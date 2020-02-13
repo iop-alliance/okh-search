@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+const fs = require('fs').promises
+const fetch = require('isomorphic-unfetch')
+const yaml = require('yaml')
+
+function fetchText(url) {
+  return fetch(url).then(r => r.text())
+}
+
+;(async () => {
+  const csv = await fetchText(
+    'https://raw.githubusercontent.com/amchagas/okh-log/master/projects_okhs.csv'
+  )
+  let projects = await Promise.all(
+    csv
+      .split('\n')
+      .slice(1)
+      .map(async line => {
+        const [name, date, link] = line.split(',')
+        if (link) {
+          const text = await fetchText(link)
+          try {
+            return yaml.parse(text)
+          } catch (e) {
+            console.warn('Error reading:', link)
+          }
+        }
+      })
+  )
+  projects = projects.filter(x => x)
+  console.log(JSON.stringify(projects, null, 2))
+})()

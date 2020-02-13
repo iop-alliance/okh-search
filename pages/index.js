@@ -1,9 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { Container, Input } from 'semantic-ui-react'
-//import 'semantic-ui-css/components/container.css'
-//import 'semantic-ui-css/components/input.css'
-//import 'semantic-ui-css/components/icon.css'
 import 'semantic-ui-css/semantic.css'
 
 const Home = () => (
@@ -17,15 +14,20 @@ const Home = () => (
         <img src="/logo.svg" />
       </div>
     </Container>
-      <div className="section">
-    <Input size="huge" placeholder="Search..." />
+    <div className="section">
+      <div className="container">
+        <Input fluid size="huge" placeholder="Search..." />
       </div>
+    </div>
 
     <style jsx>{`
       .section {
         width: 100%;
         display: flex;
         justify-content: center;
+      }
+      .section > .container {
+        width: 500px;
       }
     `}</style>
   </>
