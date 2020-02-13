@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "date-created": "2019-10-05",
     "manifest-author": {
       "name": "Jérémy Bonvoisin",
@@ -80,6 +81,7 @@
     "archive-download": "https://doi.org/10.5281/zenodo.1194284"
   },
   {
+    "id": 1,
     "date-created": "2019-10-06",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -139,6 +141,7 @@
     ]
   },
   {
+    "id": 3,
     "date-created": "2019-10-07",
     "manifest-author": {
       "name": "Jérémy Bonvoisin",
@@ -181,6 +184,7 @@
     ]
   },
   {
+    "id": 4,
     "date-created": "2019-10-07",
     "manifest-author": {
       "name": "Jérémy Bonvoisin",
@@ -227,6 +231,7 @@
     "documentation-home": "https://github.com/jbon/Ball-Machine"
   },
   {
+    "id": 5,
     "date-created": "2019-10-15",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -280,6 +285,7 @@
     ]
   },
   {
+    "id": 6,
     "date-created": "2019-10-15",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -333,6 +339,7 @@
     ]
   },
   {
+    "id": 7,
     "date-created": "2019-10-15",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -386,6 +393,7 @@
     ]
   },
   {
+    "id": 8,
     "date-created": "2019-10-23",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -439,6 +447,7 @@
     ]
   },
   {
+    "id": 9,
     "date-created": "2019-10-06",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -489,6 +498,7 @@
     "bom": "https://elifesciences.org/articles/48779#table2"
   },
   {
+    "id": 10,
     "date-created": "2019-10-17",
     "date-updated": "2019-10-17",
     "manifest-author": {
@@ -582,6 +592,7 @@
     ]
   },
   {
+    "id": 11,
     "date-created": "2019-11-16",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -608,6 +619,7 @@
     "documentation-home": "https://github.com/trendinafrica/actifield"
   },
   {
+    "id": 12,
     "date-created": "2019-11-16",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -634,6 +646,7 @@
     "documentation-home": "https://github.com/FOSH-following-demand/Syringe_Pump"
   },
   {
+    "id": 13,
     "date-created": "2019-11-16",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -660,6 +673,7 @@
     "documentation-home": "https://github.com/FOSH-following-demand/Syringe_Pump"
   },
   {
+    "id": 14,
     "date-created": "2019-11-16",
     "date-updated": "2019-11-16",
     "manifest-author": {
@@ -693,6 +707,7 @@
     "documentation-home": "https://michaelweinberg.org/post/171963532565/pi-powered-mta-subway-alerts"
   },
   {
+    "id": 16,
     "date-created": "2019-10-15",
     "manifest-author": {
       "name": "Joel T. Collins",
@@ -763,6 +778,7 @@
     ]
   },
   {
+    "id": 17,
     "date-created": "2020-02-07",
     "manifest-author": {
       "name": "Richard W. Bowman",

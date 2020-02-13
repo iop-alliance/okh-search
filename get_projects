@@ -12,16 +12,17 @@ function fetchText(url) {
   const csv = await fetchText(
     'https://raw.githubusercontent.com/amchagas/okh-log/master/projects_okhs.csv'
   )
+  let id = 0
   let projects = await Promise.all(
     csv
       .split('\n')
       .slice(1)
-      .map(async line => {
+      .map(async (line, index) => {
         const [name, date, link] = line.split(',')
         if (link) {
           const text = await fetchText(link)
           try {
-            return yaml.parse(text)
+            return {id: index, ...yaml.parse(text)}
           } catch (e) {
             console.warn('Error reading:', link)
           }

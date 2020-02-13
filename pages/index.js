@@ -2,6 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import { Container, Input } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.css'
+import projects from '../projects.json'
+import ProjectCard from '../components/ProjectCard'
 
 const Home = () => (
   <>
@@ -19,7 +21,7 @@ const Home = () => (
         <Input fluid size="huge" placeholder="Search..." />
       </div>
     </div>
-
+    {projects.map(project => <ProjectCard key={project.id} project={project} />)}
     <style jsx>{`
       .section {
         width: 100%;
@@ -28,6 +30,9 @@ const Home = () => (
       }
       .section > .container {
         width: 500px;
+      }
+      .project-image {
+        max-height: 300px !important;
       }
     `}</style>
   </>
