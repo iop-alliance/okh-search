@@ -21,7 +21,13 @@ const Home = () => (
         <Input fluid size="huge" placeholder="Search..." />
       </div>
     </div>
-    {projects.map(project => <ProjectCard key={project.id} project={project} />)}
+    <div className="section">
+      <div id="projects">
+        {projects.map(project => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
+    </div>
     <style jsx>{`
       .section {
         width: 100%;
@@ -31,8 +37,12 @@ const Home = () => (
       .section > .container {
         width: 500px;
       }
-      .project-image {
-        max-height: 300px !important;
+      #projects {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
       }
     `}</style>
   </>

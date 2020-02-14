@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
   }
 
   return (
-    <Card key={project.id} as="a" href={project['documentation-home']}>
+    <Card style={{margin: 20}} key={project.id} as="a" href={project['documentation-home']}>
       <Image
         as="div"
         style={{
