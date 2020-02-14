@@ -8,6 +8,11 @@ const ProjectCard = ({ project }) => {
     project.contributors?.[0]?.name ||
     project['manifest-author']?.name ||
     ''
+  let description = project.description || ''
+  if (description.length > 140) {
+    description = description.slice(0, 140) + '...'
+  }
+
   return (
     <Card key={project.id} as="a" href={project['documentation-home']}>
       <Image
@@ -17,16 +22,36 @@ const ProjectCard = ({ project }) => {
           overflow: 'hidden',
           display: 'flex',
           alignItems: 'center',
-          justifyContents: 'center',
         }}
         src={project.image || '/images/placeholder.png'}
       />
       <Card.Content>
-        <Card.Header>{project.title}</Card.Header>
-        <Card.Meta>
-          <span className="date">{author}</span>
+        <Card.Header
+          style={{
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {project.title}
+        </Card.Header>
+        <Card.Meta
+          style={{
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {author}
         </Card.Meta>
-        <Card.Description>{project.description || ''}</Card.Description>
+        <Card.Description
+          style={{
+            maxHeight: '10em',
+            overflow: 'hidden',
+          }}
+        >
+          {description}
+        </Card.Description>
       </Card.Content>
     </Card>
   )
