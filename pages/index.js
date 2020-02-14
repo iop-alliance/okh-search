@@ -10,15 +10,17 @@ class Home extends React.Component {
   state = { result: projects, searching: false }
   render() {
     return (
-      <div style={{display: 'flex', justifyContent: 'center'}}>
-        <div style={{maxWidth:1200}}>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ maxWidth: 1200 }}>
           <Head>
             <title>Open Know How Search</title>
             <link rel="icon" type="image/png" href="/favicon.png" />
           </Head>
           <div className="top">
             <div className="logo">
-              <img style={{ height: 200 }} src="/logo.svg" />
+              <a href="https://openknowhow.org">
+                <img style={{ height: 200 }} src="/logo.svg" />
+              </a>
             </div>
             <div className="search">
               <Input
