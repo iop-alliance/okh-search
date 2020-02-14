@@ -5,9 +5,14 @@ const yaml = require('yaml')
 const fs = require('fs')
 
 ;(async () => {
-  const csv = await fetchText(
-    'https://raw.githubusercontent.com/amchagas/okh-log/master/projects_okhs.csv',
-  )
+  let csv
+  if (process.argv[1] === 'remote') {
+    csv = await fetchText(
+      'https://raw.githubusercontent.com/amchagas/okh-log/master/projects_okhs.csv',
+    )
+  } else {
+    csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
+  }
   let id = 0
   let projects = await Promise.all(
     csv
@@ -26,14 +31,20 @@ const fs = require('fs')
         }
       }),
   )
+  projects = projects.filter(x => x)
   shuffleArray(projects)
-  projects = projects.filter(x => x).map(makeAbsolute)
+  project = projects.map(makeAbsolute)
   projects = await Promise.all(projects.map(processImages))
   console.log(JSON.stringify(projects, null, 2))
 })()
 
 function fetchText(url) {
-  return fetch(url).then(r => r.text())
+  return fetch(url).then(r => {
+    if (r.status !== 200) {
+      throw Error(r.status)
+    }
+    return r.text()
+  })
 }
 
 function makeAbsolute(project) {
