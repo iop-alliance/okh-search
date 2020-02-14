@@ -26,6 +26,7 @@ const yaml = require('yaml')
       })
   )
   projects = projects.filter(x => x).map(makeAbsolute)
+  projects = await Promise.all(projects.map(removeInvalid))
   console.log(JSON.stringify(projects, null, 2))
 })()
 
@@ -40,6 +41,18 @@ function makeAbsolute(project) {
   let image = project.image
   if (image) {
     project.image = new URL(image, origin).href
+  }
+  return project
+}
+
+async function removeInvalid(project) {
+  let image = project.image
+  if (image) {
+    const r = await fetch(image)
+    if (r.status != 200 || !/^image\//.test(r.headers.get('Content-Type'))) {
+      console.warn(`Can't read image: ${image}`)
+      delete project.image
+    }
   }
   return project
 }
