@@ -14,6 +14,7 @@
     "next": "9.2.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
+    "react-search-input": "^0.11.3",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
     "yaml": "^1.7.2"
