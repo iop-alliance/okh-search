@@ -6,12 +6,13 @@ const fs = require('fs')
 
 ;(async () => {
   let csv
-  if (process.argv[1] === 'remote') {
+  const local = await fs.promises.stat('projects_okhs.csv').catch(e => false)
+  if (local) {
+    csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
+  } else {
     csv = await fetchText(
       'https://raw.githubusercontent.com/amchagas/okh-log/master/projects_okhs.csv',
     )
-  } else {
-    csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
   }
   let id = 0
   let projects = await Promise.all(
