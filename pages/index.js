@@ -10,42 +10,60 @@ class Home extends React.Component {
   state = { result: projects, searching: false }
   render() {
     return (
-      <>
-        <Head>
-          <title>Open Know How Search</title>
-          <link rel="icon" type="image/png" href="/favicon.png" />
-        </Head>
-        <Container>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        <div style={{maxWidth:1200}}>
+          <Head>
+            <title>Open Know How Search</title>
+            <link rel="icon" type="image/png" href="/favicon.png" />
+          </Head>
+          <div className="top">
+            <div className="logo">
+              <img style={{ height: 200 }} src="/logo.svg" />
+            </div>
+            <div className="search">
+              <Input
+                fluid
+                size="huge"
+                placeholder="Search..."
+                onChange={this.searchUpdated}
+                className="searchInput"
+              />
+            </div>
+          </div>
           <div className="section">
-            <img src="/logo.svg" />
-          </div>
-        </Container>
-        <div className="section">
-          <div className="container">
-            <Input
-              fluid
-              size="huge"
-              placeholder="Search..."
-              onChange={this.searchUpdated}
-              className="searchInput"
-            />
+            <div id="projects">
+              {this.state.result.map(project => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
           </div>
         </div>
-        <div className="section">
-          <div id="projects">
-            {this.state.result.map(project => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        </div>
+
         <style jsx>{`
-          .section {
+          .main {
+            max-width: 1200px !important;
+          }
+          .top {
+            display: flex;
+            flex-wrap: wrap;
             width: 100%;
+            justify-content: center;
+            align-items: center;
+          }
+          .logo {
             display: flex;
             justify-content: center;
           }
-          .section > .container {
-            width: 500px;
+
+          @media (min-width: 550px) {
+            .search {
+              width: 500px;
+            }
+          }
+          @media (max-width: 550px) {
+            .search {
+              width: 80vw;
+            }
           }
           #projects {
             margin-top: 30px;
@@ -55,7 +73,7 @@ class Home extends React.Component {
             max-width: 1200px;
           }
         `}</style>
-      </>
+      </div>
     )
   }
   handleKeydown(event) {
