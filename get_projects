@@ -2,10 +2,11 @@
 const path = require('path')
 const fetch = require('isomorphic-unfetch')
 const yaml = require('yaml')
+const fs = require('fs')
 
 ;(async () => {
   const csv = await fetchText(
-    'https://raw.githubusercontent.com/amchagas/okh-log/master/projects_okhs.csv'
+    'https://raw.githubusercontent.com/amchagas/okh-log/master/projects_okhs.csv',
   )
   let id = 0
   let projects = await Promise.all(
@@ -23,7 +24,7 @@ const yaml = require('yaml')
             console.warn('Error reading:', link)
           }
         }
-      })
+      }),
   )
   projects = projects.filter(x => x).map(makeAbsolute)
   projects = await Promise.all(projects.map(removeInvalid))
@@ -50,8 +51,25 @@ async function removeInvalid(project) {
   if (image) {
     const r = await fetch(image)
     if (r.status != 200 || !/^image\//.test(r.headers.get('Content-Type'))) {
-      console.warn(`Can't read image: ${image}`)
+      console.warn("Can't read image:", image)
       delete project.image
+    } else {
+      const ext = r.headers.get('Content-Type').match(/image\/(.*)/)[1]
+      const p = `/images/${project.id}.${ext}`
+      await new Promise((resolve, reject) => {
+        const s = fs.createWriteStream('public' + p)
+        r.body.pipe(s)
+        r.body.on('end', () => resolve())
+        s.on('error', reject)
+      })
+        .then(() => {
+          project.image = p
+        })
+        .catch(e => {
+          console.error("Can't write image:", image)
+          console.error(e)
+          delete project.image
+        })
     }
   }
   return project

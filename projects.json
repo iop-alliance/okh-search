@@ -63,7 +63,7 @@
         "name": "Marijn Zwier"
       }
     ],
-    "image": "https://user-images.githubusercontent.com/28983580/27388247-3f9d4b84-569b-11e7-93f6-8e0f641c0413.jpg",
+    "image": "/images/0.jpeg",
     "version": 2,
     "development-stage": "prototpye",
     "made": true,
@@ -227,7 +227,7 @@
         "email": "j.bonvoisin[at]bath.ac.uk"
       }
     ],
-    "image": "https://imaginary.org/sites/default/files/styles/slideshow_630/public/top_assy.png?itok=oWRGUIVC",
+    "image": "/images/4.png",
     "development-stage": "concept/prototype",
     "made": false,
     "made-independently": false,
@@ -546,7 +546,7 @@
         "email": "r.w.bowman@bath.ac.uk"
       }
     ],
-    "image": "https://gitlab.com/bath_open_instrumentation_group/picamera_cra_compensation/-/raw/master/calibration_jig/assembly_instructions/images/jig_assembled.jpg",
+    "image": "/images/10.jpeg",
     "version": "1.0.0",
     "license": {
       "hardware": "CERN-OHL-1.2",
@@ -704,7 +704,7 @@
       "subway"
     ],
     "project-link": "https://github.com/mwweinberg/NYC-MTA-Next-Train",
-    "image": "https://michaelweinberg.org/images/2018-03-17-pi-powered-mta-subway-alerts.html2.jpg",
+    "image": "/images/14.jpeg",
     "version": 1,
     "development-stage": "stable",
     "made": true,
@@ -718,6 +718,12 @@
       "email": "hello@michaelweinberg.org"
     },
     "documentation-home": "https://michaelweinberg.org/post/171963532565/pi-powered-mta-subway-alerts"
+  },
+  {
+    "404": "Not Found",
+    "id": 15,
+    "origin": " https://raw.githubusercontent.com/case06/ZACplus/master/",
+    "documentation-home": "https://raw.githubusercontent.com/case06/ZACplus/master/undefined"
   },
   {
     "id": 16,
