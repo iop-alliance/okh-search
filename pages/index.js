@@ -18,7 +18,7 @@ class Home extends React.Component {
           </Head>
           <div className="top">
             <div className="logo">
-              <a href="https://openknowhow.org">
+              <a href="https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow">
                 <img style={{ height: 200 }} src="/logo.svg" />
               </a>
             </div>
@@ -48,7 +48,7 @@ class Home extends React.Component {
 
         <style jsx>{`
           .main {
-            max-width: 1200px !important;
+            max-width: 1200px;
           }
           .top {
             display: flex;
