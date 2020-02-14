@@ -12,7 +12,13 @@ const ProjectCard = ({ project }) => {
     <Card key={project.id} as="a" href={project['documentation-home']}>
       <Image
         as="div"
-        style={{ height: 200, overflow: 'hidden' }}
+        style={{
+          height: 200,
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContents: 'center',
+        }}
         src={project.image || '/images/placeholder.png'}
       />
       <Card.Content>
