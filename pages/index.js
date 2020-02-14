@@ -37,6 +37,11 @@ class Home extends React.Component {
               {this.state.result.map(project => (
                 <ProjectCard key={project.id} project={project} />
               ))}
+              {this.state.result.length === 0 ? (
+                <p style={{ marginTop: 80 }}>Sorry, no results</p>
+              ) : (
+                ''
+              )}
             </div>
           </div>
         </div>
