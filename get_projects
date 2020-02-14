@@ -32,8 +32,9 @@ const fs = require('fs')
       }),
   )
   projects = projects.filter(x => x)
+  projects = projects.map(processUrls)
+  projects = projects.filter(x => x)
   shuffleArray(projects)
-  project = projects.map(makeAbsolute)
   projects = await Promise.all(projects.map(processImages))
   console.log(JSON.stringify(projects, null, 2))
 })()
@@ -47,9 +48,12 @@ function fetchText(url) {
   })
 }
 
-function makeAbsolute(project) {
+function processUrls(project) {
   const origin = project.origin
   const docHome = project['documentation-home']
+  if (docHome == null) {
+    return
+  }
   project['documentation-home'] = new URL(docHome, origin).href
   let image = project.image
   if (image) {
