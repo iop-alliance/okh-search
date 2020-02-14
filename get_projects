@@ -50,7 +50,7 @@ function fetchText(url) {
 
 function processUrls(project) {
   const origin = project.origin
-  const docHome = project['documentation-home']
+  const docHome = project['documentation-home'] || project['project-link']
   if (docHome == null) {
     return
   }
