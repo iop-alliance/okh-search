@@ -1,85 +1,284 @@
 [
   {
-    "id": 0,
-    "origin": "https://raw.githubusercontent.com/CubeFactory2/cubefactory/master/",
-    "date-created": "2019-10-05",
+    "id": 5,
+    "origin": " https://raw.githubusercontent.com/BadenLab/Spikeling/master/",
+    "date-created": "2019-10-15",
+    "manifest-author": {
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk"
+    },
+    "manifest-language": "English-UK",
+    "documentation-language": "English-UK",
+    "title": "Spikeling - A hardware implementation of the Izhikevich model of a spiking neuron.",
+    "description": "Understanding of how neurons encode and compute information is fundamental to our study of the brain, but opportunities for hands-on experience with neurophysiological techniques on live neurons are scarce in science education. Here, we present Spikeling, an open source £25 in silico implementation of a spiking neuron that mimics a wide range of neuronal behaviours for classroom education and public neuroscience outreach.\n",
+    "intended-use": "Spikeling is a device for teaching how neurons work\n",
+    "keywords": [
+      "neuroscience",
+      "open science"
+    ],
+    "project-link": "https://github.com/BadenLab/Spikeling",
+    "contact": {
+      "name": "Tom Baden",
+      "affiliation": "University of Sussex",
+      "email": "t.baden@sussex.ac.uk",
+      "social": [
+        {
+          "platform": "Twitter",
+          "user-handle": "@NeuroFishh"
+        }
+      ]
+    },
+    "version": 1,
+    "development-stage": [
+      "value"
+    ],
+    "made": true,
+    "made-independently": true,
+    "license": {
+      "hardware": "CERN OHL v1.2",
+      "documentation": "MIT License",
+      "software": "CC-BY-SA v4.0"
+    },
+    "licensor": {
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk"
+    },
+    "documentation-home": "https://github.com/BadenLab/Spikeling",
+    "bom": "https://github.com/BadenLab/Spikeling/blob/master/1-click_BOM.tsv",
+    "making-instructions": [
+      {
+        "path": "https://github.com/BadenLab/Spikeling/blob/master/Spikeling%20manual%20and%20exercises.pdf",
+        "title": "Spikeling manual and exercises"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "origin": " https://raw.githubusercontent.com/FOSH-following-demand/Syringe_Pump/master/",
+    "date-created": "2019-11-16",
+    "manifest-author": {
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk"
+    },
+    "manifest-language": "EN-UK",
+    "title": "Syringe Pump",
+    "description": "We created a large volume open source DIY syringe pump from commonly available and 3D printed parts that allows for high accuracy and repeatability. We also want to make this project as simple as possible so that no specialized skills are required.\n",
+    "keywords": [
+      "bioprinting"
+    ],
+    "project-link": "https://github.com/FOSH-following-demand/Syringe_Pump",
+    "contributors": [
+      {
+        "name": "Drew Portero",
+        "email": "drewcliffporter@gmail.com"
+      }
+    ],
+    "made": true,
+    "license": {
+      "documentation": "GNU GPL v3.0"
+    },
+    "documentation-home": "https://github.com/FOSH-following-demand/Syringe_Pump"
+  },
+  {
+    "id": 3,
+    "origin": " https://raw.githubusercontent.com/Raidlight/Projet-Pilote-Open-Source/master/",
+    "date-created": "2019-10-07",
     "manifest-author": {
       "name": "Jérémy Bonvoisin",
       "affiliation": "University of Bath, Department of Mechanical Engineering",
       "email": "j.bonvoisin@bath.ac.uk"
     },
     "manifest-language": "English-UK",
-    "documentation-language": "English-UK",
-    "title": "CubeFactory2",
-    "description": "The CubeFactory 2 is an autonomous and portable mini factory with own energy and material supply. It embeds three modules: a 3D-printer, a plastic recycler producing filament for the 3D-printer for closed-loop material supply as well as photovoltaic panels and batteries for energy supply. It was developed at the Department for Assembly Technology and Factory Management of the Technische Universität Berlin in the frame of the Collaborative Research Center 1026 \"Sustainable Manufacturing - Shaping Global Value Creation\".\n",
-    "intended-use": "In its current state of development, the purpose of the CubeFactory2 is primarily illustrative and to support awareness on sustainable manufacturing. If offers an experienceable application of the concepts of circularity and resource conservation. The long term vision is to take advantage of its compactness, portability and autonomy, in order to enable fabrication in areas of low infrastructure. [Muschard, B and Bonvoisin, J. 2019. CubeFactory2 – an Off-Grid and Circular 3D-Printing Mini-Factory. Journal of Open Hardware, 3(1): 3, pp. 1–12. DOI: https://doi.org/10.5334/joh.15]\n",
-    "keywords": [
-      "mini-factory",
-      "circular economy",
-      "filament recycling",
-      "3D-printer; making",
-      "sustainable manufacturing"
-    ],
-    "project-link": "https://github.com/CubeFactory2/cubefactory",
-    "health-safety-notice": "see Muschard, B and Bonvoisin, J. 2019. CubeFactory2 – an Off-Grid and Circular 3D-Printing Mini-Factory. Journal of Open Hardware, 3(1): 3, pp. 1–12. DOI: https://doi.org/10.5334/joh.15\n",
+    "documentation-language": "French-FR",
+    "title": "Raidlight Responsiv",
+    "description": "Sac gilet Responsiv Raidlight\n",
+    "project-link": "https://github.com/Raidlight/Projet-Pilote-Open-Source",
     "contributors": [
       {
-        "name": "Bernd Muschard"
-      },
-      {
-        "name": "Gamze Hizal"
-      },
-      {
-        "name": "Dennis Lehmann"
-      },
-      {
-        "name": "Karla Metzkow"
-      },
-      {
-        "name": "Patrick Mundt"
-      },
-      {
-        "name": "Alexander Vitik"
-      },
-      {
-        "name": "Ali Yesali"
-      },
-      {
-        "name": "Ye Zhou"
-      },
-      {
-        "name": "Hannah Lickert"
-      },
-      {
-        "name": "Sharmaine Mannan"
-      },
-      {
-        "name": "Steffen Heyer"
-      },
-      {
-        "name": "Arnout J. Oldenburger"
-      },
-      {
-        "name": "Marijn Zwier"
+        "name": "Raidlight / Skis Rossignol SAS"
       }
     ],
-    "image": "/images/0.jpeg",
-    "version": 2,
-    "development-stage": "prototpye",
+    "development-stage": "in production",
     "made": true,
-    "sub": {
-      "title": "RepRap Prusa i3 Hephestos",
-      "web": "http://reprap.org/wiki/Prusa_i3_Hephestos"
-    },
+    "made-independently": false,
     "license": {
-      "documentation": "CC-BY-SA-4.0"
+      "documentation": "CC-BY-SA 3.0"
     },
     "licensor": {
-      "name": "Bernd Muschard",
-      "affiliation": "Technische Universitaet Berlin"
+      "name": "Raidlight / Skis Rossignol SAS"
     },
-    "documentation-home": "https://github.com/CubeFactory2/cubefactory",
-    "archive-download": "https://doi.org/10.5281/zenodo.1194284"
+    "documentation-home": "https://github.com/Raidlight/Projet-Pilote-Open-Source",
+    "archive-download": "https://github.com/Raidlight/Projet-Pilote-Open-Source.git",
+    "design-files": [
+      {
+        "path": "https://github.com/Raidlight/Projet-Pilote-Open-Source/tree/master/Patrons",
+        "title": "patrons"
+      }
+    ],
+    "making-instructions": [
+      {
+        "path": "https://github.com/Raidlight/Projet-Pilote-Open-Source/tree/master/Montage",
+        "title": "Guides de montage"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "origin": " https://gitlab.com/openflexure/openflexure-microscope/-/raw/master/",
+    "date-created": "2019-10-15",
+    "manifest-author": {
+      "name": "Joel T. Collins",
+      "affiliation": "University of Bath",
+      "email": "j.collins@bath.ac.uk"
+    },
+    "manifest-language": "English-UK",
+    "documentation-language": "English-UK",
+    "title": "OpenFlexure Microscope",
+    "description": "The OpenFlexure Microscope is a  3D printable microscope, including a precise mechanical stage to move the sample and focus the optics.  There are many different options for the optics, ranging from a webcam lens to a 100x, oil immersion objective.\n",
+    "intended-use": "Microscopy for research applications, university teaching, outreach, or schools",
+    "keywords": [
+      "open science",
+      "microscopy",
+      "fluorescence",
+      "raspberry pi",
+      "arduino"
+    ],
+    "project-link": "https://openflexure.org/projects/microscope/",
+    "contact": {
+      "name": "Richard Bowman",
+      "affiliation": "University of Bath",
+      "email": "rwb34@bath.ac.uk",
+      "social": [
+        {
+          "platform": "Twitter",
+          "user-handle": "@OpenFlexure"
+        }
+      ]
+    },
+    "version": "6.0.0",
+    "development-stage": "stable",
+    "made": true,
+    "made-independently": true,
+    "license": {
+      "hardware": "CERN OHL v1.2",
+      "documentation": "GPL-3.0",
+      "software": "GPL-3.0"
+    },
+    "licensor": {
+      "name": "Richard Bowman",
+      "affiliation": "University of Bath",
+      "email": "rwb34@bath.ac.uk"
+    },
+    "documentation-home": "https://build.openflexure.org/openflexure-microscope/latest/docs/",
+    "archive-download": "https://build.openflexure.org/openflexure-microscope/latest/all",
+    "design-files": [
+      {
+        "path": "https://build.openflexure.org/openflexure-microscope/latest",
+        "title": "/openflexure-microscope/latest"
+      }
+    ],
+    "making-instructions": [
+      {
+        "path": "https://build.openflexure.org/openflexure-microscope/latest/docs/",
+        "title": "OpenFlexure Microscope - Assembly Instructions"
+      }
+    ],
+    "software": [
+      {
+        "path": "https://gitlab.com/openflexure/openflexure-microscope-server",
+        "title": "openflexure-microscope-server"
+      },
+      {
+        "path": "https://gitlab.com/openflexure/openflexure-microscope-jsclient",
+        "title": "openflexure-ev"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "origin": " https://raw.githubusercontent.com/trendinafrica/actifield/master/",
+    "date-created": "2019-11-16",
+    "manifest-author": {
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk"
+    },
+    "manifest-language": "EN-UK",
+    "title": "Actifield",
+    "description": "We’re building an equipment called an actimeter. At the simplest, the actimeter is used to measure and record the locomotor activity - how fast or slow a test animal (usually rodents), is moving. This information is useful for several tests such as screening for potentially toxic effects of a new drug on the brain.\n",
+    "keywords": [
+      "Neurosciences",
+      "Behaviour"
+    ],
+    "project-link": "https://github.com/trendinafrica/actifield",
+    "contributors": [
+      {
+        "name": "Victor Kumbol",
+        "email": "kumbolvictor@gmail.com"
+      }
+    ],
+    "license": {
+      "documentation": "GNU GPL v2.0"
+    },
+    "documentation-home": "https://github.com/trendinafrica/actifield"
+  },
+  {
+    "id": 8,
+    "origin": " https://raw.githubusercontent.com/BadenLab/Hyperspectral-scanner/master/",
+    "date-created": "2019-10-23",
+    "manifest-author": {
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk"
+    },
+    "manifest-language": "English-UK",
+    "documentation-language": "English-UK",
+    "title": "Hyperspectral scanner for natural imaging above and under water",
+    "description": "Here, we designed and implemented a fully open source and low-cost hyperspectral scanner based on\na commercial spectrometer coupled to custom optical, mechanical and electronic components.\n",
+    "intended-use": "The scanner is to be used to collect light information (the spectrum composition) from the environment\n",
+    "keywords": [
+      "neuroscience",
+      "open science"
+    ],
+    "project-link": "https://github.com/BadenLab/Hyperspectral-scanner",
+    "contact": {
+      "name": "Noora Nevala",
+      "affiliation": "University of Sussex",
+      "email": "N.Nevala@sussex.ac.uk",
+      "social": [
+        {
+          "platform": "Twitter",
+          "user-handle": "@nnevala"
+        }
+      ]
+    },
+    "version": 1,
+    "development-stage": [
+      "value"
+    ],
+    "made": true,
+    "made-independently": false,
+    "license": {
+      "hardware": "CERN OHL v1.2",
+      "documentation": "GPL-3.0",
+      "software": "CC-BY-SA v4.0"
+    },
+    "licensor": {
+      "name": "Noora Nevala",
+      "affiliation": "University of Sussex",
+      "email": "N.nevala@sussex.ac.uk"
+    },
+    "documentation-home": "https://github.com/BadenLab/Hyperspectral-scanner",
+    "bom": "https://github.com/BadenLab/Hyperspectral-scanner/Manual3.pdf",
+    "making-instructions": [
+      {
+        "path": "https://github.com/BadenLab/Hyperspectral-scanner/tree/master/Manual3.pdf",
+        "title": "Instruction Manual"
+      }
+    ]
   },
   {
     "id": 1,
@@ -141,369 +340,6 @@
         "title": "User and assembly manual revised"
       }
     ]
-  },
-  {
-    "id": 3,
-    "origin": " https://raw.githubusercontent.com/Raidlight/Projet-Pilote-Open-Source/master/",
-    "date-created": "2019-10-07",
-    "manifest-author": {
-      "name": "Jérémy Bonvoisin",
-      "affiliation": "University of Bath, Department of Mechanical Engineering",
-      "email": "j.bonvoisin@bath.ac.uk"
-    },
-    "manifest-language": "English-UK",
-    "documentation-language": "French-FR",
-    "title": "Raidlight Responsiv",
-    "description": "Sac gilet Responsiv Raidlight\n",
-    "project-link": "https://github.com/Raidlight/Projet-Pilote-Open-Source",
-    "contributors": [
-      {
-        "name": "Raidlight / Skis Rossignol SAS"
-      }
-    ],
-    "development-stage": "in production",
-    "made": true,
-    "made-independently": false,
-    "license": {
-      "documentation": "CC-BY-SA 3.0"
-    },
-    "licensor": {
-      "name": "Raidlight / Skis Rossignol SAS"
-    },
-    "documentation-home": "https://github.com/Raidlight/Projet-Pilote-Open-Source",
-    "archive-download": "https://github.com/Raidlight/Projet-Pilote-Open-Source.git",
-    "design-files": [
-      {
-        "path": "https://github.com/Raidlight/Projet-Pilote-Open-Source/tree/master/Patrons",
-        "title": "patrons"
-      }
-    ],
-    "making-instructions": [
-      {
-        "path": "https://github.com/Raidlight/Projet-Pilote-Open-Source/tree/master/Montage",
-        "title": "Guides de montage"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "origin": " https://raw.githubusercontent.com/jbon/Ball-Machine/master/",
-    "date-created": "2019-10-07",
-    "manifest-author": {
-      "name": "Jérémy Bonvoisin",
-      "affiliation": "University of Bath, Department of Mechanical Engineering",
-      "email": "j.bonvoisin@bath.ac.uk"
-    },
-    "manifest-language": "English-UK",
-    "documentation-language": "English-UK",
-    "title": "Ball sorting machine",
-    "description": "The “ball-sorting machine” is a work-in-progress concept of a purely mechanical machine capable of sorting balls by weight order using a selection of sorting algorithms.  \n",
-    "intended-use": "It aims to deliver museum visitors a hands-on and visual experience of different sorting algorithms. Balls with different weights are dropped in a series of comparators sorting them simply using gravitational force. The visitor can reiterate the sorting with different machine configurations in order to compare the working principles of the sorting algorithms and therewith understand their differences.\n",
-    "keywords": [
-      "museum exhibit",
-      "sorting algorithm",
-      "machine design"
-    ],
-    "project-link": "https://imaginary.org/hands-on/ball-sorting-machine",
-    "contact": {
-      "name": "Jérémy Bonvoisin",
-      "affiliation": "University of Bath",
-      "email": "j.bonvoisin[at]bath.ac.uk",
-      "social": [
-        {
-          "platform": "twitter",
-          "user-handle": "@Du33Jerry"
-        }
-      ]
-    },
-    "contributors": [
-      {
-        "name": "James taylor",
-        "affiliation": "University of Bath"
-      },
-      {
-        "name": "Jérémy Bonvoisin",
-        "affiliation": "University of Bath",
-        "email": "j.bonvoisin[at]bath.ac.uk"
-      }
-    ],
-    "image": "/images/4.png",
-    "development-stage": "concept/prototype",
-    "made": false,
-    "made-independently": false,
-    "documentation-home": "https://github.com/jbon/Ball-Machine"
-  },
-  {
-    "id": 5,
-    "origin": " https://raw.githubusercontent.com/BadenLab/Spikeling/master/",
-    "date-created": "2019-10-15",
-    "manifest-author": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk"
-    },
-    "manifest-language": "English-UK",
-    "documentation-language": "English-UK",
-    "title": "Spikeling - A hardware implementation of the Izhikevich model of a spiking neuron.",
-    "description": "Understanding of how neurons encode and compute information is fundamental to our study of the brain, but opportunities for hands-on experience with neurophysiological techniques on live neurons are scarce in science education. Here, we present Spikeling, an open source £25 in silico implementation of a spiking neuron that mimics a wide range of neuronal behaviours for classroom education and public neuroscience outreach.\n",
-    "intended-use": "Spikeling is a device for teaching how neurons work\n",
-    "keywords": [
-      "neuroscience",
-      "open science"
-    ],
-    "project-link": "https://github.com/BadenLab/Spikeling",
-    "contact": {
-      "name": "Tom Baden",
-      "affiliation": "University of Sussex",
-      "email": "t.baden@sussex.ac.uk",
-      "social": [
-        {
-          "platform": "Twitter",
-          "user-handle": "@NeuroFishh"
-        }
-      ]
-    },
-    "version": 1,
-    "development-stage": [
-      "value"
-    ],
-    "made": true,
-    "made-independently": true,
-    "license": {
-      "hardware": "CERN OHL v1.2",
-      "documentation": "MIT License",
-      "software": "CC-BY-SA v4.0"
-    },
-    "licensor": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk"
-    },
-    "documentation-home": "https://github.com/BadenLab/Spikeling",
-    "bom": "https://github.com/BadenLab/Spikeling/blob/master/1-click_BOM.tsv",
-    "making-instructions": [
-      {
-        "path": "https://github.com/BadenLab/Spikeling/blob/master/Spikeling%20manual%20and%20exercises.pdf",
-        "title": "Spikeling manual and exercises"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "origin": " https://raw.githubusercontent.com/BadenLab/Openspritzer/master/",
-    "date-created": "2019-10-15",
-    "manifest-author": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk"
-    },
-    "manifest-language": "English-UK",
-    "documentation-language": "English-UK",
-    "title": "Openspritzer -  an open hardware pressure ejection system for reliably delivering picolitre volumes.",
-    "description": "Designed for ease of use, robustness and low-cost, the “Openspritzer” is an open hardware “Picospritzer” as routinely used in biological labs around the world. The performance of Openspritzer and commercial alternatives is effectively indistiguishable.\n\nThe system is based on a solenoid valve connected to a pressure gauge. Control can be attained directly via an external TTL pulse or internally through an Arduino set by a rotary encoder. The basic setup can be put together for 3-400€, or substantially less if you are prepare to shop around.\n\nWe anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.                          # required | paragraph\n",
-    "intended-use": "Openspritzer was developed for researchers to perform experiments that require injections of very small volumes\n",
-    "keywords": [
-      "neuroscience",
-      "open science"
-    ],
-    "project-link": "https://github.com/badenlab/Openspritzer",
-    "contact": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk",
-      "social": [
-        {
-          "platform": "Twitter",
-          "user-handle": "@chagas_am"
-        }
-      ]
-    },
-    "version": 1.3,
-    "development-stage": [
-      "value"
-    ],
-    "made": true,
-    "made-independently": true,
-    "license": {
-      "hardware": "CERN OHL v1.2",
-      "documentation": "GPL-3.0",
-      "software": "CC-BY-SA v4.0"
-    },
-    "licensor": {
-      "name": "Maxime Zimmerman",
-      "affiliation": "University of Sussex",
-      "email": "M.zimmermann@sussex.ac.uk"
-    },
-    "documentation-home": "https://github.com/badenlab/Openspritzer/",
-    "bom": "https://github.com/BadenLab/Openspritzer/blob/master/Bill%20of%20Materials/BOM.csv",
-    "making-instructions": [
-      {
-        "path": "https://github.com/BadenLab/Openspritzer/tree/master/Instruction%20Manual",
-        "title": "Instruction Manual"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "origin": " https://raw.githubusercontent.com/BadenLab/Tetra-Chromatic-Stimulator/master/",
-    "date-created": "2019-10-15",
-    "manifest-author": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk"
-    },
-    "manifest-language": "English-UK",
-    "documentation-language": "English-UK",
-    "title": "Tetra Chromatic Stimulator - An OpenSource LED stimulator for visual and optogenetics stimulation in combination with 2-photon recordings.",
-    "description": "Here we describe an effective, low-cost, opensource LED stimulator, designed to be used in combination with a 2-photon microscope. The design is built around an open-source development board and off-the-shelf components. It has been conceived to be assembled and used without the need for advanced electronics skills.\n",
-    "intended-use": "The tetra chromatic stimulator is meant to be used in laboratory experiments where\nlight stimulation is necessary.\n",
-    "keywords": [
-      "neuroscience",
-      "open science"
-    ],
-    "project-link": "https://github.com/BadenLab/Tetra-Chromatic-Stimulator",
-    "contact": {
-      "name": "Maxime Zimmerman",
-      "affiliation": "University of Sussex",
-      "email": "M.zimmermann@sussex.ac.uk",
-      "social": [
-        {
-          "platform": "Twitter",
-          "user-handle": "@MJY_Zimmermann"
-        }
-      ]
-    },
-    "version": 1,
-    "development-stage": [
-      "value"
-    ],
-    "made": true,
-    "made-independently": false,
-    "license": {
-      "hardware": "CERN OHL v1.2",
-      "documentation": "GPL-3.0",
-      "software": "CC-BY-SA v4.0"
-    },
-    "licensor": {
-      "name": "Maxime Zimmerman",
-      "affiliation": "University of Sussex",
-      "email": "M.zimmermann@sussex.ac.uk"
-    },
-    "documentation-home": "https://github.com/BadenLab/Tetra-Chromatic-Stimulator",
-    "bom": "https://github.com/BadenLab/Tetra-Chromatic-Stimulator/tree/master/Bills%20of%20Materials",
-    "making-instructions": [
-      {
-        "path": "https://github.com/BadenLab/Tetra-Chromatic-Stimulator/tree/master/Instruction%20Manual",
-        "title": "Instruction Manual"
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "origin": " https://raw.githubusercontent.com/BadenLab/Hyperspectral-scanner/master/",
-    "date-created": "2019-10-23",
-    "manifest-author": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk"
-    },
-    "manifest-language": "English-UK",
-    "documentation-language": "English-UK",
-    "title": "Hyperspectral scanner for natural imaging above and under water",
-    "description": "Here, we designed and implemented a fully open source and low-cost hyperspectral scanner based on\na commercial spectrometer coupled to custom optical, mechanical and electronic components.\n",
-    "intended-use": "The scanner is to be used to collect light information (the spectrum composition) from the environment\n",
-    "keywords": [
-      "neuroscience",
-      "open science"
-    ],
-    "project-link": "https://github.com/BadenLab/Hyperspectral-scanner",
-    "contact": {
-      "name": "Noora Nevala",
-      "affiliation": "University of Sussex",
-      "email": "N.Nevala@sussex.ac.uk",
-      "social": [
-        {
-          "platform": "Twitter",
-          "user-handle": "@nnevala"
-        }
-      ]
-    },
-    "version": 1,
-    "development-stage": [
-      "value"
-    ],
-    "made": true,
-    "made-independently": false,
-    "license": {
-      "hardware": "CERN OHL v1.2",
-      "documentation": "GPL-3.0",
-      "software": "CC-BY-SA v4.0"
-    },
-    "licensor": {
-      "name": "Noora Nevala",
-      "affiliation": "University of Sussex",
-      "email": "N.nevala@sussex.ac.uk"
-    },
-    "documentation-home": "https://github.com/BadenLab/Hyperspectral-scanner",
-    "bom": "https://github.com/BadenLab/Hyperspectral-scanner/Manual3.pdf",
-    "making-instructions": [
-      {
-        "path": "https://github.com/BadenLab/Hyperspectral-scanner/tree/master/Manual3.pdf",
-        "title": "Instruction Manual"
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "origin": " https://raw.githubusercontent.com/eulerlab/open-visual-stimulator/master/",
-    "date-created": "2019-10-06",
-    "manifest-author": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk"
-    },
-    "manifest-language": "English-UK",
-    "documentation-language": "English-UK",
-    "title": "Open Visual Stimulator",
-    "description": "The open visual stimulator is a projector system that can take up to six different leds with any chosen wavelength and project images, videos, patterns.  # required | paragraph\n",
-    "intended-use": "This system was developed for neuroscience research and to be used for experiments in vision.\n",
-    "keywords": [
-      "neuroscience",
-      "open science",
-      "microscopy",
-      "Visual neurosciences",
-      "Behaviour"
-    ],
-    "project-link": "https://github.com/eulerlab/open-visual-stimulator",
-    "contact": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk",
-      "social": [
-        {
-          "platform": "Twitter",
-          "user-handle": "@chagas_am"
-        }
-      ]
-    },
-    "version": 1,
-    "development-stage": [
-      "value"
-    ],
-    "made": true,
-    "made-independently": true,
-    "license": {
-      "hardware": "CERN OHL v1.2",
-      "documentation": "GPL-2.0",
-      "software": "CC-BY-SA v4.0"
-    },
-    "licensor": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk"
-    },
-    "documentation-home": "https://github.com/eulerlab/open-visual-stimulator",
-    "bom": "https://elifesciences.org/articles/48779#table2"
   },
   {
     "id": 10,
@@ -601,60 +437,199 @@
     ]
   },
   {
-    "id": 11,
-    "origin": " https://raw.githubusercontent.com/trendinafrica/actifield/master/",
-    "date-created": "2019-11-16",
+    "id": 0,
+    "origin": "https://raw.githubusercontent.com/CubeFactory2/cubefactory/master/",
+    "date-created": "2019-10-05",
     "manifest-author": {
-      "name": "Andre Maia Chagas",
-      "affiliation": "University of Sussex",
-      "email": "a.maia-chagas@sussex.ac.uk"
+      "name": "Jérémy Bonvoisin",
+      "affiliation": "University of Bath, Department of Mechanical Engineering",
+      "email": "j.bonvoisin@bath.ac.uk"
     },
-    "manifest-language": "EN-UK",
-    "title": "Actifield",
-    "description": "We’re building an equipment called an actimeter. At the simplest, the actimeter is used to measure and record the locomotor activity - how fast or slow a test animal (usually rodents), is moving. This information is useful for several tests such as screening for potentially toxic effects of a new drug on the brain.\n",
+    "manifest-language": "English-UK",
+    "documentation-language": "English-UK",
+    "title": "CubeFactory2",
+    "description": "The CubeFactory 2 is an autonomous and portable mini factory with own energy and material supply. It embeds three modules: a 3D-printer, a plastic recycler producing filament for the 3D-printer for closed-loop material supply as well as photovoltaic panels and batteries for energy supply. It was developed at the Department for Assembly Technology and Factory Management of the Technische Universität Berlin in the frame of the Collaborative Research Center 1026 \"Sustainable Manufacturing - Shaping Global Value Creation\".\n",
+    "intended-use": "In its current state of development, the purpose of the CubeFactory2 is primarily illustrative and to support awareness on sustainable manufacturing. If offers an experienceable application of the concepts of circularity and resource conservation. The long term vision is to take advantage of its compactness, portability and autonomy, in order to enable fabrication in areas of low infrastructure. [Muschard, B and Bonvoisin, J. 2019. CubeFactory2 – an Off-Grid and Circular 3D-Printing Mini-Factory. Journal of Open Hardware, 3(1): 3, pp. 1–12. DOI: https://doi.org/10.5334/joh.15]\n",
     "keywords": [
-      "Neurosciences",
-      "Behaviour"
+      "mini-factory",
+      "circular economy",
+      "filament recycling",
+      "3D-printer; making",
+      "sustainable manufacturing"
     ],
-    "project-link": "https://github.com/trendinafrica/actifield",
+    "project-link": "https://github.com/CubeFactory2/cubefactory",
+    "health-safety-notice": "see Muschard, B and Bonvoisin, J. 2019. CubeFactory2 – an Off-Grid and Circular 3D-Printing Mini-Factory. Journal of Open Hardware, 3(1): 3, pp. 1–12. DOI: https://doi.org/10.5334/joh.15\n",
     "contributors": [
       {
-        "name": "Victor Kumbol",
-        "email": "kumbolvictor@gmail.com"
+        "name": "Bernd Muschard"
+      },
+      {
+        "name": "Gamze Hizal"
+      },
+      {
+        "name": "Dennis Lehmann"
+      },
+      {
+        "name": "Karla Metzkow"
+      },
+      {
+        "name": "Patrick Mundt"
+      },
+      {
+        "name": "Alexander Vitik"
+      },
+      {
+        "name": "Ali Yesali"
+      },
+      {
+        "name": "Ye Zhou"
+      },
+      {
+        "name": "Hannah Lickert"
+      },
+      {
+        "name": "Sharmaine Mannan"
+      },
+      {
+        "name": "Steffen Heyer"
+      },
+      {
+        "name": "Arnout J. Oldenburger"
+      },
+      {
+        "name": "Marijn Zwier"
       }
     ],
-    "license": {
-      "documentation": "GNU GPL v2.0"
+    "image": "/images/0.jpeg",
+    "version": 2,
+    "development-stage": "prototpye",
+    "made": true,
+    "sub": {
+      "title": "RepRap Prusa i3 Hephestos",
+      "web": "http://reprap.org/wiki/Prusa_i3_Hephestos"
     },
-    "documentation-home": "https://github.com/trendinafrica/actifield"
+    "license": {
+      "documentation": "CC-BY-SA-4.0"
+    },
+    "licensor": {
+      "name": "Bernd Muschard",
+      "affiliation": "Technische Universitaet Berlin"
+    },
+    "documentation-home": "https://github.com/CubeFactory2/cubefactory",
+    "archive-download": "https://doi.org/10.5281/zenodo.1194284"
   },
   {
-    "id": 12,
-    "origin": " https://raw.githubusercontent.com/FOSH-following-demand/Syringe_Pump/master/",
-    "date-created": "2019-11-16",
+    "404": "Not Found",
+    "id": 15,
+    "origin": " https://raw.githubusercontent.com/case06/ZACplus/master/",
+    "documentation-home": "https://raw.githubusercontent.com/case06/ZACplus/master/undefined"
+  },
+  {
+    "id": 9,
+    "origin": " https://raw.githubusercontent.com/eulerlab/open-visual-stimulator/master/",
+    "date-created": "2019-10-06",
     "manifest-author": {
       "name": "Andre Maia Chagas",
       "affiliation": "University of Sussex",
       "email": "a.maia-chagas@sussex.ac.uk"
     },
-    "manifest-language": "EN-UK",
-    "title": "Syringe Pump",
-    "description": "We created a large volume open source DIY syringe pump from commonly available and 3D printed parts that allows for high accuracy and repeatability. We also want to make this project as simple as possible so that no specialized skills are required.\n",
+    "manifest-language": "English-UK",
+    "documentation-language": "English-UK",
+    "title": "Open Visual Stimulator",
+    "description": "The open visual stimulator is a projector system that can take up to six different leds with any chosen wavelength and project images, videos, patterns.  # required | paragraph\n",
+    "intended-use": "This system was developed for neuroscience research and to be used for experiments in vision.\n",
     "keywords": [
-      "bioprinting"
+      "neuroscience",
+      "open science",
+      "microscopy",
+      "Visual neurosciences",
+      "Behaviour"
     ],
-    "project-link": "https://github.com/FOSH-following-demand/Syringe_Pump",
-    "contributors": [
-      {
-        "name": "Drew Portero",
-        "email": "drewcliffporter@gmail.com"
-      }
+    "project-link": "https://github.com/eulerlab/open-visual-stimulator",
+    "contact": {
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk",
+      "social": [
+        {
+          "platform": "Twitter",
+          "user-handle": "@chagas_am"
+        }
+      ]
+    },
+    "version": 1,
+    "development-stage": [
+      "value"
     ],
     "made": true,
+    "made-independently": true,
     "license": {
-      "documentation": "GNU GPL v3.0"
+      "hardware": "CERN OHL v1.2",
+      "documentation": "GPL-2.0",
+      "software": "CC-BY-SA v4.0"
     },
-    "documentation-home": "https://github.com/FOSH-following-demand/Syringe_Pump"
+    "licensor": {
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk"
+    },
+    "documentation-home": "https://github.com/eulerlab/open-visual-stimulator",
+    "bom": "https://elifesciences.org/articles/48779#table2"
+  },
+  {
+    "id": 6,
+    "origin": " https://raw.githubusercontent.com/BadenLab/Openspritzer/master/",
+    "date-created": "2019-10-15",
+    "manifest-author": {
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk"
+    },
+    "manifest-language": "English-UK",
+    "documentation-language": "English-UK",
+    "title": "Openspritzer -  an open hardware pressure ejection system for reliably delivering picolitre volumes.",
+    "description": "Designed for ease of use, robustness and low-cost, the “Openspritzer” is an open hardware “Picospritzer” as routinely used in biological labs around the world. The performance of Openspritzer and commercial alternatives is effectively indistiguishable.\n\nThe system is based on a solenoid valve connected to a pressure gauge. Control can be attained directly via an external TTL pulse or internally through an Arduino set by a rotary encoder. The basic setup can be put together for 3-400€, or substantially less if you are prepare to shop around.\n\nWe anticipate that due to its high performance and low cost Openspritzer will be of interest to a broad range of researchers working in the life and physical sciences.                          # required | paragraph\n",
+    "intended-use": "Openspritzer was developed for researchers to perform experiments that require injections of very small volumes\n",
+    "keywords": [
+      "neuroscience",
+      "open science"
+    ],
+    "project-link": "https://github.com/badenlab/Openspritzer",
+    "contact": {
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk",
+      "social": [
+        {
+          "platform": "Twitter",
+          "user-handle": "@chagas_am"
+        }
+      ]
+    },
+    "version": 1.3,
+    "development-stage": [
+      "value"
+    ],
+    "made": true,
+    "made-independently": true,
+    "license": {
+      "hardware": "CERN OHL v1.2",
+      "documentation": "GPL-3.0",
+      "software": "CC-BY-SA v4.0"
+    },
+    "licensor": {
+      "name": "Maxime Zimmerman",
+      "affiliation": "University of Sussex",
+      "email": "M.zimmermann@sussex.ac.uk"
+    },
+    "documentation-home": "https://github.com/badenlab/Openspritzer/",
+    "bom": "https://github.com/BadenLab/Openspritzer/blob/master/Bill%20of%20Materials/BOM.csv",
+    "making-instructions": [
+      {
+        "path": "https://github.com/BadenLab/Openspritzer/tree/master/Instruction%20Manual",
+        "title": "Instruction Manual"
+      }
+    ]
   },
   {
     "id": 13,
@@ -685,115 +660,57 @@
     "documentation-home": "https://github.com/FOSH-following-demand/Syringe_Pump"
   },
   {
-    "id": 14,
-    "origin": " https://raw.githubusercontent.com/mwweinberg/NYC-MTA-Next-Train/master/",
-    "date-created": "2019-11-16",
-    "date-updated": "2019-11-16",
-    "manifest-author": {
-      "name": "Michael Weinberg",
-      "email": "hello@michaelweinberg.org"
-    },
-    "manifest-language": "EN",
-    "documentation-language": "EN",
-    "title": "NYC-MTA-Next-Train",
-    "description": "A raspberry pi-powered display for tracking NYC subway trains\n",
-    "intended-use": "Deciding when to leave the house to catch a train\n",
-    "keywords": [
-      "neopixel",
-      "raspberry pi",
-      "subway"
-    ],
-    "project-link": "https://github.com/mwweinberg/NYC-MTA-Next-Train",
-    "image": "/images/14.jpeg",
-    "version": 1,
-    "development-stage": "stable",
-    "made": true,
-    "license": {
-      "hardware": "CERN-OHL-P",
-      "documentation": "CC BY-SA 4.0",
-      "software": "MIT"
-    },
-    "licensor": {
-      "name": "Michael Weinberg",
-      "email": "hello@michaelweinberg.org"
-    },
-    "documentation-home": "https://michaelweinberg.org/post/171963532565/pi-powered-mta-subway-alerts"
-  },
-  {
-    "404": "Not Found",
-    "id": 15,
-    "origin": " https://raw.githubusercontent.com/case06/ZACplus/master/",
-    "documentation-home": "https://raw.githubusercontent.com/case06/ZACplus/master/undefined"
-  },
-  {
-    "id": 16,
-    "origin": " https://gitlab.com/openflexure/openflexure-microscope/-/raw/master/",
+    "id": 7,
+    "origin": " https://raw.githubusercontent.com/BadenLab/Tetra-Chromatic-Stimulator/master/",
     "date-created": "2019-10-15",
     "manifest-author": {
-      "name": "Joel T. Collins",
-      "affiliation": "University of Bath",
-      "email": "j.collins@bath.ac.uk"
+      "name": "Andre Maia Chagas",
+      "affiliation": "University of Sussex",
+      "email": "a.maia-chagas@sussex.ac.uk"
     },
     "manifest-language": "English-UK",
     "documentation-language": "English-UK",
-    "title": "OpenFlexure Microscope",
-    "description": "The OpenFlexure Microscope is a  3D printable microscope, including a precise mechanical stage to move the sample and focus the optics.  There are many different options for the optics, ranging from a webcam lens to a 100x, oil immersion objective.\n",
-    "intended-use": "Microscopy for research applications, university teaching, outreach, or schools",
+    "title": "Tetra Chromatic Stimulator - An OpenSource LED stimulator for visual and optogenetics stimulation in combination with 2-photon recordings.",
+    "description": "Here we describe an effective, low-cost, opensource LED stimulator, designed to be used in combination with a 2-photon microscope. The design is built around an open-source development board and off-the-shelf components. It has been conceived to be assembled and used without the need for advanced electronics skills.\n",
+    "intended-use": "The tetra chromatic stimulator is meant to be used in laboratory experiments where\nlight stimulation is necessary.\n",
     "keywords": [
-      "open science",
-      "microscopy",
-      "fluorescence",
-      "raspberry pi",
-      "arduino"
+      "neuroscience",
+      "open science"
     ],
-    "project-link": "https://openflexure.org/projects/microscope/",
+    "project-link": "https://github.com/BadenLab/Tetra-Chromatic-Stimulator",
     "contact": {
-      "name": "Richard Bowman",
-      "affiliation": "University of Bath",
-      "email": "rwb34@bath.ac.uk",
+      "name": "Maxime Zimmerman",
+      "affiliation": "University of Sussex",
+      "email": "M.zimmermann@sussex.ac.uk",
       "social": [
         {
           "platform": "Twitter",
-          "user-handle": "@OpenFlexure"
+          "user-handle": "@MJY_Zimmermann"
         }
       ]
     },
-    "version": "6.0.0",
-    "development-stage": "stable",
+    "version": 1,
+    "development-stage": [
+      "value"
+    ],
     "made": true,
-    "made-independently": true,
+    "made-independently": false,
     "license": {
       "hardware": "CERN OHL v1.2",
       "documentation": "GPL-3.0",
-      "software": "GPL-3.0"
+      "software": "CC-BY-SA v4.0"
     },
     "licensor": {
-      "name": "Richard Bowman",
-      "affiliation": "University of Bath",
-      "email": "rwb34@bath.ac.uk"
+      "name": "Maxime Zimmerman",
+      "affiliation": "University of Sussex",
+      "email": "M.zimmermann@sussex.ac.uk"
     },
-    "documentation-home": "https://build.openflexure.org/openflexure-microscope/latest/docs/",
-    "archive-download": "https://build.openflexure.org/openflexure-microscope/latest/all",
-    "design-files": [
-      {
-        "path": "https://build.openflexure.org/openflexure-microscope/latest",
-        "title": "/openflexure-microscope/latest"
-      }
-    ],
+    "documentation-home": "https://github.com/BadenLab/Tetra-Chromatic-Stimulator",
+    "bom": "https://github.com/BadenLab/Tetra-Chromatic-Stimulator/tree/master/Bills%20of%20Materials",
     "making-instructions": [
       {
-        "path": "https://build.openflexure.org/openflexure-microscope/latest/docs/",
-        "title": "OpenFlexure Microscope - Assembly Instructions"
-      }
-    ],
-    "software": [
-      {
-        "path": "https://gitlab.com/openflexure/openflexure-microscope-server",
-        "title": "openflexure-microscope-server"
-      },
-      {
-        "path": "https://gitlab.com/openflexure/openflexure-microscope-jsclient",
-        "title": "openflexure-ev"
+        "path": "https://github.com/BadenLab/Tetra-Chromatic-Stimulator/tree/master/Instruction%20Manual",
+        "title": "Instruction Manual"
       }
     ]
   },
@@ -857,5 +774,88 @@
       }
     ],
     "software": null
+  },
+  {
+    "id": 4,
+    "origin": " https://raw.githubusercontent.com/jbon/Ball-Machine/master/",
+    "date-created": "2019-10-07",
+    "manifest-author": {
+      "name": "Jérémy Bonvoisin",
+      "affiliation": "University of Bath, Department of Mechanical Engineering",
+      "email": "j.bonvoisin@bath.ac.uk"
+    },
+    "manifest-language": "English-UK",
+    "documentation-language": "English-UK",
+    "title": "Ball sorting machine",
+    "description": "The “ball-sorting machine” is a work-in-progress concept of a purely mechanical machine capable of sorting balls by weight order using a selection of sorting algorithms.  \n",
+    "intended-use": "It aims to deliver museum visitors a hands-on and visual experience of different sorting algorithms. Balls with different weights are dropped in a series of comparators sorting them simply using gravitational force. The visitor can reiterate the sorting with different machine configurations in order to compare the working principles of the sorting algorithms and therewith understand their differences.\n",
+    "keywords": [
+      "museum exhibit",
+      "sorting algorithm",
+      "machine design"
+    ],
+    "project-link": "https://imaginary.org/hands-on/ball-sorting-machine",
+    "contact": {
+      "name": "Jérémy Bonvoisin",
+      "affiliation": "University of Bath",
+      "email": "j.bonvoisin[at]bath.ac.uk",
+      "social": [
+        {
+          "platform": "twitter",
+          "user-handle": "@Du33Jerry"
+        }
+      ]
+    },
+    "contributors": [
+      {
+        "name": "James taylor",
+        "affiliation": "University of Bath"
+      },
+      {
+        "name": "Jérémy Bonvoisin",
+        "affiliation": "University of Bath",
+        "email": "j.bonvoisin[at]bath.ac.uk"
+      }
+    ],
+    "image": "/images/4.png",
+    "development-stage": "concept/prototype",
+    "made": false,
+    "made-independently": false,
+    "documentation-home": "https://github.com/jbon/Ball-Machine"
+  },
+  {
+    "id": 14,
+    "origin": " https://raw.githubusercontent.com/mwweinberg/NYC-MTA-Next-Train/master/",
+    "date-created": "2019-11-16",
+    "date-updated": "2019-11-16",
+    "manifest-author": {
+      "name": "Michael Weinberg",
+      "email": "hello@michaelweinberg.org"
+    },
+    "manifest-language": "EN",
+    "documentation-language": "EN",
+    "title": "NYC-MTA-Next-Train",
+    "description": "A raspberry pi-powered display for tracking NYC subway trains\n",
+    "intended-use": "Deciding when to leave the house to catch a train\n",
+    "keywords": [
+      "neopixel",
+      "raspberry pi",
+      "subway"
+    ],
+    "project-link": "https://github.com/mwweinberg/NYC-MTA-Next-Train",
+    "image": "/images/14.jpeg",
+    "version": 1,
+    "development-stage": "stable",
+    "made": true,
+    "license": {
+      "hardware": "CERN-OHL-P",
+      "documentation": "CC BY-SA 4.0",
+      "software": "MIT"
+    },
+    "licensor": {
+      "name": "Michael Weinberg",
+      "email": "hello@michaelweinberg.org"
+    },
+    "documentation-home": "https://michaelweinberg.org/post/171963532565/pi-powered-mta-subway-alerts"
   }
 ]

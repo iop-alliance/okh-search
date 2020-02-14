@@ -26,8 +26,9 @@ const fs = require('fs')
         }
       }),
   )
+  shuffleArray(projects)
   projects = projects.filter(x => x).map(makeAbsolute)
-  projects = await Promise.all(projects.map(removeInvalid))
+  projects = await Promise.all(projects.map(processImages))
   console.log(JSON.stringify(projects, null, 2))
 })()
 
@@ -46,7 +47,7 @@ function makeAbsolute(project) {
   return project
 }
 
-async function removeInvalid(project) {
+async function processImages(project) {
   let image = project.image
   if (image) {
     const r = await fetch(image)
@@ -73,4 +74,11 @@ async function removeInvalid(project) {
     }
   }
   return project
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]] // eslint-disable-line no-param-reassign
+  }
 }
