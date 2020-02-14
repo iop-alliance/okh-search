@@ -1,6 +1,7 @@
 [
   {
     "id": 0,
+    "origin": "https://raw.githubusercontent.com/CubeFactory2/cubefactory/master/",
     "date-created": "2019-10-05",
     "manifest-author": {
       "name": "Jérémy Bonvoisin",
@@ -82,6 +83,7 @@
   },
   {
     "id": 1,
+    "origin": " https://raw.githubusercontent.com/amchagas/Flypi/master/",
     "date-created": "2019-10-06",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -142,6 +144,7 @@
   },
   {
     "id": 3,
+    "origin": " https://raw.githubusercontent.com/Raidlight/Projet-Pilote-Open-Source/master/",
     "date-created": "2019-10-07",
     "manifest-author": {
       "name": "Jérémy Bonvoisin",
@@ -185,6 +188,7 @@
   },
   {
     "id": 4,
+    "origin": " https://raw.githubusercontent.com/jbon/Ball-Machine/master/",
     "date-created": "2019-10-07",
     "manifest-author": {
       "name": "Jérémy Bonvoisin",
@@ -232,6 +236,7 @@
   },
   {
     "id": 5,
+    "origin": " https://raw.githubusercontent.com/BadenLab/Spikeling/master/",
     "date-created": "2019-10-15",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -286,6 +291,7 @@
   },
   {
     "id": 6,
+    "origin": " https://raw.githubusercontent.com/BadenLab/Openspritzer/master/",
     "date-created": "2019-10-15",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -340,6 +346,7 @@
   },
   {
     "id": 7,
+    "origin": " https://raw.githubusercontent.com/BadenLab/Tetra-Chromatic-Stimulator/master/",
     "date-created": "2019-10-15",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -394,6 +401,7 @@
   },
   {
     "id": 8,
+    "origin": " https://raw.githubusercontent.com/BadenLab/Hyperspectral-scanner/master/",
     "date-created": "2019-10-23",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -448,6 +456,7 @@
   },
   {
     "id": 9,
+    "origin": " https://raw.githubusercontent.com/eulerlab/open-visual-stimulator/master/",
     "date-created": "2019-10-06",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -499,6 +508,7 @@
   },
   {
     "id": 10,
+    "origin": " https://gitlab.com/bath_open_instrumentation_group/picamera_cra_compensation/-/raw/master/",
     "date-created": "2019-10-17",
     "date-updated": "2019-10-17",
     "manifest-author": {
@@ -537,7 +547,7 @@
         "email": "r.w.bowman@bath.ac.uk"
       }
     ],
-    "image": "./calibration_jig/assembly_instructions/images/jig_assembled.jpg",
+    "image": "https://gitlab.com/bath_open_instrumentation_group/picamera_cra_compensation/-/raw/master/calibration_jig/assembly_instructions/images/jig_assembled.jpg",
     "version": "1.0.0",
     "license": {
       "hardware": "CERN-OHL-1.2",
@@ -546,7 +556,7 @@
     },
     "made": true,
     "made-independently": false,
-    "documentation-home": "./calibration_jig/assembly_instructions/",
+    "documentation-home": "https://gitlab.com/bath_open_instrumentation_group/picamera_cra_compensation/-/raw/master/calibration_jig/assembly_instructions/",
     "archive-download": "https://gitlab.com/bath_open_instrumentation_group/picamera_cra_compensation/-/archive/master/picamera_cra_compensation-master.zip",
     "design-files": [
       {
@@ -593,6 +603,7 @@
   },
   {
     "id": 11,
+    "origin": " https://raw.githubusercontent.com/trendinafrica/actifield/master/",
     "date-created": "2019-11-16",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -620,6 +631,7 @@
   },
   {
     "id": 12,
+    "origin": " https://raw.githubusercontent.com/FOSH-following-demand/Syringe_Pump/master/",
     "date-created": "2019-11-16",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -647,6 +659,7 @@
   },
   {
     "id": 13,
+    "origin": " https://raw.githubusercontent.com/FOSH-following-demand/Incubator/master/",
     "date-created": "2019-11-16",
     "manifest-author": {
       "name": "Andre Maia Chagas",
@@ -674,6 +687,7 @@
   },
   {
     "id": 14,
+    "origin": " https://raw.githubusercontent.com/mwweinberg/NYC-MTA-Next-Train/master/",
     "date-created": "2019-11-16",
     "date-updated": "2019-11-16",
     "manifest-author": {
@@ -708,6 +722,7 @@
   },
   {
     "id": 16,
+    "origin": " https://gitlab.com/openflexure/openflexure-microscope/-/raw/master/",
     "date-created": "2019-10-15",
     "manifest-author": {
       "name": "Joel T. Collins",
@@ -779,6 +794,7 @@
   },
   {
     "id": 17,
+    "origin": " https://gitlab.com/openflexure/openflexure-block-stage/-/raw/master/",
     "date-created": "2020-02-07",
     "manifest-author": {
       "name": "Richard W. Bowman",

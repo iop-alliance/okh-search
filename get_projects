@@ -1,12 +1,7 @@
 #!/usr/bin/env node
-
-const fs = require('fs').promises
+const path = require('path')
 const fetch = require('isomorphic-unfetch')
 const yaml = require('yaml')
-
-function fetchText(url) {
-  return fetch(url).then(r => r.text())
-}
 
 ;(async () => {
   const csv = await fetchText(
@@ -21,14 +16,30 @@ function fetchText(url) {
         const [name, date, link] = line.split(',')
         if (link) {
           const text = await fetchText(link)
+          const origin = path.dirname(link) + '/'
           try {
-            return {id: index, ...yaml.parse(text)}
+            return { id: index, origin, ...yaml.parse(text) }
           } catch (e) {
             console.warn('Error reading:', link)
           }
         }
       })
   )
-  projects = projects.filter(x => x)
+  projects = projects.filter(x => x).map(makeAbsolute)
   console.log(JSON.stringify(projects, null, 2))
 })()
+
+function fetchText(url) {
+  return fetch(url).then(r => r.text())
+}
+
+function makeAbsolute(project) {
+  const origin = project.origin
+  const docHome = project['documentation-home']
+  project['documentation-home'] = new URL(docHome, origin).href
+  let image = project.image
+  if (image) {
+    project.image = new URL(image, origin).href
+  }
+  return project
+}
