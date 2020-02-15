@@ -5,16 +5,7 @@ const yaml = require('yaml')
 const fs = require('fs')
 
 ;(async () => {
-  let csv
-  const local = await fs.promises.stat('projects_okhs.csv').catch(e => false)
-  if (local) {
-    csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
-  } else {
-    csv = await fetchText(
-      'https://raw.githubusercontent.com/amchagas/okh-log/master/projects_okhs.csv',
-    )
-  }
-  let id = 0
+  const csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
   let projects = await Promise.all(
     csv
       .split('\n')
