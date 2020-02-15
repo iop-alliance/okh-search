@@ -1,0 +1,25 @@
+{
+  "name": "okh-search",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "yarn projects && next build",
+    "start": "next start",
+    "projects": "./get_projects > projects.json"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "9.2.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-search-input": "^0.11.3",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
+    "yaml": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3"
+  }
+}

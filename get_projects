@@ -1,0 +1,91 @@
+#!/usr/bin/env node
+const path = require('path')
+const fetch = require('isomorphic-unfetch')
+const yaml = require('yaml')
+const fs = require('fs')
+
+;(async () => {
+  const csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
+  let projects = await Promise.all(
+    csv
+      .split('\n')
+      .slice(1)
+      .map(async (line, index) => {
+        const [name, date, link] = line.split(',')
+        if (link) {
+          const text = await fetchText(link)
+          const origin = path.dirname(link) + '/'
+          try {
+            return { id: index, origin, ...yaml.parse(text) }
+          } catch (e) {
+            console.warn('Error reading:', link)
+          }
+        }
+      }),
+  )
+  projects = projects.filter(x => x)
+  projects = projects.map(processUrls)
+  projects = projects.filter(x => x)
+  shuffleArray(projects)
+  projects = await Promise.all(projects.map(processImages))
+  console.log(JSON.stringify(projects, null, 2))
+})()
+
+function fetchText(url) {
+  return fetch(url).then(r => {
+    if (r.status !== 200) {
+      throw Error(r.status)
+    }
+    return r.text()
+  })
+}
+
+function processUrls(project) {
+  const origin = project.origin
+  const docHome = project['documentation-home'] || project['project-link']
+  if (docHome == null) {
+    return
+  }
+  project['documentation-home'] = new URL(docHome, origin).href
+  let image = project.image
+  if (image) {
+    project.image = new URL(image, origin).href
+  }
+  return project
+}
+
+async function processImages(project) {
+  let image = project.image
+  if (image) {
+    const r = await fetch(image)
+    if (r.status != 200 || !/^image\//.test(r.headers.get('Content-Type'))) {
+      console.warn("Can't read image:", image)
+      delete project.image
+    } else {
+      const ext = r.headers.get('Content-Type').match(/image\/(.*)/)[1]
+      const p = `/images/${project.id}.${ext}`
+      await new Promise((resolve, reject) => {
+        const s = fs.createWriteStream('public' + p)
+        r.body.pipe(s)
+        r.body.on('end', () => resolve())
+        s.on('error', reject)
+      })
+        .then(() => {
+          project.image = p
+        })
+        .catch(e => {
+          console.error("Can't write image:", image)
+          console.error(e)
+          delete project.image
+        })
+    }
+  }
+  return project
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]] // eslint-disable-line no-param-reassign
+  }
+}
