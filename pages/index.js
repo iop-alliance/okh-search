@@ -39,9 +39,7 @@ class Home extends React.Component {
               ))}
               {this.state.result.length === 0 ? (
                 <p style={{ marginTop: 80 }}>Sorry, no results</p>
-              ) : (
-                ''
-              )}
+              ) : null}
             </div>
           </div>
         </div>
@@ -97,7 +95,7 @@ class Home extends React.Component {
   }
   searchUpdated = e => {
     const term = e.target.value
-    const filter = createFilter(term, ['title', 'description'])
+    const filter = createFilter(term, ['title', 'description', 'licensor.name'])
     const result = projects.filter(filter)
     this.setState({ result, searching: term.length > 0 })
   }
