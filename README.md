@@ -11,6 +11,7 @@ Adding your project to [our list](projects_okhs.csv) will make it show up on [ok
 ## Adding your project
 
 1. Add a manifest to your project (see the [example manifest](okh-YourHardwareName.yml))
+2. Check it using our [validator][]
 2. Add a URL to the .yml to [our CSV](projects_okhs.csv)
 
 
@@ -21,3 +22,4 @@ If you have any questions, [create an issue](https://github.com/OpenKnowHow/okh-
 
 [search page]: https://okh.now.sh
 [standard]: https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/wiki
+[validator]: https://buildinstructions.org/okh-validator/
