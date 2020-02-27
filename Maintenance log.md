@@ -1,7 +1,15 @@
-# Addition log
+# Procedure to add a new manifest via pull request
 
+- use your own github account or the shared OpenKnowHow-Forks
+- create new branch okh-manifest-creation
+- create the YAML file and check it with the validator
+- upload YML and image if necessary
+- make a pull request using the standard message
+- add the file to the csv
+- 
 
-Potential ok manifest editors
+# Potential repos to be referenced
+
 - AKERKits;AKERKits/GrowSquare;AKERKits/Husky-Planter-Large;AKERKits/Husky-Planter-Medium;AKERKits/Husky-Planter-Small;AKERKits/WormHaus;AKERKits/GroWall;AKERKits/GrowGrid;AKERKits/EggHaus;AKERKits/V-Planter-Small;AKERKits/V-Planter-Medium;AKERKits/V-Planter-Large;AKERKits/Boxy-Planter-Large;AKERKits/Boxy-Planter-Medium;AKERKits/Boxy-Planter-Small;AKERKits/Slender-Planter;AKERKits/SideSquare;AKERKits/Hexagon-Planter;AKERKits/CornerSquare
 - AeroQuad;AeroQuad/FlightControlBoards
 - AFRo;Axford/AFRo;Axford/AFRo2
@@ -16,7 +24,6 @@ Potential ok manifest editors
 - Bikair;Volta-Plus/CAD.Bikair;Volta-Plus/CAD.Bikair_Archive_2018_03_27
 - blink1;todbot/blink1;todbot/BlinkM0;todbot/blink1-adapters;todbot/blinkm_mk2;todbot/CtrlM;todbot/FreeM;todbot/blinkm_xbee_adapter
 - colorhug;hughski/colorhug1-hardware;hughski/colorhug-plus-hardware;hughski/colorhug-plus-model;hughski/colorhug2-hardware;hughski/colorhug-als-hardware
-- CubeFactory2;CubeFactory2/cubefactory
 - CyclonePCBFactory;CarlosGS/Cyclone-PCB-Factory;robsbots/Cyclone_Pcb
 - DryerLeia;Gillou38/Drying-open-source-solution
 - DttoModularRobot;otrebla333/Dtto-Modular-Robot
