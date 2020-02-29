@@ -12,30 +12,35 @@ const fs = require('fs')
       .slice(1)
       .map(async (line, index) => {
         const [name, date, link] = line.split(',')
-        return fetchText(link)
-          .then(text => {
-            const origin = path.dirname(link) + '/'
-            return { id: index, origin, ...yaml.parse(text) }
-          })
-          .catch(e => {
-            console.warn(e)
-            console.warn('--------------------------------------------')
-            console.warn('Error reading:', link)
-            console.warn('--------------------------------------------')
-          })
+        if (link) {
+          return fetchText(link)
+            .then(text => {
+              const origin = path.dirname(link) + '/'
+              return { id: index, origin, ...yaml.parse(text) }
+            })
+            .catch(e => {
+              console.warn(e)
+              console.warn('--------------------------------------------')
+              console.warn('Error reading:', link)
+              console.warn('--------------------------------------------')
+            })
+        }
       }),
   )
-  // remove nulls
+  // remove null/undefined
   projects = projects.filter(x => x)
   projects = projects.map(processUrls)
-  // remove nulls
+  // remove null/undefined
   projects = projects.filter(x => x)
   shuffleArray(projects)
   projects = await Promise.all(projects.map(processImages))
   console.log(JSON.stringify(projects, null, 2))
 })()
 
-function fetchText(url) {
+async function fetchText(url) {
+  // just checking it's a valid url
+  new URL(url)
+  // actually fetch it
   return fetch(url).then(r => {
     if (r.status !== 200) {
       throw Error(r.status)
