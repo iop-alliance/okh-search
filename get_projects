@@ -12,19 +12,23 @@ const fs = require('fs')
       .slice(1)
       .map(async (line, index) => {
         const [name, date, link] = line.split(',')
-        if (link) {
-          const text = await fetchText(link)
-          const origin = path.dirname(link) + '/'
-          try {
+        return fetchText(link)
+          .then(text => {
+            const origin = path.dirname(link) + '/'
             return { id: index, origin, ...yaml.parse(text) }
-          } catch (e) {
+          })
+          .catch(e => {
+            console.warn(e)
+            console.warn('--------------------------------------------')
             console.warn('Error reading:', link)
-          }
-        }
+            console.warn('--------------------------------------------')
+          })
       }),
   )
+  // remove nulls
   projects = projects.filter(x => x)
   projects = projects.map(processUrls)
+  // remove nulls
   projects = projects.filter(x => x)
   shuffleArray(projects)
   projects = await Promise.all(projects.map(processImages))
