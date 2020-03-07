@@ -5,8 +5,8 @@ import { Card, Image } from 'semantic-ui-react'
 const ProjectCard = ({ project }) => {
   const author =
     project.licensor?.name ||
+    project.contact?.name ||
     project.contributors?.[0]?.name ||
-    project['manifest-author']?.name ||
     ''
   let description = project.description || ''
   if (description.length > 140) {
