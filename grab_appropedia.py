@@ -10,11 +10,12 @@ import pandas as pd
 
 
 
-manifestsLoc = "/home/andre/repositories/okh/okh-search/projects_okhs.csv"
+manifestsLoc = "/home/andre/repositories/okh/okh-search/"
+manifestsFile = "projects_okhs_before_appropedia.csv"
 
 date = "2020-03-26"
 
-manifests = pd.read_csv(manifestsLoc)
+manifests = pd.read_csv(manifestsLoc+manifestsFile)
 
 
 appropediaLink = "https://openknowhow.appropedia.org/manifests/"
@@ -56,4 +57,4 @@ for one_a_tag in soup.findAll('a'):  #'a' tags are for links
     #add 1 for next line
     line_count +=1
 
-manifests.to_csv(manifestsLoc)
+manifests.to_csv(manifestsLoc+"projects_okhs.csv",index=False)

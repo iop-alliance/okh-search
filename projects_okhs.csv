@@ -1,392 +1,392 @@
-,Project name, date added(YYYY-MM-DD), link to YML file
-0,CubeFactory, 2019-10-04,https://raw.githubusercontent.com/CubeFactory2/cubefactory/master/okh-cubefactory.yml
-1,Flypi, 2019-10-06, https://raw.githubusercontent.com/amchagas/Flypi/master/okh-flypi.yml
-2,Adjustabike, 2019-10-07, https://raw.githubusercontent.com/JamieTaylor23/Adjustabike/master/okh-adjustabike.yml
-3,Raidlight-Responsiv, 2019-10-07, https://raw.githubusercontent.com/Raidlight/Projet-Pilote-Open-Source/master/okh-Raidlight-Responsiv.yml
-4,Ball-Sorting-Machine, 2019-10-07, https://raw.githubusercontent.com/jbon/Ball-Machine/master/okh-ballSortingMachine.yml
-5,Spikeling, 2019-10-15, https://raw.githubusercontent.com/BadenLab/Spikeling/master/okh-spikeling.yml
-6,OpenSpritzer, 2019-10-15, https://raw.githubusercontent.com/BadenLab/Openspritzer/master/okh-openspritzer.yml
-7,Led Zappelin, 2019-10-15, https://raw.githubusercontent.com/BadenLab/LED-Zappelin/master/okh-LED-Zappelin.yml
-8,hyperspectral scanner, 2019-10-15, https://raw.githubusercontent.com/BadenLab/Hyperspectral-scanner/master/okh-hyperspectral-scanner.yml
-9,open visual stimulator, 2019-10-06, https://raw.githubusercontent.com/eulerlab/open-visual-stimulator/master/okh-open-visual-stimulator.yml
-10,Raspberry Pi Camera Calibration Jig, 2019-11-14, https://gitlab.com/bath_open_instrumentation_group/picamera_cra_compensation/-/raw/master/okh-calibration_jig.yml
-11,Actifield, 2019-11-16, https://raw.githubusercontent.com/trendinafrica/actifield/master/okh-actifield.yml
-12,Syringe Pump, 2019-11-16, https://raw.githubusercontent.com/FOSH-following-demand/Syringe_Pump/master/okh-syringe-pump.yml
-13,Incubator, 2019-11-16, https://raw.githubusercontent.com/FOSH-following-demand/Incubator/master/okh-incubator.yml
-14,NYC-MTA-Next-Train, 2019-11-16, https://raw.githubusercontent.com/mwweinberg/NYC-MTA-Next-Train/master/okh-nycmtapi.yml
-15,ZACplus, 2019-11-15, https://raw.githubusercontent.com/case06/ZACplus/master/okh-ZACplus.yml
-16,OpenFlexure Microscope, 2020-02-13, https://gitlab.com/openflexure/openflexure-microscope/-/raw/master/okh.yml
-17,OpenFlexure Block Stage, 2020-02-13, https://gitlab.com/openflexure/openflexure-block-stage/-/raw/master/okh-openflexure-block-stage.yml
-18,OpenFlexure Delta Stage, 2020-02-26, https://gitlab.com/openflexure/openflexure-delta-stage/-/raw/master/okh-OpenFlexureDeltaStage.yml
-19,Mech-Jiwe, 2020-02-26, https://gitlab.com/bath_open_instrumentation_group/mech-jiwe/-/raw/master/okh-MechJiwe.yml
-20,OSP: An Open-source Plate Reader, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/OSP/master/okh-OSP.yml
-21,Fermento, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/Fermento/master/okh-Fermento.yml
-22,Microscope incubation box, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/microscope-incubation-box/master/okh-microscope-incubation-box.yml
-23,lightM, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/lightM/master/okh-lightm.yml
-24,The Test Tube Photometer, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/test_tube_photometer/master/okh-test-tube-photometer.yml
-25,OttoDIY, 2020-02-27, https://raw.githubusercontent.com/jbon/OttoDIY/patch-1/okh-OttoDIY.yml
-26,Poseidon, 2020-02-28, https://raw.githubusercontent.com/OKH-Forks/poseidon/release/okh-poseidon.yml
-27,Arduino voltage amplifier, 2020-02-29, https://raw.githubusercontent.com/Sussex-Neuroscience/voltage-amplifier/master/okh-arduino-voltage-amplifier.yml
-28,2 Liter Winnower,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-2%20Liter%20Winnower.yml
-29,3-D Printable Digital Balance,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20Printable%20Digital%20Balance.yml
-30,3-D Printable Speaker Demo,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20Printable%20Speaker%20Demo.yml
-31,3-D Printing Solar Photovoltaic Racking in Developing World,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20Printing%20Solar%20Photovoltaic%20Racking%20in%20Developing%20World.yml
-32,3-D printable open source dual axis gimbal system for optoelectronic measurements,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20printable%20open%20source%20dual%20axis%20gimbal%20system%20for%20optoelectronic%20measurements.yml
-33,3-D printable photovoltaic module spacer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20printable%20photovoltaic%20module%20spacer.yml
-34,3-D printable solar charger,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20printable%20solar%20charger.yml
-35,3-D printing open-source click-MUAC bands for identification of malnutrition,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20printing%20open-source%20click-MUAC%20bands%20for%20identification%20of%20malnutrition.yml
-36,3D-printed Lucky Iron Totems,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D-printed%20Lucky%20Iron%20Totems.yml
-37,3D Print Speculum,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Print%20Speculum.yml
-38,3D Printable Cider Press,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printable%20Cider%20Press.yml
-39,3D Printable Goniometer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printable%20Goniometer.yml
-40,3D Printed Bike Seat,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printed%20Bike%20Seat.yml
-41,3D Printed Carpet Knife,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printed%20Carpet%20Knife.yml
-42,3D Printed Otoscope,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printed%20Otoscope.yml
-43,3D Printed Shoes,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printed%20Shoes.yml
-44,3d printable prosthetic foot,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3d%20printable%20prosthetic%20foot.yml
-45,7up,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-7up.yml
-46,12 Drive Speed Brace,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-12%20Drive%20Speed%20Brace.yml
-47,14 Day Pill Dispenser,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-14%20Day%20Pill%20Dispenser.yml
-48,A Hand Powered Hay and Leaf Baler,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-A%20Hand%20Powered%20Hay%20and%20Leaf%20Baler.yml
-49,Acorn Sheller,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Acorn%20Sheller.yml
-50,Actually Functional 2 Wafer Dipper for Schott Duran 250 ml beaker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Actually%20Functional%202%20Wafer%20Dipper%20for%20Schott%20Duran%20250%20ml%20beaker.yml
-51,Adapted thermostatic valve for water pasteurization,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Adapted%20thermostatic%20valve%20for%20water%20pasteurization.yml
-52,Adjustable Bike Mirror,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Adjustable%20Bike%20Mirror.yml
-53,Adjustable Heated Bed,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Adjustable%20Heated%20Bed.yml
-54,Advanced Tent Stake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Advanced%20Tent%20Stake.yml
-55,Alm Retractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Alm%20Retractor.yml
-56,Ankle Brace Night Splint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ankle%20Brace%20Night%20Splint.yml
-57,Ankle Splint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ankle%20Splint.yml
-58,Aquaponics System,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Aquaponics%20System.yml
-59,Arctic Cat Snowmobile Choke Lever,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Arctic%20Cat%20Snowmobile%20Choke%20Lever.yml
-60,Athena 24V Round Heated Bed,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%2024V%20Round%20Heated%20Bed.yml
-61,Athena Dual Extrusion Single Hotend,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%20Dual%20Extrusion%20Single%20Hotend.yml
-62,Athena Engraver mod,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%20Engraver%20mod.yml
-63,Athena Heated Print Bed,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%20Heated%20Print%20Bed.yml
-64,Athena II Laser Engraver mod,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%20II%20Laser%20Engraver%20mod.yml
-65,Auto-Clearance Adjustable Triple Hotend Effector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Auto-Clearance%20Adjustable%20Triple%20Hotend%20Effector.yml
-66,AutoInjector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-AutoInjector.yml
-67,Automated Plastic GrinderRecycler,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Automated%20Plastic%20GrinderRecycler.yml
-68,Backpack Snap-fit Clips,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Backpack%20Snap-fit%20Clips.yml
-69,Bamboo Joints for house,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bamboo%20Joints%20for%20house.yml
-70,Banana Tree Fibre Female Hygienic Pads,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Banana%20Tree%20Fibre%20Female%20Hygienic%20Pads.yml
-71,Basic Tent Stake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Basic%20Tent%20Stake.yml
-72,Bee Feeder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bee%20Feeder.yml
-73,Beekeeping Queen Rearing Kit,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Beekeeping%20Queen%20Rearing%20Kit.yml
-74,Bicycle Brake Caliper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bicycle%20Brake%20Caliper.yml
-75,Bicycle Hub,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bicycle%20Hub.yml
-76,Bike Cargo Rack,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Cargo%20Rack.yml
-77,Bike Chain,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Chain.yml
-78,Bike Chain Guard,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Chain%20Guard.yml
-79,Bike Chain Tensioner,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Chain%20Tensioner.yml
-80,Bike Handlebar Plug,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Handlebar%20Plug.yml
-81,Bike Hub Pelton Turbine,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Hub%20Pelton%20Turbine.yml
-82,Bike Pedals,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Pedals.yml
-83,Bike Thru Axle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Thru%20Axle.yml
-84,Bike rack,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20rack.yml
-85,Black Mamba Bike pedal,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Black%20Mamba%20Bike%20pedal.yml
-86,Blind Person's Assistant,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Blind%20Person's%20Assistant.yml
-87,Bottle Cap LED Lighting,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bottle%20Cap%20LED%20Lighting.yml
-88,Bow and Hand Drill Set,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bow%20and%20Hand%20Drill%20Set.yml
-89,Bowfishing Rest,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bowfishing%20Rest.yml
-90,Brake calliper of blackmamba bicycle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Brake%20calliper%20of%20blackmamba%20bicycle.yml
-91,Bucket Shower,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bucket%20Shower.yml
-92,Building an inexpensive mosquito net,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Building%20an%20inexpensive%20mosquito%20net.yml
-93,BulbSeed Planter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-BulbSeed%20Planter.yml
-94,Butterfly Handlebars for bike,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Butterfly%20Handlebars%20for%20bike.yml
-95,CCAT CCATBox,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20CCATBox.yml
-96,CCAT Raised Garden Beds,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20Raised%20Garden%20Beds.yml
-97,CCAT cob protection and beautification,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20cob%20protection%20and%20beautification.yml
-98,CCAT interpretive wind turbine display,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20interpretive%20wind%20turbine%20display.yml
-99,CCAT kid bike power,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20kid%20bike%20power.yml
-100,CCAT kitchen effluent particulate filter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20kitchen%20effluent%20particulate%20filter.yml
-101,CCAT papercrete clayslip demo wall,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20papercrete%20clayslip%20demo%20wall.yml
-102,CNC Router Lubrication and Chip Clearing,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CNC%20Router%20Lubrication%20and%20Chip%20Clearing.yml
-103,Caliper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Caliper.yml
-104,Can Opener,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Can%20Opener.yml
-105,Car Charging Port,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Car%20Charging%20Port.yml
-106,Car Heater-Vent Hanger,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Car%20Heater-Vent%20Hanger.yml
-107,Carriage-Connecting Rod Sound Dampener.,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Carriage-Connecting%20Rod%20Sound%20Dampener..yml
-108,Cassava Press,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Cassava%20Press.yml
-109,Changeable Garden Tool Heads,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Changeable%20Garden%20Tool%20Heads.yml
-110,Charcoal Holder Pen,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Charcoal%20Holder%20Pen.yml
-111,Charcoal Pen,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Charcoal%20Pen.yml
-112,Chicken Feed Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chicken%20Feed%20Holder.yml
-113,Chicken FeederWaterer w adapter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chicken%20FeederWaterer%20w%20adapter.yml
-114,Chicken Tractor (Optimized Construction and Design),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chicken%20Tractor%20(Optimized%20Construction%20and%20Design).yml
-115,Chris's ENGR305 Solar Food Dehydrator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chris's%20ENGR305%20Solar%20Food%20Dehydrator.yml
-116,Chujio la maji la gharama nafuu,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chujio%20la%20maji%20la%20gharama%20nafuu.yml
-117,Clamps with gearing system,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Clamps%20with%20gearing%20system.yml
-118,Club foot Brace for Infants,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Club%20foot%20Brace%20for%20Infants.yml
-119,Commode,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Commode.yml
-120,Community Comment Box,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Community%20Comment%20Box.yml
-121,Composite Materials Resin Mixing & Pouring Container,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Composite%20Materials%20Resin%20Mixing%20&%20Pouring%20Container.yml
-122,Compost Toilet Hinge,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Compost%20Toilet%20Hinge.yml
-123,Concrete trowel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Concrete%20trowel.yml
-124,Contoured Spigot for 5-gallon buckets,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Contoured%20Spigot%20for%205-gallon%20buckets.yml
-125,Corn Crusher,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Corn%20Crusher.yml
-126,Cotton to yarn maker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Cotton%20to%20yarn%20maker.yml
-127,Crawler Harness Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Crawler%20Harness%20Holder.yml
-128,CubeSat Attitude System Airbearing Test Bed,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CubeSat%20Attitude%20System%20Airbearing%20Test%20Bed.yml
-129,Custom Built 3D Printable Motor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Custom%20Built%203D%20Printable%20Motor.yml
-130,Custom Shovel Handle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Custom%20Shovel%20Handle.yml
-131,Customizable Bike Light Mount,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Customizable%20Bike%20Light%20Mount.yml
-132,Customizable shovel handle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Customizable%20shovel%20handle.yml
-133,DIF Adobe Senior Center,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-DIF%20Adobe%20Senior%20Center.yml
-134,DIF Adobe Senior Center 2007,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-DIF%20Adobe%20Senior%20Center%202007.yml
-135,DIY Solar Panel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-DIY%20Solar%20Panel.yml
-136,Daily menstrual cycle tracker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Daily%20menstrual%20cycle%20tracker.yml
-137,Dental Chair,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dental%20Chair.yml
-138,Depth-adjustable Rope Pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Depth-adjustable%20Rope%20Pump.yml
-139,Design of a low-cost household water treatment system,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Design%20of%20a%20low-cost%20household%20water%20treatment%20system.yml
-140,Dew collection roof retrofit,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dew%20collection%20roof%20retrofit.yml
-141,Dial Indicator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dial%20Indicator.yml
-142,Direct drive extrusion hot end for flexible materials,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Direct%20drive%20extrusion%20hot%20end%20for%20flexible%20materials.yml
-143,Disaster Relief Housing Platform,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Disaster%20Relief%20Housing%20Platform.yml
-144,Drip irrigation stake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Drip%20irrigation%20stake.yml
-145,Drone Search and Rescue supplies attachment (DJI Phantom 3),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Drone%20Search%20and%20Rescue%20supplies%20attachment%20(DJI%20Phantom%203).yml
-146,Drop Spindle for Spinning Wool into Yarn,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Drop%20Spindle%20for%20Spinning%20Wool%20into%20Yarn.yml
-147,Dual Tone Air RaidSecurity Siren,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dual%20Tone%20Air%20RaidSecurity%20Siren.yml
-148,Dust Mask,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dust%20Mask.yml
-149,E305 backyard biodigester,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-E305%20backyard%20biodigester.yml
-150,Electric Mountain Board,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Electric%20Mountain%20Board.yml
-151,Electric Whisk,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Electric%20Whisk.yml
-152,Electronic Stethoscope,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Electronic%20Stethoscope.yml
-153,Electroplating holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Electroplating%20holder.yml
-154,Ergonomic Ice Scraper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ergonomic%20Ice%20Scraper.yml
-155,Ergonomic bike grips,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ergonomic%20bike%20grips.yml
-156,Ethanol from organic sugar beets versus refined cane sugar,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ethanol%20from%20organic%20sugar%20beets%20versus%20refined%20cane%20sugar.yml
-157,FBP Hot Dang Plastic Encasement,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-FBP%20Hot%20Dang%20Plastic%20Encasement.yml
-158,FBP LC Sheller,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-FBP%20LC%20Sheller.yml
-159,FBP The Full Bell,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-FBP%20The%20Full%20Bell.yml
-160,Fecal Sample Collection Kit,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fecal%20Sample%20Collection%20Kit.yml
-161,Field Dressing Tool,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Field%20Dressing%20Tool.yml
-162,Field Ready Design - ECG Lead Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Field%20Ready%20Design%20-%20ECG%20Lead%20Holder.yml
-163,Field Ready Design - Nebuliser,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Field%20Ready%20Design%20-%20Nebuliser.yml
-164,Field Ready Design - Nebuliser Connector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Field%20Ready%20Design%20-%20Nebuliser%20Connector.yml
-165,Filament Extruder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Filament%20Extruder.yml
-166,Fish Cleaning Tool,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fish%20Cleaning%20Tool.yml
-167,Fish Hook Extractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fish%20Hook%20Extractor.yml
-168,Fishing Pole Rod Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fishing%20Pole%20Rod%20Holder.yml
-169,Flash Light,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flash%20Light.yml
-170,Flock House Biopod,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20Biopod.yml
-171,Flock House EcoDermis,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20EcoDermis.yml
-172,Flock House Geared-Up From the Feet-Up,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20Geared-Up%20From%20the%20Feet-Up.yml
-173,Flock House Handcar Generator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20Handcar%20Generator.yml
-174,Flock House Hyper Visible Power Meter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20Hyper%20Visible%20Power%20Meter.yml
-175,Flowmeter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flowmeter.yml
-176,ForcepsTweezers,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-ForcepsTweezers.yml
-177,Fork Support for Bike,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fork%20Support%20for%20Bike.yml
-178,Framing Spacer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Framing%20Spacer.yml
-179,Free-Libre Hardware RFID handheld device,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Free-Libre%20Hardware%20RFID%20handheld%20device.yml
-180,Fruit Picker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fruit%20Picker.yml
-181,Fruit crusher,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fruit%20crusher.yml
-182,Fuel Container Restraint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fuel%20Container%20Restraint.yml
-183,Fully Printable Wild Berry Scoop Picker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fully%20Printable%20Wild%20Berry%20Scoop%20Picker.yml
-184,Fume Extractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fume%20Extractor.yml
-185,GPS Belt Clip,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-GPS%20Belt%20Clip.yml
-186,Garden Hose Splitter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Garden%20Hose%20Splitter.yml
-187,Garden Rip and Seed Tool,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Garden%20Rip%20and%20Seed%20Tool.yml
-188,Garden water sprinkler,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Garden%20water%20sprinkler.yml
-189,Gravity Light Attachment,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Gravity%20Light%20Attachment.yml
-190,Ground collector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ground%20collector.yml
-191,Grout Trowel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Grout%20Trowel.yml
-192,Gyro mini nutating mixer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Gyro%20mini%20nutating%20mixer.yml
-193,HSU Bike powered washing machine,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-HSU%20Bike%20powered%20washing%20machine.yml
-194,Hammer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hammer.yml
-195,Hand Drill,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Drill.yml
-196,Hand Pump Drill (Spring-Loaded),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Pump%20Drill%20(Spring-Loaded).yml
-197,Hand Rotary Edger,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Rotary%20Edger.yml
-198,Hand Shovel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Shovel.yml
-199,Hand Washing Station,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Washing%20Station.yml
-200,Hand Wood Planer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Wood%20Planer.yml
-201,Hand cultivator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20cultivator.yml
-202,Handlebar grips,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Handlebar%20grips.yml
-203,Hands-Free Crutch,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hands-Free%20Crutch.yml
-204,Hanging Garden that Minimizes Water Use,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hanging%20Garden%20that%20Minimizes%20Water%20Use.yml
-205,Heliostat or Sun Tracker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Heliostat%20or%20Sun%20Tracker.yml
-206,Hemostats,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hemostats.yml
-207,Hinges,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hinges.yml
-208,Home biogas system (Philippine BioDigesters),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Home%20biogas%20system%20(Philippine%20BioDigesters).yml
-209,Homemade Wheel Hoe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Homemade%20Wheel%20Hoe.yml
-210,Honey Forge,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Honey%20Forge.yml
-211,Hori Hori Knife  Shovel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hori%20Hori%20Knife%20%20Shovel.yml
-212,Horseshoes,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Horseshoes.yml
-213,Hydroponic halo ring,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hydroponic%20halo%20ring.yml
-214,Ice Scraper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ice%20Scraper.yml
-215,Improved 3D Printed Bike Grips,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%203D%20Printed%20Bike%20Grips.yml
-216,Improved GPS Belt Clip,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%20GPS%20Belt%20Clip.yml
-217,Improved Hammer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%20Hammer.yml
-218,Improved PET Bottle Stripper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%20PET%20Bottle%20Stripper.yml
-219,Improved Potato Ricer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%20Potato%20Ricer.yml
-220,Inside Corner Trowel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Inside%20Corner%20Trowel.yml
-221,Integrated Smoke Alarm Delta Mod,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Integrated%20Smoke%20Alarm%20Delta%20Mod.yml
-222,Jefferson Community Center compost,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Jefferson%20Community%20Center%20compost.yml
-223,Jefferson Community Center edible landscape,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Jefferson%20Community%20Center%20edible%20landscape.yml
-224,Kidney Tray,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Kidney%20Tray.yml
-225,Kreg Jig,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Kreg%20Jig.yml
-226,La Yuca rainwater 2014,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-La%20Yuca%20rainwater%202014.yml
-227,La Yuca rainwater catchment 2012,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-La%20Yuca%20rainwater%20catchment%202012.yml
-228,La Yuca schoolroom renovation,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-La%20Yuca%20schoolroom%20renovation.yml
-229,La Yuca small scale renewable energy 2012,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-La%20Yuca%20small%20scale%20renewable%20energy%202012.yml
-230,Las Malvinas botica popular ecoladrillo 2013,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Las%20Malvinas%20botica%20popular%20ecoladrillo%202013.yml
-231,Laser Trip-wire shut-off for Delta Printer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laser%20Trip-wire%20shut-off%20for%20Delta%20Printer.yml
-232,Laser trip-wire shutoff,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laser%20trip-wire%20shutoff.yml
-233,Laurel Tree Charter School energy use visualization,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laurel%20Tree%20Charter%20School%20energy%20use%20visualization.yml
-234,Laurel Tree Charter School human powered blender,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laurel%20Tree%20Charter%20School%20human%20powered%20blender.yml
-235,Laurel Tree Charter School onderdonk's box,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laurel%20Tree%20Charter%20School%20onderdonk's%20box.yml
-236,Laurel Tree Charter School ovenly inferno,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laurel%20Tree%20Charter%20School%20ovenly%20inferno.yml
-237,Leaf Press for Leaf Protein Concentrate,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Leaf%20Press%20for%20Leaf%20Protein%20Concentrate.yml
-238,Lightweight Wrenches,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Lightweight%20Wrenches.yml
-239,Limb Prosthetic,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Limb%20Prosthetic.yml
-240,Load Carrier for labour,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Load%20Carrier%20for%20labour.yml
-241,Locally manufactured thermostatic valve for water pasteurization,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Locally%20manufactured%20thermostatic%20valve%20for%20water%20pasteurization.yml
-242,Low Profile Projector Ceiling Mount,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Low%20Profile%20Projector%20Ceiling%20Mount.yml
-243,Low force snaps for easy assemblydis-assembly of mating parts,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Low%20force%20snaps%20for%20easy%20assemblydis-assembly%20of%20mating%20parts.yml
-244,MY4777 Athena Printer Modifications by Cikaub,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-MY4777%20Athena%20Printer%20Modifications%20by%20Cikaub.yml
-245,Make your own Honey Cow (Top Bar Bee Hive),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Make%20your%20own%20Honey%20Cow%20(Top%20Bar%20Bee%20Hive).yml
-246,Manual Centrifuge Apparatus,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Manual%20Centrifuge%20Apparatus.yml
-247,Manual Rotating Pea Sheller,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Manual%20Rotating%20Pea%20Sheller.yml
-248,Mattole Community Center rainwater catchment,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Mattole%20Community%20Center%20rainwater%20catchment.yml
-249,Measuring DC electrical energy production from micro-renewables,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Measuring%20DC%20electrical%20energy%20production%20from%20micro-renewables.yml
-250,Measuring cup,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Measuring%20cup.yml
-251,Medical Tweezers,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Medical%20Tweezers.yml
-252,Micro-Turbines for Water Power,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Micro-Turbines%20for%20Water%20Power.yml
-253,Micro-turbine for water power,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Micro-turbine%20for%20water%20power.yml
-254,Micro Lathe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Micro%20Lathe.yml
-255,Micro water turbine,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Micro%20water%20turbine.yml
-256,Mineral Sifter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Mineral%20Sifter.yml
-257,Minnow Trap,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Minnow%20Trap.yml
-258,Mirco Lathe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Mirco%20Lathe.yml
-259,Mobilization Wedge,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Mobilization%20Wedge.yml
-260,Modified Spork Design,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modified%20Spork%20Design.yml
-261,Modified cap for turning two-liter bottle into sharps disposal container,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modified%20cap%20for%20turning%20two-liter%20bottle%20into%20sharps%20disposal%20container.yml
-262,Modular Coral Regrowth Post,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20Coral%20Regrowth%20Post.yml
-263,Modular PC104 Case,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20PC104%20Case.yml
-264,Modular Peg Board,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20Peg%20Board.yml
-265,Modular hand held arm with Backsaver grip attachment,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20hand%20held%20arm%20with%20Backsaver%20grip%20attachment.yml
-266,Modular hand held arm with Backsaver grip attachment and Leaf Claws,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20hand%20held%20arm%20with%20Backsaver%20grip%20attachment%20and%20Leaf%20Claws.yml
-267,Momentum Fire Starter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Momentum%20Fire%20Starter.yml
-268,Monochromator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Monochromator.yml
-269,Multimeter Negative Probe Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Multimeter%20Negative%20Probe%20Holder.yml
-270,Neck Immobilizer for Trauma,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Neck%20Immobilizer%20for%20Trauma.yml
-271,Newspaper Briquette Maker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Newspaper%20Briquette%20Maker.yml
-272,Newspaper briquet maker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Newspaper%20briquet%20maker.yml
-273,Non-drive side crank,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Non-drive%20side%20crank.yml
-274,Non-electric Megaphone,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Non-electric%20Megaphone.yml
-275,Nut Cracker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Nut%20Cracker.yml
-276,OSAT-Protractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT-Protractor.yml
-277,OSAT 3D Printable Treadle Pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%203D%20Printable%20Treadle%20Pump.yml
-278,OSAT 3D Printed Finger Splint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%203D%20Printed%20Finger%20Splint.yml
-279,OSAT 3D Printed Gravity Light,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%203D%20Printed%20Gravity%20Light.yml
-280,OSAT 3D Printed Hand Pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%203D%20Printed%20Hand%20Pump.yml
-281,OSAT Bike Pedal,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20Bike%20Pedal.yml
-282,OSAT Bike Seat,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20Bike%20Seat.yml
-283,OSAT Jump Rope Design,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20Jump%20Rope%20Design.yml
-284,OSAT Wind Turbine,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20Wind%20Turbine.yml
-285,OSAT project - Infantometer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20project%20-%20Infantometer.yml
-286,OSAT toilet paper holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20toilet%20paper%20holder.yml
-287,OSHE Growbot Motor Encoders,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSHE%20Growbot%20Motor%20Encoders.yml
-288,OSHE Growbot Mounting Units,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSHE%20Growbot%20Mounting%20Units.yml
-289,OSHE High Temperature 3D Printer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSHE%20High%20Temperature%203D%20Printer.yml
-290,One Way Ratchet,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-One%20Way%20Ratchet.yml
-291,Open-Source 3D Printed Surgical Retractors,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open-Source%203D%20Printed%20Surgical%20Retractors.yml
-292,Open-Source Photometric System for Enzymatic Nitrate Quantification,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open-Source%20Photometric%20System%20for%20Enzymatic%20Nitrate%20Quantification.yml
-293,Open-source 3-D Platform for Low-cost Scientific Instrument Ecosystem,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open-source%203-D%20Platform%20for%20Low-cost%20Scientific%20Instrument%20Ecosystem.yml
-294,Open Source 3D printed water pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%203D%20printed%20water%20pump.yml
-295,Open Source Bike Brake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Bike%20Brake.yml
-296,Open Source Fume Extractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Fume%20Extractor.yml
-297,Open Source Monochromator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Monochromator.yml
-298,Open Source Pellet Extruder Tool Head for a Desktop 3D Printer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Pellet%20Extruder%20Tool%20Head%20for%20a%20Desktop%203D%20Printer.yml
-299,Open Source Rope Pump Valve,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Rope%20Pump%20Valve.yml
-300,Open Source Salt Spray Chamber,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Salt%20Spray%20Chamber.yml
-301,Open Source Ultrasonic Whistle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Ultrasonic%20Whistle.yml
-302,Open source hoe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20source%20hoe.yml
-303,Open sustainability,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20sustainability.yml
-304,PET Bottle Shredder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-PET%20Bottle%20Shredder.yml
-305,Parametric Vertical Storage,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Parametric%20Vertical%20Storage.yml
-306,Parametric elbow splint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Parametric%20elbow%20splint.yml
-307,Parametric quick release buckles,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Parametric%20quick%20release%20buckles.yml
-308,Peanut Mill,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Peanut%20Mill.yml
-309,Pharmaceutical Bottle Caps,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pharmaceutical%20Bottle%20Caps.yml
-310,Picohydro generator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Picohydro%20generator.yml
-311,Piezoelectric Energy Harvesting Shoe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Piezoelectric%20Energy%20Harvesting%20Shoe.yml
-312,Pinhole Bifocal Eyeglasses,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pinhole%20Bifocal%20Eyeglasses.yml
-313,Pipe T-fitting,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pipe%20T-fitting.yml
-314,Pipette Carousel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pipette%20Carousel.yml
-315,Pocket Wrench,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pocket%20Wrench.yml
-316,Pointer Trowel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pointer%20Trowel.yml
-317,Potato Ricer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Potato%20Ricer.yml
-318,Powder maker - Chilies and herbs,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Powder%20maker%20-%20Chilies%20and%20herbs.yml
-319,Printable non-puncturing textile fastener,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Printable%20non-puncturing%20textile%20fastener.yml
-320,Pruning hook,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pruning%20hook.yml
-321,Pulleys,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pulleys.yml
-322,Rain Water Purification and Storage,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Rain%20Water%20Purification%20and%20Storage.yml
-323,Rain chain,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Rain%20chain.yml
-324,Rainwater Catchment J Gnarly,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Rainwater%20Catchment%20J%20Gnarly.yml
-325,Rain water filterbottler,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Rain%20water%20filterbottler.yml
-326,Ram Pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ram%20Pump.yml
-327,Raspberry Pi Control and Wireless Interface,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Raspberry%20Pi%20Control%20and%20Wireless%20Interface.yml
-328,Recyclebot Cooling Fan Section,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Recyclebot%20Cooling%20Fan%20Section.yml
-329,Recyclebot v5.0,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Recyclebot%20v5.0.yml
-330,Recycled Concentrated Solar Heater,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Recycled%20Concentrated%20Solar%20Heater.yml
-331,Redwood Coast Montessori chicken coop,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Redwood%20Coast%20Montessori%20chicken%20coop.yml
-332,Redwood Coast Montessori climbing wall,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Redwood%20Coast%20Montessori%20climbing%20wall.yml
-333,Reindeer Snaffle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Reindeer%20Snaffle.yml
-334,Safety Switch Cover,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Safety%20Switch%20Cover.yml
-335,Sailing cam cleat,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Sailing%20cam%20cleat.yml
-336,Saline Water Filter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Saline%20Water%20Filter.yml
-337,Sample Rotator Mixer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Sample%20Rotator%20Mixer.yml
-338,Screw driver,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Screw%20driver.yml
-339,Scrub Brush,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Scrub%20Brush.yml
-340,Seat,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Seat.yml
-341,Seed Drill Punch,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Seed%20Drill%20Punch.yml
-342,Seed Spreader  Salt Shaker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Seed%20Spreader%20%20Salt%20Shaker.yml
-343,Seed sowing tool (3D printed),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Seed%20sowing%20tool%20(3D%20printed).yml
-344,Semi-Permanent Stake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Semi-Permanent%20Stake.yml
-345,Simple Forestry Densiometer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Simple%20Forestry%20Densiometer.yml
-346,Smart Phone Adaptive Otoscope,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Smart%20Phone%20Adaptive%20Otoscope.yml
-347,Snap Together Snow Shovel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Snap%20Together%20Snow%20Shovel.yml
-348,Snap together shovel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Snap%20together%20shovel.yml
-349,Snow shoes,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Snow%20shoes.yml
-350,Spoke wrench,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Spoke%20wrench.yml
-351,Spoon Fork Knife,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Spoon%20Fork%20Knife.yml
-352,Spoon Multi-tool,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Spoon%20Multi-tool.yml
-353,Sprinkler Head,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Sprinkler%20Head.yml
-354,Starter Handle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Starter%20Handle.yml
-355,Stethoscope (Monaural),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Stethoscope%20(Monaural).yml
-356,Stethoscope,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Stethoscope.yml
-357,Stethoscope upgrade,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Stethoscope%20upgrade.yml
-358,Straw Filter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Straw%20Filter.yml
-359,Surgical Retractor Complex,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Surgical%20Retractor%20Complex.yml
-360,Surgical retractors really complex,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Surgical%20retractors%20really%20complex.yml
-361,Table Saw Fence Push Stick,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Table%20Saw%20Fence%20Push%20Stick.yml
-362,Talbot Type Water Tap,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Talbot%20Type%20Water%20Tap.yml
-363,Tent Stake Pierson,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Tent%20Stake%20Pierson.yml
-364,Tent Vertex Joint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Tent%20Vertex%20Joint.yml
-365,Thermometer Jar Unicef Supply Catologue,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Thermometer%20Jar%20Unicef%20Supply%20Catologue.yml
-366,Thumb Spike,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Thumb%20Spike.yml
-367,Toilet Paper Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Toilet%20Paper%20Holder.yml
-368,Tool-Free Tile Leveling System,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Tool-Free%20Tile%20Leveling%20System.yml
-369,Tools To Measure Children's Height,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Tools%20To%20Measure%20Children's%20Height.yml
-370,Ultimate Snow Scraper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ultimate%20Snow%20Scraper.yml
-371,Umbilical Cord Clamp,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Umbilical%20Cord%20Clamp.yml
-372,Umbilical Cord Clip,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Umbilical%20Cord%20Clip.yml
-373,Universal handguards,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Universal%20handguards.yml
-374,Updated Forestry Densiometer (Smartphone Capable),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Updated%20Forestry%20Densiometer%20(Smartphone%20Capable).yml
-375,Update to Changeable Garden Tool Heads,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Update%20to%20Changeable%20Garden%20Tool%20Heads.yml
-376,Urine Diverter for Composting Toilet,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Urine%20Diverter%20for%20Composting%20Toilet.yml
-377,Use Li-ion Batteries Instead of Alkaline,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Use%20Li-ion%20Batteries%20Instead%20of%20Alkaline.yml
-378,Variable Sifter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Variable%20Sifter.yml
-379,Walnut Cracker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Walnut%20Cracker.yml
-380,Water Dew Collector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Water%20Dew%20Collector.yml
-381,Water bottle filter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Water%20bottle%20filter.yml
-382,Water bottle stripper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Water%20bottle%20stripper.yml
-383,Water bottle to sippy cup converter cap,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Water%20bottle%20to%20sippy%20cup%20converter%20cap.yml
-384,Weighing scalesmass balance,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Weighing%20scalesmass%20balance.yml
-385,Welder Plug Cover,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Welder%20Plug%20Cover.yml
-386,Wild Berry Scoop Picker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Wild%20Berry%20Scoop%20Picker.yml
-387,Wire Sensor Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Wire%20Sensor%20Holder.yml
-388,Wood Planer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Wood%20Planer.yml
-389,Yamaha Quick Fastener,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Yamaha%20Quick%20Fastener.yml
-390,Zero-electricity refrigerator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Zero-electricity%20refrigerator.yml
+Project name, date added(YYYY-MM-DD), link to YML file
+CubeFactory, 2019-10-04,https://raw.githubusercontent.com/CubeFactory2/cubefactory/master/okh-cubefactory.yml
+Flypi, 2019-10-06, https://raw.githubusercontent.com/amchagas/Flypi/master/okh-flypi.yml
+Adjustabike, 2019-10-07, https://raw.githubusercontent.com/JamieTaylor23/Adjustabike/master/okh-adjustabike.yml
+Raidlight-Responsiv, 2019-10-07, https://raw.githubusercontent.com/Raidlight/Projet-Pilote-Open-Source/master/okh-Raidlight-Responsiv.yml
+Ball-Sorting-Machine, 2019-10-07, https://raw.githubusercontent.com/jbon/Ball-Machine/master/okh-ballSortingMachine.yml
+Spikeling, 2019-10-15, https://raw.githubusercontent.com/BadenLab/Spikeling/master/okh-spikeling.yml
+OpenSpritzer, 2019-10-15, https://raw.githubusercontent.com/BadenLab/Openspritzer/master/okh-openspritzer.yml
+Led Zappelin, 2019-10-15, https://raw.githubusercontent.com/BadenLab/LED-Zappelin/master/okh-LED-Zappelin.yml
+hyperspectral scanner, 2019-10-15, https://raw.githubusercontent.com/BadenLab/Hyperspectral-scanner/master/okh-hyperspectral-scanner.yml
+open visual stimulator, 2019-10-06, https://raw.githubusercontent.com/eulerlab/open-visual-stimulator/master/okh-open-visual-stimulator.yml
+Raspberry Pi Camera Calibration Jig, 2019-11-14, https://gitlab.com/bath_open_instrumentation_group/picamera_cra_compensation/-/raw/master/okh-calibration_jig.yml
+Actifield, 2019-11-16, https://raw.githubusercontent.com/trendinafrica/actifield/master/okh-actifield.yml
+Syringe Pump, 2019-11-16, https://raw.githubusercontent.com/FOSH-following-demand/Syringe_Pump/master/okh-syringe-pump.yml
+Incubator, 2019-11-16, https://raw.githubusercontent.com/FOSH-following-demand/Incubator/master/okh-incubator.yml
+NYC-MTA-Next-Train, 2019-11-16, https://raw.githubusercontent.com/mwweinberg/NYC-MTA-Next-Train/master/okh-nycmtapi.yml
+ZACplus, 2019-11-15, https://raw.githubusercontent.com/case06/ZACplus/master/okh-ZACplus.yml
+OpenFlexure Microscope, 2020-02-13, https://gitlab.com/openflexure/openflexure-microscope/-/raw/master/okh.yml
+OpenFlexure Block Stage, 2020-02-13, https://gitlab.com/openflexure/openflexure-block-stage/-/raw/master/okh-openflexure-block-stage.yml
+OpenFlexure Delta Stage, 2020-02-26, https://gitlab.com/openflexure/openflexure-delta-stage/-/raw/master/okh-OpenFlexureDeltaStage.yml
+Mech-Jiwe, 2020-02-26, https://gitlab.com/bath_open_instrumentation_group/mech-jiwe/-/raw/master/okh-MechJiwe.yml
+OSP: An Open-source Plate Reader, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/OSP/master/okh-OSP.yml
+Fermento, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/Fermento/master/okh-Fermento.yml
+Microscope incubation box, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/microscope-incubation-box/master/okh-microscope-incubation-box.yml
+lightM, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/lightM/master/okh-lightm.yml
+The Test Tube Photometer, 2020-02-27, https://raw.githubusercontent.com/cool-fosh/test_tube_photometer/master/okh-test-tube-photometer.yml
+OttoDIY, 2020-02-27, https://raw.githubusercontent.com/jbon/OttoDIY/patch-1/okh-OttoDIY.yml
+Poseidon, 2020-02-28, https://raw.githubusercontent.com/OKH-Forks/poseidon/release/okh-poseidon.yml
+Arduino voltage amplifier, 2020-02-29, https://raw.githubusercontent.com/Sussex-Neuroscience/voltage-amplifier/master/okh-arduino-voltage-amplifier.yml
+2 Liter Winnower,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-2%20Liter%20Winnower.yml
+3-D Printable Digital Balance,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20Printable%20Digital%20Balance.yml
+3-D Printable Speaker Demo,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20Printable%20Speaker%20Demo.yml
+3-D Printing Solar Photovoltaic Racking in Developing World,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20Printing%20Solar%20Photovoltaic%20Racking%20in%20Developing%20World.yml
+3-D printable open source dual axis gimbal system for optoelectronic measurements,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20printable%20open%20source%20dual%20axis%20gimbal%20system%20for%20optoelectronic%20measurements.yml
+3-D printable photovoltaic module spacer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20printable%20photovoltaic%20module%20spacer.yml
+3-D printable solar charger,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20printable%20solar%20charger.yml
+3-D printing open-source click-MUAC bands for identification of malnutrition,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3-D%20printing%20open-source%20click-MUAC%20bands%20for%20identification%20of%20malnutrition.yml
+3D-printed Lucky Iron Totems,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D-printed%20Lucky%20Iron%20Totems.yml
+3D Print Speculum,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Print%20Speculum.yml
+3D Printable Cider Press,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printable%20Cider%20Press.yml
+3D Printable Goniometer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printable%20Goniometer.yml
+3D Printed Bike Seat,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printed%20Bike%20Seat.yml
+3D Printed Carpet Knife,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printed%20Carpet%20Knife.yml
+3D Printed Otoscope,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printed%20Otoscope.yml
+3D Printed Shoes,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3D%20Printed%20Shoes.yml
+3d printable prosthetic foot,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-3d%20printable%20prosthetic%20foot.yml
+7up,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-7up.yml
+12 Drive Speed Brace,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-12%20Drive%20Speed%20Brace.yml
+14 Day Pill Dispenser,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-14%20Day%20Pill%20Dispenser.yml
+A Hand Powered Hay and Leaf Baler,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-A%20Hand%20Powered%20Hay%20and%20Leaf%20Baler.yml
+Acorn Sheller,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Acorn%20Sheller.yml
+Actually Functional 2 Wafer Dipper for Schott Duran 250 ml beaker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Actually%20Functional%202%20Wafer%20Dipper%20for%20Schott%20Duran%20250%20ml%20beaker.yml
+Adapted thermostatic valve for water pasteurization,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Adapted%20thermostatic%20valve%20for%20water%20pasteurization.yml
+Adjustable Bike Mirror,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Adjustable%20Bike%20Mirror.yml
+Adjustable Heated Bed,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Adjustable%20Heated%20Bed.yml
+Advanced Tent Stake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Advanced%20Tent%20Stake.yml
+Alm Retractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Alm%20Retractor.yml
+Ankle Brace Night Splint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ankle%20Brace%20Night%20Splint.yml
+Ankle Splint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ankle%20Splint.yml
+Aquaponics System,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Aquaponics%20System.yml
+Arctic Cat Snowmobile Choke Lever,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Arctic%20Cat%20Snowmobile%20Choke%20Lever.yml
+Athena 24V Round Heated Bed,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%2024V%20Round%20Heated%20Bed.yml
+Athena Dual Extrusion Single Hotend,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%20Dual%20Extrusion%20Single%20Hotend.yml
+Athena Engraver mod,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%20Engraver%20mod.yml
+Athena Heated Print Bed,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%20Heated%20Print%20Bed.yml
+Athena II Laser Engraver mod,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Athena%20II%20Laser%20Engraver%20mod.yml
+Auto-Clearance Adjustable Triple Hotend Effector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Auto-Clearance%20Adjustable%20Triple%20Hotend%20Effector.yml
+AutoInjector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-AutoInjector.yml
+Automated Plastic GrinderRecycler,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Automated%20Plastic%20GrinderRecycler.yml
+Backpack Snap-fit Clips,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Backpack%20Snap-fit%20Clips.yml
+Bamboo Joints for house,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bamboo%20Joints%20for%20house.yml
+Banana Tree Fibre Female Hygienic Pads,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Banana%20Tree%20Fibre%20Female%20Hygienic%20Pads.yml
+Basic Tent Stake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Basic%20Tent%20Stake.yml
+Bee Feeder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bee%20Feeder.yml
+Beekeeping Queen Rearing Kit,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Beekeeping%20Queen%20Rearing%20Kit.yml
+Bicycle Brake Caliper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bicycle%20Brake%20Caliper.yml
+Bicycle Hub,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bicycle%20Hub.yml
+Bike Cargo Rack,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Cargo%20Rack.yml
+Bike Chain,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Chain.yml
+Bike Chain Guard,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Chain%20Guard.yml
+Bike Chain Tensioner,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Chain%20Tensioner.yml
+Bike Handlebar Plug,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Handlebar%20Plug.yml
+Bike Hub Pelton Turbine,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Hub%20Pelton%20Turbine.yml
+Bike Pedals,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Pedals.yml
+Bike Thru Axle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20Thru%20Axle.yml
+Bike rack,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bike%20rack.yml
+Black Mamba Bike pedal,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Black%20Mamba%20Bike%20pedal.yml
+Blind Person's Assistant,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Blind%20Person's%20Assistant.yml
+Bottle Cap LED Lighting,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bottle%20Cap%20LED%20Lighting.yml
+Bow and Hand Drill Set,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bow%20and%20Hand%20Drill%20Set.yml
+Bowfishing Rest,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bowfishing%20Rest.yml
+Brake calliper of blackmamba bicycle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Brake%20calliper%20of%20blackmamba%20bicycle.yml
+Bucket Shower,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Bucket%20Shower.yml
+Building an inexpensive mosquito net,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Building%20an%20inexpensive%20mosquito%20net.yml
+BulbSeed Planter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-BulbSeed%20Planter.yml
+Butterfly Handlebars for bike,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Butterfly%20Handlebars%20for%20bike.yml
+CCAT CCATBox,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20CCATBox.yml
+CCAT Raised Garden Beds,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20Raised%20Garden%20Beds.yml
+CCAT cob protection and beautification,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20cob%20protection%20and%20beautification.yml
+CCAT interpretive wind turbine display,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20interpretive%20wind%20turbine%20display.yml
+CCAT kid bike power,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20kid%20bike%20power.yml
+CCAT kitchen effluent particulate filter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20kitchen%20effluent%20particulate%20filter.yml
+CCAT papercrete clayslip demo wall,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CCAT%20papercrete%20clayslip%20demo%20wall.yml
+CNC Router Lubrication and Chip Clearing,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CNC%20Router%20Lubrication%20and%20Chip%20Clearing.yml
+Caliper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Caliper.yml
+Can Opener,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Can%20Opener.yml
+Car Charging Port,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Car%20Charging%20Port.yml
+Car Heater-Vent Hanger,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Car%20Heater-Vent%20Hanger.yml
+Carriage-Connecting Rod Sound Dampener.,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Carriage-Connecting%20Rod%20Sound%20Dampener..yml
+Cassava Press,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Cassava%20Press.yml
+Changeable Garden Tool Heads,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Changeable%20Garden%20Tool%20Heads.yml
+Charcoal Holder Pen,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Charcoal%20Holder%20Pen.yml
+Charcoal Pen,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Charcoal%20Pen.yml
+Chicken Feed Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chicken%20Feed%20Holder.yml
+Chicken FeederWaterer w adapter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chicken%20FeederWaterer%20w%20adapter.yml
+Chicken Tractor (Optimized Construction and Design),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chicken%20Tractor%20(Optimized%20Construction%20and%20Design).yml
+Chris's ENGR305 Solar Food Dehydrator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chris's%20ENGR305%20Solar%20Food%20Dehydrator.yml
+Chujio la maji la gharama nafuu,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Chujio%20la%20maji%20la%20gharama%20nafuu.yml
+Clamps with gearing system,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Clamps%20with%20gearing%20system.yml
+Club foot Brace for Infants,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Club%20foot%20Brace%20for%20Infants.yml
+Commode,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Commode.yml
+Community Comment Box,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Community%20Comment%20Box.yml
+Composite Materials Resin Mixing & Pouring Container,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Composite%20Materials%20Resin%20Mixing%20&%20Pouring%20Container.yml
+Compost Toilet Hinge,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Compost%20Toilet%20Hinge.yml
+Concrete trowel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Concrete%20trowel.yml
+Contoured Spigot for 5-gallon buckets,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Contoured%20Spigot%20for%205-gallon%20buckets.yml
+Corn Crusher,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Corn%20Crusher.yml
+Cotton to yarn maker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Cotton%20to%20yarn%20maker.yml
+Crawler Harness Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Crawler%20Harness%20Holder.yml
+CubeSat Attitude System Airbearing Test Bed,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-CubeSat%20Attitude%20System%20Airbearing%20Test%20Bed.yml
+Custom Built 3D Printable Motor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Custom%20Built%203D%20Printable%20Motor.yml
+Custom Shovel Handle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Custom%20Shovel%20Handle.yml
+Customizable Bike Light Mount,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Customizable%20Bike%20Light%20Mount.yml
+Customizable shovel handle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Customizable%20shovel%20handle.yml
+DIF Adobe Senior Center,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-DIF%20Adobe%20Senior%20Center.yml
+DIF Adobe Senior Center 2007,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-DIF%20Adobe%20Senior%20Center%202007.yml
+DIY Solar Panel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-DIY%20Solar%20Panel.yml
+Daily menstrual cycle tracker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Daily%20menstrual%20cycle%20tracker.yml
+Dental Chair,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dental%20Chair.yml
+Depth-adjustable Rope Pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Depth-adjustable%20Rope%20Pump.yml
+Design of a low-cost household water treatment system,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Design%20of%20a%20low-cost%20household%20water%20treatment%20system.yml
+Dew collection roof retrofit,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dew%20collection%20roof%20retrofit.yml
+Dial Indicator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dial%20Indicator.yml
+Direct drive extrusion hot end for flexible materials,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Direct%20drive%20extrusion%20hot%20end%20for%20flexible%20materials.yml
+Disaster Relief Housing Platform,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Disaster%20Relief%20Housing%20Platform.yml
+Drip irrigation stake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Drip%20irrigation%20stake.yml
+Drone Search and Rescue supplies attachment (DJI Phantom 3),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Drone%20Search%20and%20Rescue%20supplies%20attachment%20(DJI%20Phantom%203).yml
+Drop Spindle for Spinning Wool into Yarn,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Drop%20Spindle%20for%20Spinning%20Wool%20into%20Yarn.yml
+Dual Tone Air RaidSecurity Siren,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dual%20Tone%20Air%20RaidSecurity%20Siren.yml
+Dust Mask,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Dust%20Mask.yml
+E305 backyard biodigester,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-E305%20backyard%20biodigester.yml
+Electric Mountain Board,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Electric%20Mountain%20Board.yml
+Electric Whisk,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Electric%20Whisk.yml
+Electronic Stethoscope,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Electronic%20Stethoscope.yml
+Electroplating holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Electroplating%20holder.yml
+Ergonomic Ice Scraper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ergonomic%20Ice%20Scraper.yml
+Ergonomic bike grips,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ergonomic%20bike%20grips.yml
+Ethanol from organic sugar beets versus refined cane sugar,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ethanol%20from%20organic%20sugar%20beets%20versus%20refined%20cane%20sugar.yml
+FBP Hot Dang Plastic Encasement,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-FBP%20Hot%20Dang%20Plastic%20Encasement.yml
+FBP LC Sheller,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-FBP%20LC%20Sheller.yml
+FBP The Full Bell,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-FBP%20The%20Full%20Bell.yml
+Fecal Sample Collection Kit,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fecal%20Sample%20Collection%20Kit.yml
+Field Dressing Tool,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Field%20Dressing%20Tool.yml
+Field Ready Design - ECG Lead Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Field%20Ready%20Design%20-%20ECG%20Lead%20Holder.yml
+Field Ready Design - Nebuliser,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Field%20Ready%20Design%20-%20Nebuliser.yml
+Field Ready Design - Nebuliser Connector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Field%20Ready%20Design%20-%20Nebuliser%20Connector.yml
+Filament Extruder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Filament%20Extruder.yml
+Fish Cleaning Tool,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fish%20Cleaning%20Tool.yml
+Fish Hook Extractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fish%20Hook%20Extractor.yml
+Fishing Pole Rod Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fishing%20Pole%20Rod%20Holder.yml
+Flash Light,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flash%20Light.yml
+Flock House Biopod,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20Biopod.yml
+Flock House EcoDermis,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20EcoDermis.yml
+Flock House Geared-Up From the Feet-Up,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20Geared-Up%20From%20the%20Feet-Up.yml
+Flock House Handcar Generator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20Handcar%20Generator.yml
+Flock House Hyper Visible Power Meter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flock%20House%20Hyper%20Visible%20Power%20Meter.yml
+Flowmeter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Flowmeter.yml
+ForcepsTweezers,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-ForcepsTweezers.yml
+Fork Support for Bike,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fork%20Support%20for%20Bike.yml
+Framing Spacer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Framing%20Spacer.yml
+Free-Libre Hardware RFID handheld device,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Free-Libre%20Hardware%20RFID%20handheld%20device.yml
+Fruit Picker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fruit%20Picker.yml
+Fruit crusher,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fruit%20crusher.yml
+Fuel Container Restraint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fuel%20Container%20Restraint.yml
+Fully Printable Wild Berry Scoop Picker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fully%20Printable%20Wild%20Berry%20Scoop%20Picker.yml
+Fume Extractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Fume%20Extractor.yml
+GPS Belt Clip,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-GPS%20Belt%20Clip.yml
+Garden Hose Splitter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Garden%20Hose%20Splitter.yml
+Garden Rip and Seed Tool,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Garden%20Rip%20and%20Seed%20Tool.yml
+Garden water sprinkler,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Garden%20water%20sprinkler.yml
+Gravity Light Attachment,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Gravity%20Light%20Attachment.yml
+Ground collector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ground%20collector.yml
+Grout Trowel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Grout%20Trowel.yml
+Gyro mini nutating mixer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Gyro%20mini%20nutating%20mixer.yml
+HSU Bike powered washing machine,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-HSU%20Bike%20powered%20washing%20machine.yml
+Hammer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hammer.yml
+Hand Drill,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Drill.yml
+Hand Pump Drill (Spring-Loaded),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Pump%20Drill%20(Spring-Loaded).yml
+Hand Rotary Edger,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Rotary%20Edger.yml
+Hand Shovel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Shovel.yml
+Hand Washing Station,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Washing%20Station.yml
+Hand Wood Planer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20Wood%20Planer.yml
+Hand cultivator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hand%20cultivator.yml
+Handlebar grips,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Handlebar%20grips.yml
+Hands-Free Crutch,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hands-Free%20Crutch.yml
+Hanging Garden that Minimizes Water Use,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hanging%20Garden%20that%20Minimizes%20Water%20Use.yml
+Heliostat or Sun Tracker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Heliostat%20or%20Sun%20Tracker.yml
+Hemostats,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hemostats.yml
+Hinges,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hinges.yml
+Home biogas system (Philippine BioDigesters),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Home%20biogas%20system%20(Philippine%20BioDigesters).yml
+Homemade Wheel Hoe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Homemade%20Wheel%20Hoe.yml
+Honey Forge,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Honey%20Forge.yml
+Hori Hori Knife  Shovel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hori%20Hori%20Knife%20%20Shovel.yml
+Horseshoes,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Horseshoes.yml
+Hydroponic halo ring,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Hydroponic%20halo%20ring.yml
+Ice Scraper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ice%20Scraper.yml
+Improved 3D Printed Bike Grips,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%203D%20Printed%20Bike%20Grips.yml
+Improved GPS Belt Clip,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%20GPS%20Belt%20Clip.yml
+Improved Hammer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%20Hammer.yml
+Improved PET Bottle Stripper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%20PET%20Bottle%20Stripper.yml
+Improved Potato Ricer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Improved%20Potato%20Ricer.yml
+Inside Corner Trowel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Inside%20Corner%20Trowel.yml
+Integrated Smoke Alarm Delta Mod,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Integrated%20Smoke%20Alarm%20Delta%20Mod.yml
+Jefferson Community Center compost,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Jefferson%20Community%20Center%20compost.yml
+Jefferson Community Center edible landscape,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Jefferson%20Community%20Center%20edible%20landscape.yml
+Kidney Tray,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Kidney%20Tray.yml
+Kreg Jig,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Kreg%20Jig.yml
+La Yuca rainwater 2014,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-La%20Yuca%20rainwater%202014.yml
+La Yuca rainwater catchment 2012,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-La%20Yuca%20rainwater%20catchment%202012.yml
+La Yuca schoolroom renovation,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-La%20Yuca%20schoolroom%20renovation.yml
+La Yuca small scale renewable energy 2012,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-La%20Yuca%20small%20scale%20renewable%20energy%202012.yml
+Las Malvinas botica popular ecoladrillo 2013,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Las%20Malvinas%20botica%20popular%20ecoladrillo%202013.yml
+Laser Trip-wire shut-off for Delta Printer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laser%20Trip-wire%20shut-off%20for%20Delta%20Printer.yml
+Laser trip-wire shutoff,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laser%20trip-wire%20shutoff.yml
+Laurel Tree Charter School energy use visualization,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laurel%20Tree%20Charter%20School%20energy%20use%20visualization.yml
+Laurel Tree Charter School human powered blender,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laurel%20Tree%20Charter%20School%20human%20powered%20blender.yml
+Laurel Tree Charter School onderdonk's box,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laurel%20Tree%20Charter%20School%20onderdonk's%20box.yml
+Laurel Tree Charter School ovenly inferno,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Laurel%20Tree%20Charter%20School%20ovenly%20inferno.yml
+Leaf Press for Leaf Protein Concentrate,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Leaf%20Press%20for%20Leaf%20Protein%20Concentrate.yml
+Lightweight Wrenches,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Lightweight%20Wrenches.yml
+Limb Prosthetic,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Limb%20Prosthetic.yml
+Load Carrier for labour,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Load%20Carrier%20for%20labour.yml
+Locally manufactured thermostatic valve for water pasteurization,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Locally%20manufactured%20thermostatic%20valve%20for%20water%20pasteurization.yml
+Low Profile Projector Ceiling Mount,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Low%20Profile%20Projector%20Ceiling%20Mount.yml
+Low force snaps for easy assemblydis-assembly of mating parts,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Low%20force%20snaps%20for%20easy%20assemblydis-assembly%20of%20mating%20parts.yml
+MY4777 Athena Printer Modifications by Cikaub,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-MY4777%20Athena%20Printer%20Modifications%20by%20Cikaub.yml
+Make your own Honey Cow (Top Bar Bee Hive),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Make%20your%20own%20Honey%20Cow%20(Top%20Bar%20Bee%20Hive).yml
+Manual Centrifuge Apparatus,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Manual%20Centrifuge%20Apparatus.yml
+Manual Rotating Pea Sheller,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Manual%20Rotating%20Pea%20Sheller.yml
+Mattole Community Center rainwater catchment,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Mattole%20Community%20Center%20rainwater%20catchment.yml
+Measuring DC electrical energy production from micro-renewables,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Measuring%20DC%20electrical%20energy%20production%20from%20micro-renewables.yml
+Measuring cup,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Measuring%20cup.yml
+Medical Tweezers,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Medical%20Tweezers.yml
+Micro-Turbines for Water Power,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Micro-Turbines%20for%20Water%20Power.yml
+Micro-turbine for water power,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Micro-turbine%20for%20water%20power.yml
+Micro Lathe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Micro%20Lathe.yml
+Micro water turbine,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Micro%20water%20turbine.yml
+Mineral Sifter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Mineral%20Sifter.yml
+Minnow Trap,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Minnow%20Trap.yml
+Mirco Lathe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Mirco%20Lathe.yml
+Mobilization Wedge,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Mobilization%20Wedge.yml
+Modified Spork Design,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modified%20Spork%20Design.yml
+Modified cap for turning two-liter bottle into sharps disposal container,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modified%20cap%20for%20turning%20two-liter%20bottle%20into%20sharps%20disposal%20container.yml
+Modular Coral Regrowth Post,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20Coral%20Regrowth%20Post.yml
+Modular PC104 Case,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20PC104%20Case.yml
+Modular Peg Board,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20Peg%20Board.yml
+Modular hand held arm with Backsaver grip attachment,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20hand%20held%20arm%20with%20Backsaver%20grip%20attachment.yml
+Modular hand held arm with Backsaver grip attachment and Leaf Claws,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Modular%20hand%20held%20arm%20with%20Backsaver%20grip%20attachment%20and%20Leaf%20Claws.yml
+Momentum Fire Starter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Momentum%20Fire%20Starter.yml
+Monochromator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Monochromator.yml
+Multimeter Negative Probe Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Multimeter%20Negative%20Probe%20Holder.yml
+Neck Immobilizer for Trauma,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Neck%20Immobilizer%20for%20Trauma.yml
+Newspaper Briquette Maker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Newspaper%20Briquette%20Maker.yml
+Newspaper briquet maker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Newspaper%20briquet%20maker.yml
+Non-drive side crank,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Non-drive%20side%20crank.yml
+Non-electric Megaphone,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Non-electric%20Megaphone.yml
+Nut Cracker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Nut%20Cracker.yml
+OSAT-Protractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT-Protractor.yml
+OSAT 3D Printable Treadle Pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%203D%20Printable%20Treadle%20Pump.yml
+OSAT 3D Printed Finger Splint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%203D%20Printed%20Finger%20Splint.yml
+OSAT 3D Printed Gravity Light,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%203D%20Printed%20Gravity%20Light.yml
+OSAT 3D Printed Hand Pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%203D%20Printed%20Hand%20Pump.yml
+OSAT Bike Pedal,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20Bike%20Pedal.yml
+OSAT Bike Seat,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20Bike%20Seat.yml
+OSAT Jump Rope Design,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20Jump%20Rope%20Design.yml
+OSAT Wind Turbine,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20Wind%20Turbine.yml
+OSAT project - Infantometer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20project%20-%20Infantometer.yml
+OSAT toilet paper holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSAT%20toilet%20paper%20holder.yml
+OSHE Growbot Motor Encoders,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSHE%20Growbot%20Motor%20Encoders.yml
+OSHE Growbot Mounting Units,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSHE%20Growbot%20Mounting%20Units.yml
+OSHE High Temperature 3D Printer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-OSHE%20High%20Temperature%203D%20Printer.yml
+One Way Ratchet,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-One%20Way%20Ratchet.yml
+Open-Source 3D Printed Surgical Retractors,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open-Source%203D%20Printed%20Surgical%20Retractors.yml
+Open-Source Photometric System for Enzymatic Nitrate Quantification,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open-Source%20Photometric%20System%20for%20Enzymatic%20Nitrate%20Quantification.yml
+Open-source 3-D Platform for Low-cost Scientific Instrument Ecosystem,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open-source%203-D%20Platform%20for%20Low-cost%20Scientific%20Instrument%20Ecosystem.yml
+Open Source 3D printed water pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%203D%20printed%20water%20pump.yml
+Open Source Bike Brake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Bike%20Brake.yml
+Open Source Fume Extractor,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Fume%20Extractor.yml
+Open Source Monochromator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Monochromator.yml
+Open Source Pellet Extruder Tool Head for a Desktop 3D Printer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Pellet%20Extruder%20Tool%20Head%20for%20a%20Desktop%203D%20Printer.yml
+Open Source Rope Pump Valve,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Rope%20Pump%20Valve.yml
+Open Source Salt Spray Chamber,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Salt%20Spray%20Chamber.yml
+Open Source Ultrasonic Whistle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20Source%20Ultrasonic%20Whistle.yml
+Open source hoe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20source%20hoe.yml
+Open sustainability,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Open%20sustainability.yml
+PET Bottle Shredder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-PET%20Bottle%20Shredder.yml
+Parametric Vertical Storage,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Parametric%20Vertical%20Storage.yml
+Parametric elbow splint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Parametric%20elbow%20splint.yml
+Parametric quick release buckles,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Parametric%20quick%20release%20buckles.yml
+Peanut Mill,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Peanut%20Mill.yml
+Pharmaceutical Bottle Caps,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pharmaceutical%20Bottle%20Caps.yml
+Picohydro generator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Picohydro%20generator.yml
+Piezoelectric Energy Harvesting Shoe,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Piezoelectric%20Energy%20Harvesting%20Shoe.yml
+Pinhole Bifocal Eyeglasses,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pinhole%20Bifocal%20Eyeglasses.yml
+Pipe T-fitting,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pipe%20T-fitting.yml
+Pipette Carousel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pipette%20Carousel.yml
+Pocket Wrench,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pocket%20Wrench.yml
+Pointer Trowel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pointer%20Trowel.yml
+Potato Ricer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Potato%20Ricer.yml
+Powder maker - Chilies and herbs,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Powder%20maker%20-%20Chilies%20and%20herbs.yml
+Printable non-puncturing textile fastener,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Printable%20non-puncturing%20textile%20fastener.yml
+Pruning hook,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pruning%20hook.yml
+Pulleys,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Pulleys.yml
+Rain Water Purification and Storage,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Rain%20Water%20Purification%20and%20Storage.yml
+Rain chain,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Rain%20chain.yml
+Rainwater Catchment J Gnarly,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Rainwater%20Catchment%20J%20Gnarly.yml
+Rain water filterbottler,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Rain%20water%20filterbottler.yml
+Ram Pump,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ram%20Pump.yml
+Raspberry Pi Control and Wireless Interface,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Raspberry%20Pi%20Control%20and%20Wireless%20Interface.yml
+Recyclebot Cooling Fan Section,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Recyclebot%20Cooling%20Fan%20Section.yml
+Recyclebot v5.0,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Recyclebot%20v5.0.yml
+Recycled Concentrated Solar Heater,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Recycled%20Concentrated%20Solar%20Heater.yml
+Redwood Coast Montessori chicken coop,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Redwood%20Coast%20Montessori%20chicken%20coop.yml
+Redwood Coast Montessori climbing wall,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Redwood%20Coast%20Montessori%20climbing%20wall.yml
+Reindeer Snaffle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Reindeer%20Snaffle.yml
+Safety Switch Cover,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Safety%20Switch%20Cover.yml
+Sailing cam cleat,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Sailing%20cam%20cleat.yml
+Saline Water Filter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Saline%20Water%20Filter.yml
+Sample Rotator Mixer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Sample%20Rotator%20Mixer.yml
+Screw driver,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Screw%20driver.yml
+Scrub Brush,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Scrub%20Brush.yml
+Seat,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Seat.yml
+Seed Drill Punch,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Seed%20Drill%20Punch.yml
+Seed Spreader  Salt Shaker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Seed%20Spreader%20%20Salt%20Shaker.yml
+Seed sowing tool (3D printed),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Seed%20sowing%20tool%20(3D%20printed).yml
+Semi-Permanent Stake,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Semi-Permanent%20Stake.yml
+Simple Forestry Densiometer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Simple%20Forestry%20Densiometer.yml
+Smart Phone Adaptive Otoscope,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Smart%20Phone%20Adaptive%20Otoscope.yml
+Snap Together Snow Shovel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Snap%20Together%20Snow%20Shovel.yml
+Snap together shovel,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Snap%20together%20shovel.yml
+Snow shoes,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Snow%20shoes.yml
+Spoke wrench,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Spoke%20wrench.yml
+Spoon Fork Knife,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Spoon%20Fork%20Knife.yml
+Spoon Multi-tool,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Spoon%20Multi-tool.yml
+Sprinkler Head,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Sprinkler%20Head.yml
+Starter Handle,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Starter%20Handle.yml
+Stethoscope (Monaural),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Stethoscope%20(Monaural).yml
+Stethoscope,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Stethoscope.yml
+Stethoscope upgrade,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Stethoscope%20upgrade.yml
+Straw Filter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Straw%20Filter.yml
+Surgical Retractor Complex,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Surgical%20Retractor%20Complex.yml
+Surgical retractors really complex,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Surgical%20retractors%20really%20complex.yml
+Table Saw Fence Push Stick,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Table%20Saw%20Fence%20Push%20Stick.yml
+Talbot Type Water Tap,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Talbot%20Type%20Water%20Tap.yml
+Tent Stake Pierson,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Tent%20Stake%20Pierson.yml
+Tent Vertex Joint,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Tent%20Vertex%20Joint.yml
+Thermometer Jar Unicef Supply Catologue,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Thermometer%20Jar%20Unicef%20Supply%20Catologue.yml
+Thumb Spike,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Thumb%20Spike.yml
+Toilet Paper Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Toilet%20Paper%20Holder.yml
+Tool-Free Tile Leveling System,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Tool-Free%20Tile%20Leveling%20System.yml
+Tools To Measure Children's Height,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Tools%20To%20Measure%20Children's%20Height.yml
+Ultimate Snow Scraper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Ultimate%20Snow%20Scraper.yml
+Umbilical Cord Clamp,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Umbilical%20Cord%20Clamp.yml
+Umbilical Cord Clip,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Umbilical%20Cord%20Clip.yml
+Universal handguards,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Universal%20handguards.yml
+Updated Forestry Densiometer (Smartphone Capable),2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Updated%20Forestry%20Densiometer%20(Smartphone%20Capable).yml
+Update to Changeable Garden Tool Heads,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Update%20to%20Changeable%20Garden%20Tool%20Heads.yml
+Urine Diverter for Composting Toilet,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Urine%20Diverter%20for%20Composting%20Toilet.yml
+Use Li-ion Batteries Instead of Alkaline,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Use%20Li-ion%20Batteries%20Instead%20of%20Alkaline.yml
+Variable Sifter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Variable%20Sifter.yml
+Walnut Cracker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Walnut%20Cracker.yml
+Water Dew Collector,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Water%20Dew%20Collector.yml
+Water bottle filter,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Water%20bottle%20filter.yml
+Water bottle stripper,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Water%20bottle%20stripper.yml
+Water bottle to sippy cup converter cap,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Water%20bottle%20to%20sippy%20cup%20converter%20cap.yml
+Weighing scalesmass balance,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Weighing%20scalesmass%20balance.yml
+Welder Plug Cover,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Welder%20Plug%20Cover.yml
+Wild Berry Scoop Picker,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Wild%20Berry%20Scoop%20Picker.yml
+Wire Sensor Holder,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Wire%20Sensor%20Holder.yml
+Wood Planer,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Wood%20Planer.yml
+Yamaha Quick Fastener,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Yamaha%20Quick%20Fastener.yml
+Zero-electricity refrigerator,2020-03-26,https://openknowhow.appropedia.org/manifests/okh-Zero-electricity%20refrigerator.yml
