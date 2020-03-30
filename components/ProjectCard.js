@@ -32,6 +32,7 @@ const ProjectCard = ({ project }) => {
       >
         <LazyLoadImage
           effect="blur"
+          placeholder={<img src={project.previewImage || '/images/placeholder.png'} />}
           placeholderSrc={project.previewImage || '/images/placeholder.png'}
           src={project.image || '/images/placeholder.png'}
         />
