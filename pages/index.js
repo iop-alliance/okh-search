@@ -15,6 +15,36 @@ class Home extends React.Component {
           <Head>
             <title>Open Know How Search</title>
             <link rel="icon" type="image/png" href="/favicon.png" />
+            <script>
+              {`
+                /*
+                * lazy-simon.js
+                *
+                *  Minimal effort 350 byte JavaScript library to lazy load all <img> on your website
+                *
+                * License: MIT (https://github.com/simonfrey/lazysimon/blob/master/LICENSE)
+                */
+                o = new IntersectionObserver((a, s) => {
+                  a.forEach(e => {
+                    if (e.isIntersecting) {
+                      e.target.src = e.target.dataset.l;
+                      s.unobserve(e.target);
+                    }
+                  });
+                });
+                d = document.querySelectorAll("img");
+                for (i = d.length - 1; i >= 0; i--) {
+                  e = d[i];
+                  if (e.loading != undefined){
+                    e.loading = "lazy"
+                  }else{
+                  e.dataset.l = e.src;
+                  e.src = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' />";
+                  o.observe(e);
+                  }
+                }
+              `}
+            </script>
           </Head>
           <div className="top">
             <div className="logo">
@@ -34,7 +64,7 @@ class Home extends React.Component {
           </div>
           <div className="section">
             <div id="projects">
-              {this.state.result.map(project => (
+              {this.state.result.map((project) => (
                 <ProjectCard key={project.id} project={project} />
               ))}
               {this.state.result.length === 0 ? (
@@ -93,7 +123,7 @@ class Home extends React.Component {
       .getElementsByClassName('searchInput')[0]
       .firstElementChild.addEventListener('keydown', this.handleKeydown)
   }
-  searchUpdated = e => {
+  searchUpdated = (e) => {
     const term = e.target.value
     const filter = createFilter(term, ['title', 'description', 'licensor.name'])
     const result = projects.filter(filter)
