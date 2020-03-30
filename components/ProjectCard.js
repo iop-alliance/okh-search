@@ -1,7 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import { Card } from 'semantic-ui-react'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 const ProjectCard = ({ project }) => {
   const author =
@@ -29,7 +30,11 @@ const ProjectCard = ({ project }) => {
           alignItems: 'center',
         }}
       >
-        <LazyLoadImage src={project.image || '/images/placeholder.png'} />
+        <LazyLoadImage
+          effect="blur"
+          placeholderSrc={project.previewImage || '/images/placeholder.png'}
+          src={project.image || '/images/placeholder.png'}
+        />
       </div>
       <Card.Content>
         <Card.Header
