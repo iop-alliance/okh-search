@@ -10,24 +10,24 @@ const rateLimit = require('promise-rate-limit')
   const csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
   let projects = await Promise.all(
     csv
-    .split('\n')
-    .slice(1)
-    .map(async (line, index) => {
-      const [name, date, link] = line.split(',')
-      if (link) {
-        return fetchText(link)
-          .then(text => {
-            const origin = path.dirname(link) + '/'
-            return { id: index, origin, ...yaml.parse(text) }
-          })
-          .catch(e => {
-            console.warn(e)
-            console.warn('--------------------------------------------')
-            console.warn('Error reading:', link)
-            console.warn('--------------------------------------------')
-          })
-      }
-    }),
+      .split('\n')
+      .slice(1)
+      .map(async (line, index) => {
+        const [name, date, link] = line.split(',')
+        if (link) {
+          return fetchText(link)
+            .then(text => {
+              const origin = path.dirname(link) + '/'
+              return { id: index, origin, ...yaml.parse(text) }
+            })
+            .catch(e => {
+              console.warn(e)
+              console.warn('--------------------------------------------')
+              console.warn('Error reading:', link)
+              console.warn('--------------------------------------------')
+            })
+        }
+      }),
   )
   // remove null/undefined
   projects = projects.filter(x => x)
@@ -71,9 +71,9 @@ function promiseTimeout(t) {
   })
 }
 
-const processImages = rateLimit(1, 100, (project) => {
+const processImages = rateLimit(1, 100, project => {
   return Promise.race([_processImages(project), promiseTimeout(60000)]).catch(e => {
-    console.error("Error processing image for:", project.image || project.title)
+    console.error('Error processing image for:', project.image || project.title)
     console.error(e)
     delete project.image
     return project
