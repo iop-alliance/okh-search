@@ -9,10 +9,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
-        <body>
-          <Main />
-          <NextScript />
+        <Head>
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -23,7 +20,7 @@ class MyDocument extends Document {
                 *
                 * License: MIT (https://github.com/simonfrey/lazysimon/blob/master/LICENSE)
                 */
-                o = new IntersectionObserver((a, s) => {
+                const o = new IntersectionObserver((a, s) => {
                   a.forEach(e => {
                     if (e.isIntersecting) {
                       e.target.src = e.target.dataset.l;
@@ -31,9 +28,9 @@ class MyDocument extends Document {
                     }
                   });
                 });
-                d = document.querySelectorAll("img");
+                const d = document.querySelectorAll("img");
                 for (i = d.length - 1; i >= 0; i--) {
-                  e = d[i];
+                  const e = d[i];
                   if (e.loading != undefined){
                     e.loading = "lazy"
                   }else{
@@ -45,6 +42,10 @@ class MyDocument extends Document {
             `,
             }}
           />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
         </body>
       </Html>
     )
