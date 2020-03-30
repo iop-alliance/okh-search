@@ -2851,6 +2851,11 @@ function-bind@^1.1.1:
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
+function-rate-limit@^1.0.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/function-rate-limit/-/function-rate-limit-1.1.0.tgz#eccdf1af918fc959eb6509058603e462e37fd683"
+  integrity sha1-7M3xr5GPyVnrZQkFhgPkYuN/1oM=
+
 fuse.js@^3.0.0:
   version "3.4.6"
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.4.6.tgz#545c3411fed88bf2e27c457cab6e73e7af697a45"
@@ -5004,6 +5009,13 @@ promise-inflight@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
+
+promise-rate-limit@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/promise-rate-limit/-/promise-rate-limit-0.0.1.tgz#98fec7d214f7d92f93297b7c175794664faffb4d"
+  integrity sha1-mP7H0hT32S+TKXt8F1eUZk+v+00=
+  dependencies:
+    function-rate-limit "^1.0.1"
 
 promise@7.1.1:
   version "7.1.1"

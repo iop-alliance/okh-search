@@ -13,6 +13,7 @@
     "image-thumbnail": "https://github.com/OpenKnowHow/image-thumbnail",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.2.1",
+    "promise-rate-limit": "^0.0.1",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-lazy-load-image-component": "^1.4.1",

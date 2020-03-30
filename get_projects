@@ -4,29 +4,30 @@ const fetch = require('isomorphic-unfetch')
 const yaml = require('yaml')
 const fs = require('fs')
 const imageThumbnail = require('image-thumbnail')
+const rateLimit = require('promise-rate-limit')
 
 ;(async () => {
   const csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
   let projects = await Promise.all(
     csv
-      .split('\n')
-      .slice(1)
-      .map(async (line, index) => {
-        const [name, date, link] = line.split(',')
-        if (link) {
-          return fetchText(link)
-            .then(text => {
-              const origin = path.dirname(link) + '/'
-              return { id: index, origin, ...yaml.parse(text) }
-            })
-            .catch(e => {
-              console.warn(e)
-              console.warn('--------------------------------------------')
-              console.warn('Error reading:', link)
-              console.warn('--------------------------------------------')
-            })
-        }
-      }),
+    .split('\n')
+    .slice(1)
+    .map(async (line, index) => {
+      const [name, date, link] = line.split(',')
+      if (link) {
+        return fetchText(link)
+          .then(text => {
+            const origin = path.dirname(link) + '/'
+            return { id: index, origin, ...yaml.parse(text) }
+          })
+          .catch(e => {
+            console.warn(e)
+            console.warn('--------------------------------------------')
+            console.warn('Error reading:', link)
+            console.warn('--------------------------------------------')
+          })
+      }
+    }),
   )
   // remove null/undefined
   projects = projects.filter(x => x)
@@ -64,25 +65,34 @@ function processUrls(project) {
   return project
 }
 
-async function processImages(project) {
-  let image = project.image
+function promiseTimeout(t) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => reject(Error('Timed out')), t)
+  })
+}
+
+const processImages = rateLimit(10, 100, (project) => {
+  return Promise.race([_processImages(project), promiseTimeout(60000)]).catch(e => {
+    console.error("Error processing image for:", project.image || project.title)
+    console.error(e)
+    delete project.image
+    return project
+  })
+})
+
+async function _processImages(project) {
+  const image = project.image
   if (image) {
     const r = await fetch(image)
     if (r.status != 200 || !/^image\//.test(r.headers.get('Content-Type'))) {
       console.warn("Can't read image:", image)
       delete project.image
     } else {
-      try {
-        const ext = r.headers.get('Content-Type').match(/image\/(.*)/)[1]
-        const imageUrl = `/images/${project.id}.${ext}`
-        const thumb = await imageThumbnail(r.body, { height: 200, width: 290 })
-        await fs.promises.writeFile('public' + imageUrl, thumb)
-        project.image = imageUrl
-      } catch (e) {
-        console.error("Can't write thumbnail for:", image)
-        console.error(e)
-        delete project.image
-      }
+      const ext = r.headers.get('Content-Type').match(/image\/(.*)/)[1]
+      const imageUrl = `/images/${project.id}.${ext}`
+      const thumb = await imageThumbnail(r.body, { height: 200, width: 290 })
+      await fs.promises.writeFile('public' + imageUrl, thumb)
+      project.image = imageUrl
     }
   }
   return project
