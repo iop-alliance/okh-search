@@ -13,8 +13,9 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script>
-            {`
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                 /*
                 * lazy-simon.js
                 *
@@ -41,8 +42,9 @@ class MyDocument extends Document {
                   o.observe(e);
                   }
                 }
-            `}
-          </script>
+            `,
+            }}
+          />
         </body>
       </Html>
     )
