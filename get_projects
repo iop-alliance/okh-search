@@ -97,8 +97,6 @@ async function _processImages(project) {
       await fs.promises.writeFile('public' + previewUrl, preview)
       project.image = imageUrl
       project.imagePreview = previewUrl
-      await fs.promises.writeFile('public' + imageUrl, thumb)
-      project.image = imageUrl
     }
   }
   return project
