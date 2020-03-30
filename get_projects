@@ -3,6 +3,7 @@ const path = require('path')
 const fetch = require('isomorphic-unfetch')
 const yaml = require('yaml')
 const fs = require('fs')
+const imageThumbnail = require('image-thumbnail')
 
 ;(async () => {
   const csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
@@ -71,22 +72,17 @@ async function processImages(project) {
       console.warn("Can't read image:", image)
       delete project.image
     } else {
-      const ext = r.headers.get('Content-Type').match(/image\/(.*)/)[1]
-      const p = `/images/${project.id}.${ext}`
-      await new Promise((resolve, reject) => {
-        const s = fs.createWriteStream('public' + p)
-        r.body.pipe(s)
-        r.body.on('end', () => resolve())
-        s.on('error', reject)
-      })
-        .then(() => {
-          project.image = p
-        })
-        .catch(e => {
-          console.error("Can't write image:", image)
-          console.error(e)
-          delete project.image
-        })
+      try {
+        const ext = r.headers.get('Content-Type').match(/image\/(.*)/)[1]
+        const imageUrl = `/images/${project.id}.${ext}`
+        const thumb = await imageThumbnail(r.body, { height: 200 })
+        await fs.promises.writeFile('public' + imageUrl, thumb)
+        project.image = imageUrl
+      } catch (e) {
+        console.error("Can't write thumbnail for:", image)
+        console.error(e)
+        delete project.image
+      }
     }
   }
   return project
