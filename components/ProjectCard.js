@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import { Card, Image } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const ProjectCard = ({ project }) => {
   const author =
@@ -14,17 +15,22 @@ const ProjectCard = ({ project }) => {
   }
 
   return (
-    <Card style={{margin: 20}} key={project.id} as="a" href={project['documentation-home']}>
-      <Image
-        as="div"
+    <Card
+      style={{ margin: 20 }}
+      key={project.id}
+      as="a"
+      href={project['documentation-home']}
+    >
+      <div
         style={{
           height: 200,
           overflow: 'hidden',
           display: 'flex',
           alignItems: 'center',
         }}
-        src={project.image || '/images/placeholder.png'}
-      />
+      >
+        <LazyLoadImage src={project.image || '/images/placeholder.png'} />
+      </div>
       <Card.Content>
         <Card.Header
           style={{
