@@ -94,10 +94,13 @@ class Home extends React.Component {
       .firstElementChild.addEventListener('keydown', this.handleKeydown)
   }
   searchUpdated = e => {
+    clearTimeout(this.timeout)
     const term = e.target.value
-    const filter = createFilter(term, ['title', 'description', 'licensor.name'])
-    const result = projects.filter(filter)
-    this.setState({ result, searching: term.length > 0 })
+    this.timeout = setTimeout(() => {
+      const filter = createFilter(term, ['title', 'description', 'licensor.name'])
+      const result = projects.filter(filter)
+      this.setState({ result, searching: term.length > 0 })
+    }, 100)
   }
 }
 
