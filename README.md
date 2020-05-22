@@ -22,4 +22,4 @@ If you have any questions, [create an issue](https://github.com/OpenKnowHow/okh-
 
 [search page]: https://okh.now.sh
 [standard]: https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/wiki
-[validator]: https://buildinstructions.org/okh-validator/
+[validator]: https://okh-validator.netlify.app/okh-validator/
