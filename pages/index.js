@@ -13,7 +13,7 @@ class Home extends React.Component {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ maxWidth: 1200 }}>
           <Head>
-            <title>Open Know How Search</title>
+            <title>Open Know-How Search</title>
             <link rel="icon" type="image/png" href="/favicon.png" />
           </Head>
           <div className="top">
