@@ -14,12 +14,12 @@ class Home extends React.Component {
         <div style={{ maxWidth: 1200 }}>
           <Head>
             <title>GOSH Search</title>
-            <link rel="icon" type="image/png" href="/favicon.png" />
+            <link rel="icon" type="image/png" href="favicon.png" />
           </Head>
           <div className="top">
             <div className="logo">
               <a href="http://openhardware.science">
-                <img style={{ height: 200 }} src="/logo.svg" />
+                <img style={{ height: 200 }} src="logo.svg" />
               </a>
             </div>
             <div className="search">

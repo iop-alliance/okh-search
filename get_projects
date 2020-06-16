@@ -74,9 +74,9 @@ async function processImages(project) {
     } else {
       try {
         const ext = r.headers.get('Content-Type').match(/image\/(.*)/)[1]
-        const imageUrl = `/images/${project.id}.${ext}`
+        const imageUrl = `images/${project.id}.${ext}`
         const thumb = await imageThumbnail(r.body, { height: 200, width: 290 })
-        await fs.promises.writeFile('public' + imageUrl, thumb)
+        await fs.promises.writeFile('public/' + imageUrl, thumb)
         project.image = imageUrl
       } catch (e) {
         console.error("Can't write thumbnail for:", image)

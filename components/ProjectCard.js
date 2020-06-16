@@ -29,7 +29,7 @@ const ProjectCard = ({ project }) => {
           alignItems: 'center',
         }}
       >
-        <LazyLoadImage src={project.image || '/images/placeholder.png'} />
+        <LazyLoadImage src={project.image || 'images/placeholder.png'} />
       </div>
       <Card.Content>
         <Card.Header
