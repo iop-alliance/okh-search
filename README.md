@@ -1,8 +1,10 @@
-[![Open Know-How logo](public/logo_no_text.svg)][standard]
+[![GOSH logo](public/logo.svg)](http://openhwardware.science
+
+# A fork of the Open Know-How search for open science hardware
 
 # Open Know-How Search
 
-A publicly editable CSV file and associated [search page][] for open source hardware projects that have an [OpenKnowHow manifest][standard].
+A publicly editable CSV file and associated [search page][] for open source hardware *science* projects that have an [OpenKnowHow manifest][standard].
 
 Open Know-How wants to make hardware projects easy to find (there are more than 80 different platforms/repositories for hardware available out there!). To do that, a group of people has come up with a manifest, a little file that goes into each project documentation, and that can be found by webcrawlers.
 
@@ -15,7 +17,7 @@ Adding your project to [our list](projects_okhs.csv) will make it show up on [ok
 2. Add a URL to the .yml to [our CSV](projects_okhs.csv)
 
 
-## Problem? 
+## Problem?
 
 If you have any questions, [create an issue](https://github.com/OpenKnowHow/okh-log/issues/new), or drop a message to andremaia.chagas[at]gmail.com
 
