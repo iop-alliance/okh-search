@@ -1,0 +1,15 @@
+image: node:14-alpine
+
+pages:
+  stage: deploy
+  before_script:
+    - yarn --frozen-lockfile
+  script:
+    - yarn run build
+    - mv public out_of_the_way
+    - mv out public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
