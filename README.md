@@ -1,8 +1,11 @@
-[![GOSH logo](public/logo.svg)](http://openhwardware.science
+[![GOSH logo](public/logo.svg)](http://openhwardware.science)
 
 # A fork of the Open Know-How search for open science hardware
 
-# Open Know-How Search
+- [it's live here](https://gosh-community.gitlab.io/gosh-okh-search/)
+- forked from: https://github.com/OpenKnowHow/okh-search
+
+## Open Know-How Search
 
 A publicly editable CSV file and associated [search page][] for open source hardware *science* projects that have an [OpenKnowHow manifest][standard].
 
