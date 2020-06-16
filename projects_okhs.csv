@@ -10,7 +10,6 @@ Raspberry Pi Camera Calibration Jig, 2019-11-14, https://gitlab.com/bath_open_in
 Actifield, 2019-11-16, https://raw.githubusercontent.com/trendinafrica/actifield/master/okh-actifield.yml
 Syringe Pump, 2019-11-16, https://raw.githubusercontent.com/FOSH-following-demand/Syringe_Pump/master/okh-syringe-pump.yml
 Incubator, 2019-11-16, https://raw.githubusercontent.com/FOSH-following-demand/Incubator/master/okh-incubator.yml
-NYC-MTA-Next-Train, 2019-11-16, https://raw.githubusercontent.com/mwweinberg/NYC-MTA-Next-Train/master/okh-nycmtapi.yml
 ZACplus, 2019-11-15, https://raw.githubusercontent.com/case06/ZACplus/master/okh-ZACplus.yml
 OpenFlexure Microscope, 2020-02-13, https://gitlab.com/openflexure/openflexure-microscope/-/raw/master/okh.yml
 OpenFlexure Block Stage, 2020-02-13, https://gitlab.com/openflexure/openflexure-block-stage/-/raw/master/okh-openflexure-block-stage.yml
