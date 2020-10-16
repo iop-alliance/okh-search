@@ -14,8 +14,8 @@
    viewBox="0 0 84.185853 61.994122"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.5 (0.92.5+68)"
-   sodipodi:docname="logo.svg"
+   inkscape:version="0.92.5 (0ad1ac969f, 2020-08-06, custom)"
+   sodipodi:docname="logo_source.svg"
    inkscape:export-filename="/home/kaspar/projects/buildsearch/public/favicon.png"
    inkscape:export-xdpi="94.879448"
    inkscape:export-ydpi="94.879448">
@@ -41,11 +41,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="137.94403"
-     inkscape:cy="-72.95248"
+     inkscape:zoom="1.979899"
+     inkscape:cx="138.39318"
+     inkscape:cy="72.908321"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1544"
      showgrid="false"
      objecttolerance="1"
      guidetolerance="1"
@@ -66,7 +66,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -90,30 +90,31 @@
        transform="translate(0,0.45018467)">
       <g
          transform="matrix(0.94506979,0,0,0.97107354,5.778709,40.210003)"
-         id="g2275">
+         id="g2275"
+         style="fill:#333333">
         <g
            id="text12-6-2"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:15.0607996px;line-height:1.14999998;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';letter-spacing:0px;fill:#1a1a1a;fill-opacity:1;stroke-width:0.26458299"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:15.0607996px;line-height:1.14999998;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';letter-spacing:0px;fill:#333333;fill-opacity:1;stroke-width:0.26458299"
            aria-label="GOSH ">
           <path
              inkscape:connector-curvature="0"
              id="path847"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';fill:#1a1a1a;fill-opacity:1;stroke-width:0.26458299"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';fill:#333333;fill-opacity:1;stroke-width:0.26458299"
              d="M 27.957706,93.337901 Q 25.547978,93.337901 23.944003,91.786639 22.340027,90.235376 22.340027,87.961195 22.340027,85.656893 23.989185,84.135752 25.638343,82.614612 28.093253,82.614612 30.457798,82.614612 32.325338,84.150813 L 30.984926,85.852683 Q 29.629454,84.677941 28.093253,84.677941 26.617295,84.677941 25.698586,85.619241 24.779877,86.560541 24.779877,87.961195 24.779877,88.676583 24.998259,89.233833 25.224171,89.791083 25.600691,90.197724 25.977211,90.604366 26.466687,90.860399 27.219727,91.259511 28.108314,91.259511 29.057144,91.259511 30.171643,90.6872 V 89.015451 H 27.957706 V 87.208155 H 32.234973 V 91.967368 Q 30.352373,93.337901 27.957706,93.337901 Z" />
           <path
              inkscape:connector-curvature="0"
              id="path849"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';fill:#1a1a1a;fill-opacity:1;stroke-width:0.26458299"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';fill:#333333;fill-opacity:1;stroke-width:0.26458299"
              d="M 39.210241,93.398144 Q 36.815574,93.398144 35.181477,91.839351 33.54738,90.280559 33.54738,87.946135 33.54738,85.611711 35.166416,84.067979 36.785452,82.524247 39.210241,82.524247 41.65009,82.524247 43.261596,84.08304 44.873101,85.641832 44.873101,87.946135 44.873101,90.280559 43.254065,91.839351 41.635029,93.398144 39.210241,93.398144 Z M 39.240362,91.319754 Q 39.842794,91.319754 40.415105,91.101372 40.987415,90.882991 41.439239,90.461288 41.891063,90.032055 42.162157,89.407032 42.433252,88.774479 42.433252,87.946135 42.433252,86.876818 41.981428,86.138839 41.529604,85.400859 40.806685,85.001748 40.083767,84.602637 39.240362,84.602637 37.975255,84.602637 36.981242,85.536407 35.98723,86.470176 35.98723,87.946135 35.98723,89.437154 36.966182,90.378454 37.945134,91.319754 39.240362,91.319754 Z" />
           <path
              inkscape:connector-curvature="0"
              id="path851"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';fill:#1a1a1a;fill-opacity:1;stroke-width:0.26458299"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';fill:#333333;fill-opacity:1;stroke-width:0.26458299"
              d="M 50.244396,93.368022 Q 47.653938,93.368022 45.590608,91.681213 L 46.539439,89.73837 Q 47.623816,90.581775 48.587708,90.958295 49.551599,91.334815 50.274517,91.334815 51.84084,91.334815 51.84084,90.280559 51.84084,89.708248 51.298652,89.384441 50.756463,89.060634 49.672085,88.8046 48.090701,88.322655 47.50333,87.976256 46.223162,87.193095 46.223162,85.641832 46.223162,84.120692 47.397904,83.307408 48.572647,82.494125 50.304639,82.494125 52.518576,82.494125 54.310811,83.653807 L 53.392103,85.626771 Q 51.46432,84.542394 50.108848,84.542394 48.783498,84.542394 48.768437,85.430981 48.768437,85.927987 49.257913,86.266855 49.75492,86.605723 50.89201,86.891879 L 51.554685,87.095199 Q 51.773067,87.162973 52.360438,87.396415 53.294207,87.772935 53.828866,88.42808 54.371055,89.075695 54.371055,90.160072 54.371055,91.696274 53.226434,92.532148 52.081813,93.368022 50.244396,93.368022 Z" />
           <path
              inkscape:connector-curvature="0"
              id="path853"
-             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';fill:#1a1a1a;fill-opacity:1;stroke-width:0.26458299"
+             style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';fill:#333333;fill-opacity:1;stroke-width:0.26458299"
              d="M 65.572053,93.232475 H 63.192447 V 89.075695 H 58.418173 V 93.232475 H 56.038567 V 82.689916 H 58.418173 V 87.087669 H 63.192447 V 82.689916 H 65.572053 Z" />
         </g>
       </g>
@@ -257,19 +258,19 @@
       <text
          transform="scale(0.9865199,1.0136643)"
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.01473093px;line-height:1.14999998;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';letter-spacing:0px;fill:#1a1a1a;stroke-width:0.20631707"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:4.01473093px;line-height:1.14999998;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';letter-spacing:0px;fill:#333333;stroke-width:0.20631707;"
          x="27.89662"
          y="133.28932"
          id="text12-6"><tspan
            sodipodi:role="line"
            x="27.89662"
            y="133.28932"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke-width:0.20631707"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';text-align:start;text-anchor:start;fill:#333333;fill-opacity:1;stroke-width:0.20631707;"
            id="tspan28-4">Gathering for Open</tspan><tspan
            sodipodi:role="line"
            x="27.89662"
            y="137.90627"
-           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke-width:0.20631707"
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:'Argentum Sans';-inkscape-font-specification:'Argentum Sans Semi-Bold';text-align:start;text-anchor:start;fill:#333333;fill-opacity:1;stroke-width:0.20631707;"
            id="tspan34-7">Science Hardware</tspan></text>
     </g>
   </g>
