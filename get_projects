@@ -67,7 +67,10 @@ function processUrls(project) {
 async function processImages(project) {
   let image = project.image
   if (image) {
-    const r = await fetch(image)
+    const r = await fetch(image).catch(e => {
+      console.error(e)
+      return {}
+    })
     if (r.status != 200 || !/^image\//.test(r.headers.get('Content-Type'))) {
       console.warn("Can't read image:", image)
       delete project.image
