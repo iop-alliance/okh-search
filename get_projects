@@ -71,7 +71,11 @@ async function processImages(project) {
       console.error(e)
       return {}
     })
-    if (r.status != 200 || !/^image\//.test(r.headers.get('Content-Type'))) {
+    if (
+      r.status != 200 ||
+      !/^image\//.test(r.headers.get('Content-Type')) ||
+      r.body == null
+    ) {
       console.warn("Can't read image:", image)
       delete project.image
     } else {
