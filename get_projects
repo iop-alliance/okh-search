@@ -3,6 +3,9 @@ const path = require('path')
 const fetch = require('isomorphic-unfetch')
 const yaml = require('yaml')
 const fs = require('fs')
+const util = require('util')
+const accessPromise = util.promisify(fs.access)
+
 const imageThumbnail = require('image-thumbnail')
 
 ;(async () => {
@@ -73,8 +76,8 @@ async function processImages(project) {
     const imageUrl = `/images/${project.id}${ext}`
     project.image = imageUrl
     const imagePath = path.join('public', imageUrl)
-    const exists = fs.existsSync(imagePath)
-    if (!exists) {
+    const doesExist = await exists(imagePath)
+    if (!doesExist) {
       console.info(`Fetching ${image}`)
       const r = await fetch(image).catch(e => {
         console.warn('............................................')
@@ -107,6 +110,18 @@ async function processImages(project) {
     }
   }
   return project
+}
+
+function exists(file) {
+  return accessPromise(file, fs.constants.F_OK)
+    .then(x => x == null)
+    .catch(err => {
+      if (err.code === 'ENOENT') {
+        return false
+      } else {
+        throw err
+      }
+    })
 }
 
 function shuffleArray(array) {
