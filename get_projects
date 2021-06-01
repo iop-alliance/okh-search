@@ -68,7 +68,9 @@ async function processImages(project) {
   let image = project.image
   if (image) {
     const r = await fetch(image).catch(e => {
-      console.error(e)
+      console.warn('--------------------------------------------')
+      console.warn(e)
+      console.warn('--------------------------------------------')
       return {}
     })
     if (
@@ -86,8 +88,11 @@ async function processImages(project) {
         await fs.promises.writeFile('public' + imageUrl, thumb)
         project.image = imageUrl
       } catch (e) {
-        console.error("Can't write thumbnail for:", image)
-        console.error(e)
+        console.warn('--------------------------------------------')
+        console.warn(e)
+        console.warn('--------------------------------------------')
+        console.warn("Can't write thumbnail for:", image)
+        console.warn('--------------------------------------------')
         delete project.image
       }
     }
