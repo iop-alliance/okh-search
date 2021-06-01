@@ -23,11 +23,11 @@ const imageThumbnail = require('image-thumbnail')
               return { id: index, origin, ...yaml.parse(text) }
             })
             .catch(e => {
-              console.warn('............................................')
-              console.warn(e)
               console.warn('--------------------------------------------')
-              console.warn('Error reading:', link)
+              console.warn(e)
               console.warn('............................................')
+              console.warn('Error reading:', link)
+              console.warn('--------------------------------------------')
             })
         }
       }),
@@ -80,9 +80,9 @@ async function processImages(project) {
     if (!doesExist) {
       console.info(`Fetching ${image}`)
       const r = await fetch(image).catch(e => {
-        console.warn('............................................')
+        console.warn('--------------------------------------------')
         console.warn(e)
-        console.warn('............................................')
+        console.warn('--------------------------------------------')
         return {}
       })
       if (
@@ -97,11 +97,11 @@ async function processImages(project) {
           const thumb = await imageThumbnail(r.body, { height: 200, width: 290 })
           await fs.promises.writeFile(imagePath, thumb)
         } catch (e) {
-          console.warn('............................................')
-          console.warn(e)
           console.warn('--------------------------------------------')
-          console.warn("Can't write thumbnail for:", image)
+          console.warn(e)
           console.warn('............................................')
+          console.warn("Can't write thumbnail for:", image)
+          console.warn('--------------------------------------------')
           delete project.image
         }
       }
