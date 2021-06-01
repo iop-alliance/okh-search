@@ -93,6 +93,7 @@ async function processImages(project) {
         delete project.image
       } else {
         try {
+          console.warn(image)
           const thumb = await imageThumbnail(r.body, { height: 200, width: 290 })
           await fs.promises.writeFile(imagePath, thumb)
         } catch (e) {
