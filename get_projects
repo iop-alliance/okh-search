@@ -78,7 +78,6 @@ async function processImages(project) {
     const imagePath = path.join('public', imageUrl)
     const doesExist = await exists(imagePath)
     if (!doesExist) {
-      console.info(`Fetching ${image}`)
       const r = await fetch(image).catch(e => {
         console.warn('--------------------------------------------')
         console.warn(e)
@@ -105,8 +104,6 @@ async function processImages(project) {
           delete project.image
         }
       }
-    } else {
-      //console.info(`Skipping download of ${imageUrl}, already exists.`)
     }
   }
   return project
