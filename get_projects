@@ -81,7 +81,7 @@ async function processImage(project) {
   }
 
   const ext = path.extname(image).toLowerCase()
-  const imageUrl = `/images/${project.id}${ext}`
+  const imageUrl = `images/${project.id}${ext}`
   project.image = imageUrl
   const imagePath = path.join('public', imageUrl)
 
