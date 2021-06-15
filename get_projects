@@ -80,7 +80,10 @@ async function processImage(project) {
     return project
   }
 
-  const ext = path.extname(image).toLowerCase()
+  let ext = path.extname(image).toLowerCase()
+  // remove any query parameters if there are any
+  ext = ext.split('?')[0]
+
   const imageUrl = `images/${project.id}${ext}`
   project.image = imageUrl
   const imagePath = path.join('public', imageUrl)
