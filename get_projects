@@ -3,6 +3,9 @@ const path = require('path')
 const fetch = require('isomorphic-unfetch')
 const yaml = require('yaml')
 const fs = require('fs')
+const util = require('util')
+const accessPromise = util.promisify(fs.access)
+
 const imageThumbnail = require('image-thumbnail')
 
 ;(async () => {
@@ -20,8 +23,9 @@ const imageThumbnail = require('image-thumbnail')
               return { id: index, origin, ...yaml.parse(text) }
             })
             .catch(e => {
-              console.warn(e)
               console.warn('--------------------------------------------')
+              console.warn(e)
+              console.warn('............................................')
               console.warn('Error reading:', link)
               console.warn('--------------------------------------------')
             })
@@ -34,7 +38,7 @@ const imageThumbnail = require('image-thumbnail')
   // remove null/undefined
   projects = projects.filter(x => x)
   shuffleArray(projects)
-  projects = await Promise.all(projects.map(processImages))
+  projects = await Promise.all(projects.map(processImage))
   console.log(JSON.stringify(projects, null, 2))
 })()
 
@@ -54,6 +58,11 @@ function processUrls(project) {
   const origin = project.origin
   const docHome = project['documentation-home'] || project['project-link']
   if (docHome == null) {
+    console.warn('--------------------------------------------')
+    console.warn(
+      `No link available for project - title: "${project.title}", CSV line number: ${project.id + 2}`,
+    )
+    console.warn('--------------------------------------------')
     return
   }
   project['documentation-home'] = new URL(docHome, origin).href
@@ -64,33 +73,70 @@ function processUrls(project) {
   return project
 }
 
-async function processImages(project) {
+async function processImage(project) {
   let image = project.image
-  if (image) {
-    const r = await fetch(image)
-    if (r.status != 200 || !/^image\//.test(r.headers.get('Content-Type'))) {
-      console.warn("Can't read image:", image)
+
+  if (!image) {
+    return project
+  }
+
+  const ext = path.extname(image).toLowerCase()
+  const imageUrl = `/images/${project.id}${ext}`
+  project.image = imageUrl
+  const imagePath = path.join('public', imageUrl)
+
+  const doesExist = await exists(imagePath)
+  if (doesExist) {
+    return project
+  }
+
+  const r = await fetch(image).catch(e => {
+    console.warn('--------------------------------------------')
+    console.warn(e)
+    console.warn('--------------------------------------------')
+    return {}
+  })
+
+  if (
+    r.status != 200 ||
+    !/^image\//.test(r.headers.get('Content-Type')) ||
+    r.body == null
+  ) {
+    console.warn("Can't read image:", image)
+    delete project.image
+  } else {
+    try {
+      console.warn(image)
+      const thumb = await imageThumbnail(r.body, { height: 200, width: 290 })
+      await fs.promises.writeFile(imagePath, thumb)
+    } catch (e) {
+      console.warn('--------------------------------------------')
+      console.warn(e)
+      console.warn('............................................')
+      console.warn("Can't write thumbnail for:", image)
+      console.warn('--------------------------------------------')
       delete project.image
-    } else {
-      try {
-        const ext = r.headers.get('Content-Type').match(/image\/(.*)/)[1]
-        const imageUrl = `images/${project.id}.${ext}`
-        const thumb = await imageThumbnail(r.body, { height: 200, width: 290 })
-        await fs.promises.writeFile('public/' + imageUrl, thumb)
-        project.image = imageUrl
-      } catch (e) {
-        console.error("Can't write thumbnail for:", image)
-        console.error(e)
-        delete project.image
-      }
     }
   }
   return project
 }
 
+function exists(file) {
+  return accessPromise(file, fs.constants.F_OK)
+    .then(x => x == null)
+    .catch(err => {
+      if (err.code === 'ENOENT') {
+        return false
+      } else {
+        throw err
+      }
+    })
+}
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
-    ;[array[i], array[j]] = [array[j], array[i]] // eslint-disable-line no-param-reassign
+    // eslint-disable-next-line no-param-reassign
+    ;[array[i], array[j]] = [array[j], array[i]]
   }
 }
