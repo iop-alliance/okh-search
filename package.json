@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn projects && next build",
+    "build": "next build",
     "export": "next export",
     "start": "next start",
     "projects": "./get_projects > projects.json"
