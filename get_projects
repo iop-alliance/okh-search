@@ -114,6 +114,7 @@ async function processImage(project) {
       console.warn(e)
       console.warn('............................................')
       console.warn("Can't write thumbnail for:", image)
+      console.warn(project.title)
       console.warn('--------------------------------------------')
       delete project.image
     }
