@@ -15,7 +15,9 @@ jobs:
         with:
           submodules: true
       - run: yarn install --frozen-lockfile
-      - run: yarn export
+      - run: yarn projects
+      - run: next build
+      - run: next export
       - env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

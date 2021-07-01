@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "yarn projects && next build",
-    "export": "yarn build && next export",
+    "export": "next export",
     "start": "next start",
     "projects": "./get_projects > projects.json"
   },
