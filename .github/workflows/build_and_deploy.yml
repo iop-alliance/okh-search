@@ -23,7 +23,7 @@ jobs:
           path: public/images/
           key: images
       - run: yarn install --frozen-lockfile
-      - run: yarn projects
+      - run: ./get_projects > projects.json
       - run: cat projects.json
       - run: yarn build
       - run: yarn export
