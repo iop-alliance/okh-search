@@ -1,10 +1,11 @@
 name: Build and deploy
 
 on:
-  schedule:
+  # disabled till it's working reliably
+  #schedule:
     # run every 24 hours on the 23rd minute (github actions sees higher usage on
     # the 0th minute)
-    - cron: 23 */24 * * *
+    #- cron: 23 */24 * * *
   push:
 
 jobs:
