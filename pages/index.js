@@ -18,7 +18,7 @@ class Home extends React.Component {
           </Head>
           <div className="top">
             <div className="logo">
-              <a href="https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow">
+              <a href="https://openknowhow.org">
                 <img style={{ height: 200 }} src="/logo.svg" />
               </a>
             </div>
