@@ -2,7 +2,7 @@
 
 # A fork of the Open Know-How search for open science hardware
 
-- [it's live here](https://gosh-community.gitlab.io/gosh-okh-search/)
+- [it's live here](https://projects.openhardware.science)
 - forked from: https://github.com/OpenKnowHow/okh-search
 
 ## Open Know-How Search
@@ -20,11 +20,6 @@ Adding your project to [our list](projects_okhs.csv) will make it show up on [ok
 2. Add a URL to the .yml to [our CSV](projects_okhs.csv)
 
 
-## Problem?
-
-If you have any questions, [create an issue](https://github.com/OpenKnowHow/okh-log/issues/new), or drop a message to andremaia.chagas[at]gmail.com
-
-
 [search page]: https://okh.now.sh
-[standard]: https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/wiki
+[standard]: https://iop.link/okh
 [validator]: https://okh-validator.netlify.app/okh-validator/
