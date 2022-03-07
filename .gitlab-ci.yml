@@ -8,8 +8,9 @@ pages:
     - yarn run build
     - mv public out_of_the_way
     - mv out public
+    - cp _redirects public/
     # gzip the files so we get compression in gitlab pages
-    - gzip -k -6 $(find public -type f)
+    - gzip -k -6 $(find public -type f -name='*.html' -name='*.js' -name='*.css')
   artifacts:
     paths:
       - public
