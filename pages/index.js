@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import { withRouter } from 'next/router'
 import { createFilter } from 'react-search-input'
 import { Container, Input } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.css'
@@ -10,7 +9,6 @@ import ProjectCard from '../components/ProjectCard'
 class Home extends React.Component {
   state = { result: projects, searching: false }
   render() {
-    console.log('pathname', this.props.router.pathname)
     return (
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ maxWidth: 1200 }}>
@@ -106,4 +104,4 @@ class Home extends React.Component {
   }
 }
 
-export default withRouter(Home)
+export default Home
