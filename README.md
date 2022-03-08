@@ -21,5 +21,5 @@ If you have any questions, [create an issue](https://github.com/OpenKnowHow/okh-
 
 
 [search page]: https://search.openknowhow.org
-[standard]: https://app.standardsrepo.com/MakerNetAlliance/OpenKnowHow/wiki
+[standard]: https://iop.link/okh
 [validator]: https://okh-validator.netlify.app/okh-validator/
