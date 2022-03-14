@@ -8,6 +8,8 @@ const accessPromise = util.promisify(fs.access)
 
 const imageThumbnail = require('image-thumbnail')
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 ;(async () => {
   const csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
   let projects = await Promise.all(
