@@ -113,7 +113,7 @@ async function processImage(project) {
     try {
       console.warn(image)
       const body = await r.buffer()
-      const thumb = await imageThumbnail(body, { height: 200, width: 290 })
+      const thumb = await imageThumbnail(body, { height: 200, width: 290, fit: 'outside' })
       await fs.promises.writeFile(imagePath, thumb)
     } catch (e) {
       console.warn('--------------------------------------------')

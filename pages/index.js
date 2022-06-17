@@ -63,6 +63,7 @@ class Home extends React.Component {
               .main {
                 max-width: 1200px;
               }
+
               .top {
                 display: flex;
                 flex-wrap: wrap;
@@ -70,6 +71,7 @@ class Home extends React.Component {
                 justify-content: center;
                 align-items: center;
               }
+
               .logo {
                 display: flex;
                 justify-content: center;
@@ -80,11 +82,13 @@ class Home extends React.Component {
                   width: 500px;
                 }
               }
+
               @media (max-width: 550px) {
                 .search {
                   width: 80vw;
                 }
               }
+
               #projects {
                 margin-top: 30px;
                 display: flex;
