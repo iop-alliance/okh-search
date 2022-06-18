@@ -8,8 +8,7 @@ const accessPromise = util.promisify(fs.access)
 
 const imageThumbnail = require('image-thumbnail')
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 ;(async () => {
   const csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
   let projects = await Promise.all(
@@ -44,11 +43,15 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
   console.log(JSON.stringify(projects, null, 2))
 })()
 
-async function fetchText(url) {
+async function fetchText(link) {
+  link = link.trim()
+  if (link.startsWith('local-manifests/')) {
+    return fs.promises.readFile(link, 'utf-8')
+  }
   // just checking it's a valid url
-  new URL(url)
+  new URL(link)
   // actually fetch it
-  return fetch(url).then(r => {
+  return fetch(link).then(r => {
     if (r.status !== 200) {
       throw Error(r.status)
     }
@@ -57,12 +60,17 @@ async function fetchText(url) {
 }
 
 function processUrls(project) {
-  const origin = project.origin
+  let origin = project.origin.trim()
+  if (origin === 'local-manifests/') {
+    origin = 'https://projects.openhardware.science'
+  }
   const docHome = project['documentation-home'] || project['project-link']
   if (docHome == null) {
     console.warn('--------------------------------------------')
     console.warn(
-      `No link available for project - title: "${project.title}", CSV line number: ${project.id + 2}`,
+      `No link available for project - title: "${
+        project.title
+      }", CSV line number: ${project.id + 2}`,
     )
     console.warn('--------------------------------------------')
     return
@@ -113,7 +121,11 @@ async function processImage(project) {
     try {
       console.warn(image)
       const body = await r.buffer()
-      const thumb = await imageThumbnail(body, { height: 200, width: 290, fit: 'outside' })
+      const thumb = await imageThumbnail(body, {
+        height: 200,
+        width: 290,
+        fit: 'outside',
+      })
       await fs.promises.writeFile(imagePath, thumb)
     } catch (e) {
       console.warn('--------------------------------------------')
