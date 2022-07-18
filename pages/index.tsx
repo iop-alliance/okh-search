@@ -7,6 +7,7 @@ import projects from '../projects.json'
 import ProjectCard from '../components/ProjectCard'
 
 class Home extends React.Component {
+  timeout = null
   state = { result: projects, searching: false, redirecting: false }
   componentDidMoun() {}
   render() {
@@ -105,7 +106,10 @@ class Home extends React.Component {
   handleKeydown(event) {
     //lose focus when pressing enter key, for mobile
     if (event.which == 13) {
-      document.getElementsByClassName('searchInput')[0].firstElementChild.blur()
+      ;(
+        document.getElementsByClassName('searchInput')[0]
+          .firstElementChild as HTMLInputElement
+      ).blur()
     }
     return false
   }
