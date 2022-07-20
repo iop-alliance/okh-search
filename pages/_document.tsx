@@ -9,7 +9,9 @@ class CustomDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link rel="canonical" href="https://projects.openhardware.science" />
+        </Head>
         <body>
           <script
             async

@@ -1,0 +1,33 @@
+title: XYZ Nanopositioner (Piezo motor)
+
+description: I am sharing 12 types of nanopositioners, from thumb-size actuator to 18 axes nano-probing station, CAD and Arduino-based controller designs are now published in Hardware X and make it open source for everyone.
+
+project-link: https://www.sciencedirect.com/science/article/pii/S2468067222000621
+
+image: https://lh3.googleusercontent.com/pw/AM-JKLXpJcvxm8-Q6BAWnR6R0jUnrxEobwgzXpwPb5mscSQkyuCqQUBMRWfyS0TEa5MgyWQfCiCQonum2FudDQFKRCugSOw1yfcMGA0EVYyzXrTprR-0AF_-SOmsLRh-E1Mtv9UbnWfMO7sTb3gDPWq-iPQOrq8=w1036-h978-no
+
+video-link: https://www.youtube.com/c/EdwinHwuHacks4Science/videos
+
+design-files:
+  - name: osf-archive
+    path: https://osf.io/7fk3u/files/osfstorage
+
+intended-use:
+  - nanotechnology
+  - nanometrology
+  - bioengineering
+  - semiconductor fabrication
+  - aerospace
+
+keywords:
+  - Nanopositioning
+  - 3D printing
+  - Atomic resolution
+  - Vibrometer
+  - Atomic force microscopy
+  - Scanning electron microscopy
+
+contact:
+  name: Edwin En-Te Hwu
+  affiliation: Danish Technical University
+  email: etehw@dtu.dk
