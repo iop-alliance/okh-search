@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const path = require('path')
-const fetch = require('isomorphic-unfetch')
+const fetch = require('node-fetch')
 const yaml = require('yaml')
 const fs = require('fs')
 const util = require('util')
@@ -17,6 +17,7 @@ const imageThumbnail = require('image-thumbnail')
       .map(async (line, index) => {
         const [name, date, link] = line.split(',')
         if (link) {
+          console.warn('FETCHING', link)
           return fetchText(link)
             .then(text => {
               const origin = path.dirname(link) + '/'
@@ -38,15 +39,26 @@ const imageThumbnail = require('image-thumbnail')
   // remove null/undefined
   projects = projects.filter(x => x)
   shuffleArray(projects)
-  projects = await Promise.all(projects.map(processImage))
+  projects = await Promise.all(
+    projects.map(p =>
+      processImage(p).catch(e => {
+        console.warn('FAILED', p.image)
+        return { ...p, image: null }
+      }),
+    ),
+  )
   console.log(JSON.stringify(projects, null, 2))
 })()
 
-async function fetchText(url) {
+async function fetchText(link) {
+  link = link.trim()
+  if (link.startsWith('local-manifests/')) {
+    return fs.promises.readFile(link, 'utf-8')
+  }
   // just checking it's a valid url
-  new URL(url)
+  new URL(link)
   // actually fetch it
-  return fetch(url).then(r => {
+  return fetch(link).then(r => {
     if (r.status !== 200) {
       throw Error(r.status)
     }
@@ -55,12 +67,17 @@ async function fetchText(url) {
 }
 
 function processUrls(project) {
-  const origin = project.origin
+  let origin = project.origin.trim()
+  if (origin === 'local-manifests/') {
+    origin = 'https://search.openknowhow.org'
+  }
   const docHome = project['documentation-home'] || project['project-link']
   if (docHome == null) {
     console.warn('--------------------------------------------')
     console.warn(
-      `No link available for project - title: "${project.title}", CSV line number: ${project.id + 2}`,
+      `No link available for project - title: "${
+        project.title
+      }", CSV line number: ${project.id + 2}`,
     )
     console.warn('--------------------------------------------')
     return
@@ -75,15 +92,20 @@ function processUrls(project) {
 
 async function processImage(project) {
   let image = project.image
+  console.warn({ image })
 
   if (!image) {
     return project
   }
 
-  const ext = path.extname(image).toLowerCase()
-  const imageUrl = `/images/${project.id}${ext}`
+  let ext = path.extname(image).toLowerCase()
+  // remove any query parameters if there are any
+  ext = ext.split('?')[0]
+
+  const imageUrl = `images/${project.id}${ext}`
   project.image = imageUrl
   const imagePath = path.join('public', imageUrl)
+  console.warn({ imagePath })
 
   const doesExist = await exists(imagePath)
   if (doesExist) {
@@ -97,17 +119,18 @@ async function processImage(project) {
     return {}
   })
 
-  if (
-    r.status != 200 ||
-    !/^image\//.test(r.headers.get('Content-Type')) ||
-    r.body == null
-  ) {
+  if (!r.ok || !/^image\//.test(r.headers.get('Content-Type')) || r.body == null) {
     console.warn("Can't read image:", image)
-    delete project.image
+    return { ...project, image: null }
   } else {
     try {
       console.warn(image)
-      const thumb = await imageThumbnail(r.body, { height: 200, width: 290 })
+      const body = await r.buffer()
+      const thumb = await imageThumbnail(body, {
+        height: 200,
+        width: 290,
+        fit: 'outside',
+      })
       await fs.promises.writeFile(imagePath, thumb)
     } catch (e) {
       console.warn('--------------------------------------------')
