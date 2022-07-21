@@ -2845,25 +2845,6 @@ emojis-list@^3.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
   integrity sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==
 
-en-inflectors@^1.0.11, en-inflectors@^1.0.7:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/en-inflectors/-/en-inflectors-1.0.12.tgz#fd334776608a021cb4202157f20d52ab934af78a"
-  integrity sha512-G9wwJMx9DQQzwom8J8e8ErVpI6h/Z5BpYusJCE2Q/2NfgBNYCesyNaCOOskZAhOrw2nmR4D8nYAv4Xv/INIbzw==
-  dependencies:
-    en-stemmer "^1.0.2"
-
-en-lexicon@^1.0.10:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/en-lexicon/-/en-lexicon-1.0.11.tgz#3f4da8a9cca9a906f510b8ece11631be3fd1105f"
-  integrity sha512-eanOw9551H6jMRpRK023+Nlss5qnuAi99drXcSUzQySsMrB43teDNbin/AbpOfnemQiTtuZChXYm2kEIR1Mhmg==
-  dependencies:
-    en-inflectors "^1.0.7"
-
-en-stemmer@^1.0.2, en-stemmer@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/en-stemmer/-/en-stemmer-1.0.3.tgz#2d22fb5db9005a88d6fc58026b38a831c8bc7c19"
-  integrity sha512-sBeYsHLqZWACn/mTRLAMdYb/A53s55r4/nCB2UjKK96EBuRQ4t4GKl4V1pW/0hvzdncfYlZRT+JSIRxCtoYqbA==
-
 enabled@2.0.x:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/enabled/-/enabled-2.0.0.tgz#f9dd92ec2d6f4bbc0d5d1e64e21d61cd4665e7c2"
@@ -4792,15 +4773,6 @@ lazystream@^1.0.0:
   integrity sha512-b94GiNHQNy6JNTrt5w6zNyffMrNkXZb3KTkCZJb2V1xaEGCk093vkZ2jk3tpaeP33/OiXC+WvK9AxUebnf5nbw==
   dependencies:
     readable-stream "^2.0.5"
-
-lemmatizer@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/lemmatizer/-/lemmatizer-0.0.1.tgz#d27ee09025392fc14b014494f3a6881a3371fbe6"
-  integrity sha512-OhVYdbBYeCHE0Jea6L8jzbyKzZyZVjq/Aexd7Tv/kQa4TSiXR9HQ7+SgsD/VRzNNEB2sfO5HCx4Czg1fWgibDw==
-  dependencies:
-    en-inflectors "^1.0.11"
-    en-lexicon "^1.0.10"
-    en-stemmer "^1.0.3"
 
 leven@^3.1.0:
   version "3.1.0"
@@ -7446,11 +7418,6 @@ statuses@2.0.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
-
-stem-porter@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/stem-porter/-/stem-porter-0.0.1.tgz#591a8b0d696c34252af593535228430a34de7001"
-  integrity sha512-xJuy127YOwO4Cv5GPNkFebK9cpgCv2pDeUEVCIXngWjIgQmeH9cjDyk0QV+8coP4SJ6MCQPgUMYXMEQDYflLbw==
 
 strict-uri-encode@^1.0.0:
   version "1.1.0"
