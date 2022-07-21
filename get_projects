@@ -8,6 +8,7 @@ const util = require('util')
 const accessPromise = util.promisify(fs.access)
 
 const imageThumbnail = require('image-thumbnail')
+const natural = require('natural')
 
 ;(async () => {
   const csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
@@ -34,12 +35,11 @@ const imageThumbnail = require('image-thumbnail')
       }),
   )
   // remove null/undefined
-  projects = projects.filter(x => x)
+  projects = projects.filter(Boolean)
   projects = projects.map(processUrls)
   // remove null/undefined
-  projects = projects.filter(x => x)
+  projects = projects.filter(Boolean)
   shuffleArray(projects)
-  console.warn('LO')
   projects = await Promise.all(
     projects.map(p =>
       processImage(p).catch(e => {
@@ -48,7 +48,70 @@ const imageThumbnail = require('image-thumbnail')
       }),
     ),
   )
-  console.log(JSON.stringify(projects, null, 2))
+  // aggregate keywords and count the number of times they are used. stem the
+  // keywords but keep trak of the original pre-stemmed keywords too.
+  let keywords = projects.reduce(
+    ({ stemmed, original }, p) => {
+      if (p.keywords) {
+        const stemmedKeywords = p.keywords
+          .filter(Boolean)
+          .map(k => k.toLowerCase())
+          .map(k => [k, natural.PorterStemmer.stem(k)])
+        for (const [originalKey, stemmedKey] of stemmedKeywords) {
+          if (Object.keys(stemmed).includes(stemmedKey)) {
+            stemmed[stemmedKey]++
+          } else {
+            stemmed[stemmedKey] = 1
+          }
+          if (Object.keys(original).includes(originalKey)) {
+            original[originalKey].count++
+          } else {
+            original[originalKey] = { stemmed: stemmedKey, count: 1 }
+          }
+        }
+      }
+      return { stemmed, original }
+    },
+    { stemmed: {}, original: {} },
+  )
+  // get the pre-stemmed original keywords sorted according to popularity
+  const preStemmed = Object.entries(keywords.original).sort(
+    ([_, { count }], [__, { count: count2 }]) => count2 - count,
+  )
+  // get the stemmed keywords according to popularity
+  keywords = Object.entries(keywords.stemmed)
+    .filter(([_, count]) => count > 1)
+    .sort(([_, count1], [__, count2]) => count2 - count1)
+  // make a map of all keywords used to canonical names (the most popular
+  // pre-stemmed keywords)
+  const keywordMap = keywords.map(([keyword]) => {
+    const [canonical] = preStemmed.find(([_, { stemmed }]) => stemmed === keyword)
+    const aliases = preStemmed
+      .filter(([_, { stemmed }]) => stemmed === keyword)
+      .map(([k]) => k)
+      .filter(k => k !== canonical)
+    return [canonical, aliases]
+  })
+  // normalize keywords in projects by mapping them to canonical names
+  projects = projects.map(project => {
+    if (project.keywords) {
+      const keywords = project.keywords.filter(Boolean).map(keyword => {
+        keyword = keyword.toLowerCase()
+        const canonical = keywordMap.find(([_, aliases]) =>
+          aliases.includes(keyword),
+        )
+        if (canonical) {
+          return canonical[0]
+        }
+        return keyword
+      })
+      return { ...project, keywords }
+    }
+    return project
+  })
+  keywords = keywordMap.map(([canonical]) => canonical)
+  fs.writeFileSync('projects.json', JSON.stringify(projects, null, 2))
+  fs.writeFileSync('keywords.json', JSON.stringify(keywords, null, 2))
 })()
 
 async function fetchText(link) {
