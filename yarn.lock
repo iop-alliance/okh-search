@@ -547,6 +547,11 @@ fs-constants@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
+function-rate-limit@^1.0.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/function-rate-limit/-/function-rate-limit-1.1.0.tgz#eccdf1af918fc959eb6509058603e462e37fd683"
+  integrity sha512-XNFOWy3kSz+96MeBCDUMmsLMSb7SmkAIfnhOsPRPz9V2Dx2agNmqjT//3QvXOgIH7FcGPfXMj8peajKHYuQ/Sw==
+
 fuse.js@^3.0.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.6.1.tgz#7de85fdd6e1b3377c23ce010892656385fd9b10c"
@@ -1038,6 +1043,13 @@ process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
+
+promise-rate-limit@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/promise-rate-limit/-/promise-rate-limit-0.0.1.tgz#98fec7d214f7d92f93297b7c175794664faffb4d"
+  integrity sha512-40Vw0Hrg/gQYUf9/IZnsw1ZYHQHrdZHKFEIzdVtGf4t1d5PJxnJvrIHmizQAMob8xrsw0wgRQiAbv1qTRYWMJA==
+  dependencies:
+    function-rate-limit "^1.0.1"
 
 prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"

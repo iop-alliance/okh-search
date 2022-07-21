@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const path = require('path')
-const fetch = require('node-fetch')
+const rateLimit = require('promise-rate-limit')
+const fetch = rateLimit(60, 1000, require('node-fetch'))
 const yaml = require('yaml')
 const fs = require('fs')
 const util = require('util')
@@ -17,7 +18,6 @@ const imageThumbnail = require('image-thumbnail')
       .map(async (line, index) => {
         const [name, date, link] = line.split(',')
         if (link) {
-          console.warn('FETCHING', link)
           return fetchText(link)
             .then(text => {
               const origin = path.dirname(link) + '/'
@@ -39,6 +39,7 @@ const imageThumbnail = require('image-thumbnail')
   // remove null/undefined
   projects = projects.filter(x => x)
   shuffleArray(projects)
+  console.warn('LO')
   projects = await Promise.all(
     projects.map(p =>
       processImage(p).catch(e => {
@@ -47,6 +48,7 @@ const imageThumbnail = require('image-thumbnail')
       }),
     ),
   )
+  console.warn('HI')
   console.log(JSON.stringify(projects, null, 2))
 })()
 
@@ -62,6 +64,7 @@ async function fetchText(link) {
     if (r.status !== 200) {
       throw Error(r.status)
     }
+    console.warn('FETCHED', link)
     return r.text()
   })
 }
@@ -119,26 +122,17 @@ async function processImage(project) {
 
   if (!r.ok || !/^image\//.test(r.headers.get('Content-Type')) || r.body == null) {
     console.warn("Can't read image:", image)
+    console.warn(r)
     return { ...project, image: null }
-  } else {
-    try {
-      console.warn(image)
-      const body = await r.buffer()
-      const thumb = await imageThumbnail(body, {
-        height: 200,
-        width: 290,
-        fit: 'outside',
-      })
-      await fs.promises.writeFile(imagePath, thumb)
-    } catch (e) {
-      console.warn('--------------------------------------------')
-      console.warn(e)
-      console.warn('............................................')
-      console.warn("Can't write thumbnail for:", image)
-      console.warn('--------------------------------------------')
-      return { ...project, image: null }
-    }
   }
+  const body = await r.buffer()
+  const thumb = await imageThumbnail(body, {
+    height: 200,
+    width: 290,
+    fit: 'outside',
+  })
+  console.warn('FETCHED', image)
+  await fs.promises.writeFile(imagePath, thumb)
   return project
 }
 

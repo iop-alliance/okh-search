@@ -14,6 +14,7 @@
     "image-thumbnail": "https://github.com/OpenKnowHow/image-thumbnail",
     "next": "^12.2.2",
     "node-fetch": "2",
+    "promise-rate-limit": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-lazy-load-image-component": "^1.4.1",
