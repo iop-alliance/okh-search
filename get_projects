@@ -35,12 +35,7 @@ const imageThumbnail = require('image-thumbnail')
   )
   // remove null/undefined
   projects = projects.filter(x => x)
-  projects = projects.map(project =>
-    processUrls(project).catch(e => {
-      console.warn(e)
-      return { ...project, image: null }
-    }),
-  )
+  projects = projects.map(processUrls)
   // remove null/undefined
   projects = projects.filter(x => x)
   shuffleArray(projects)
