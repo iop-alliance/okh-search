@@ -33,7 +33,7 @@ class Home extends React.Component {
               <>
                 <div className="top">
                   <div className="logo">
-                    <a href="https://internetofproduction.org/openknowhow">
+                    <a href="https://internetofproduction.org/open-know-how">
                       <img style={{ height: 200 }} src="logo.svg" />
                     </a>
                   </div>
