@@ -110,6 +110,22 @@ const natural = require('natural')
     return project
   })
   keywords = keywordMap.map(([canonical]) => canonical)
+
+  let domains = projects.reduce((acc, project) => {
+    const name = project['source-domain']
+    if (Object.keys(acc).includes(name)) {
+      acc[name]++
+    } else {
+      acc[name] = 1
+    }
+    return acc
+  }, {})
+  // sort the domains according to popularity
+  domains = Object.entries(domains)
+    .sort(([_, count1], [__, count2]) => count2 - count1)
+    .map(([domain]) => domain)
+
+  fs.writeFileSync('domains.json', JSON.stringify(domains, null, 2))
   fs.writeFileSync('projects.json', JSON.stringify(projects, null, 2))
   fs.writeFileSync('keywords.json', JSON.stringify(keywords, null, 2))
 })()
@@ -136,6 +152,11 @@ function processUrls(project) {
   if (origin === 'local-manifests/') {
     origin = 'https://search.openknowhow.org'
   }
+  let sourceDomain = new URL(origin).host.split('.')
+  sourceDomain =
+    sourceDomain[sourceDomain.length - 2] +
+    '.' +
+    sourceDomain[sourceDomain.length - 1]
   const docHome = project['documentation-home'] || project['project-link']
   if (docHome == null) {
     console.warn('--------------------------------------------')
@@ -152,7 +173,7 @@ function processUrls(project) {
   if (image) {
     project.image = new URL(image, origin).href
   }
-  return project
+  return { ...project, 'source-domain': sourceDomain }
 }
 
 async function processImage(project) {
