@@ -48,7 +48,6 @@ const imageThumbnail = require('image-thumbnail')
       }),
     ),
   )
-  console.warn('HI')
   console.log(JSON.stringify(projects, null, 2))
 })()
 
