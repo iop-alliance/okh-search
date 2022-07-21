@@ -32,11 +32,12 @@ class Home extends React.Component {
             ) : (
               <>
                 <div className="top">
-                  <div className="logo">
-                    <a href="https://internetofproduction.org/open-know-how">
-                      <img style={{ height: 200 }} src="logo.svg" />
-                    </a>
-                  </div>
+                  <a href="https://internetofproduction.org/open-know-how">
+                    <div className="logo">
+                      <img src="logo.svg" />
+                      <Header as="h1" style={{ marginTop: 0 }}>Open Know-How</Header>
+                    </div>
+                  </a>
                   <div className="search">
                     <Input
                       fluid
@@ -74,8 +75,15 @@ class Home extends React.Component {
               }
 
               .logo {
+                padding: 20px;
                 display: flex;
                 justify-content: center;
+                flex-direction: column;
+                align-items: center;
+              }
+
+              .logo img {
+                width: 200px;
               }
 
               @media (min-width: 550px) {

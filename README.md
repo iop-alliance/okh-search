@@ -1,4 +1,4 @@
-[![Open Know-How logo](public/logo_no_text.svg)][standard]
+[![Open Know-How logo](public/logo.svg)][standard]
 
 # Open Know-How Search
 
