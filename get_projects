@@ -92,7 +92,6 @@ function processUrls(project) {
 
 async function processImage(project) {
   let image = project.image
-  console.warn({ image })
 
   if (!image) {
     return project
@@ -105,7 +104,6 @@ async function processImage(project) {
   const imageUrl = `images/${project.id}${ext}`
   project.image = imageUrl
   const imagePath = path.join('public', imageUrl)
-  console.warn({ imagePath })
 
   const doesExist = await exists(imagePath)
   if (doesExist) {
