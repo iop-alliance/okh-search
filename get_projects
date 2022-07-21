@@ -35,7 +35,12 @@ const imageThumbnail = require('image-thumbnail')
   )
   // remove null/undefined
   projects = projects.filter(x => x)
-  projects = projects.map(processUrls)
+  projects = projects.map(project =>
+    processUrls(project).catch(e => {
+      console.warn(e)
+      return { ...project, image: null }
+    }),
+  )
   // remove null/undefined
   projects = projects.filter(x => x)
   shuffleArray(projects)
@@ -136,7 +141,7 @@ async function processImage(project) {
       console.warn('............................................')
       console.warn("Can't write thumbnail for:", image)
       console.warn('--------------------------------------------')
-      delete project.image
+      return { ...project, image: null }
     }
   }
   return project
