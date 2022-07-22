@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { createFilter } from 'react-search-input'
-import { Container, Input, Header } from 'semantic-ui-react'
+import { Input, Header } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.css'
 import siteData from '../site-data.json'
 import ProjectCard from '../components/ProjectCard'
@@ -10,7 +10,7 @@ const { projects } = siteData
 
 class Home extends React.Component {
   timeout = null
-  state = { result: projects, searching: false, redirecting: false }
+  state = { result: projects, searching: false }
   componentDidMoun() {}
   render() {
     return (
@@ -21,17 +21,7 @@ class Home extends React.Component {
               <title>Open Know-How Search</title>
               <link rel="icon" type="image/png" href="favicon.png" />
             </Head>
-            {this.state.redirecting ? (
-              <div style={{ marginTop: 100 }}>
-                <Header>
-                  {'This page is has moved. Re-directing to '}
-                  <a href="https://projects.openhardware.science">
-                    project.openhardware.science
-                  </a>
-                  {'.'}
-                </Header>
-              </div>
-            ) : (
+            {
               <>
                 <div className="top">
                   <a href="https://internetofproduction.org/open-know-how">
@@ -63,7 +53,7 @@ class Home extends React.Component {
                   </div>
                 </div>
               </>
-            )}
+            }
 
             <style jsx>{`
               .main {
@@ -126,19 +116,9 @@ class Home extends React.Component {
     return false
   }
   componentDidMount() {
-    if (
-      typeof window !== 'undefined' &&
-      window.location.href === 'https://gosh-community.gitlab.io/gosh-okh-search/'
-    ) {
-      this.setState({ redirecting: true })
-      setTimeout(() => {
-        window.location.href = 'https://projects.openhardware.science'
-      }, 3000)
-    } else {
-      document
-        .getElementsByClassName('searchInput')[0]
-        .firstElementChild.addEventListener('keydown', this.handleKeydown)
-    }
+    document
+      .getElementsByClassName('searchInput')[0]
+      .firstElementChild.addEventListener('keydown', this.handleKeydown)
   }
   searchUpdated = e => {
     clearTimeout(this.timeout)
