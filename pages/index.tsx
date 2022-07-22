@@ -3,8 +3,10 @@ import Head from 'next/head'
 import { createFilter } from 'react-search-input'
 import { Container, Input, Header } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.css'
-import projects from '../projects.json'
+import siteData from '../site-data.json'
 import ProjectCard from '../components/ProjectCard'
+
+const { projects } = siteData
 
 class Home extends React.Component {
   timeout = null
@@ -35,7 +37,9 @@ class Home extends React.Component {
                   <a href="https://internetofproduction.org/open-know-how">
                     <div className="logo">
                       <img src="logo.svg" />
-                      <Header as="h1" style={{ marginTop: 0 }}>Open Know-How</Header>
+                      <Header as="h1" style={{ marginTop: 0 }}>
+                        Open Know-How
+                      </Header>
                     </div>
                   </a>
                   <div className="search">

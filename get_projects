@@ -125,9 +125,56 @@ const natural = require('natural')
     .sort(([_, count1], [__, count2]) => count2 - count1)
     .map(([domain]) => domain)
 
-  fs.writeFileSync('domains.json', JSON.stringify(domains, null, 2))
-  fs.writeFileSync('projects.json', JSON.stringify(projects, null, 2))
-  fs.writeFileSync('keywords.json', JSON.stringify(keywords, null, 2))
+  let designFileExtensions = projects.reduce((acc, project) => {
+    const designFiles = project['design-files'] || []
+    const extensions = designFiles
+      .map(f => path.extname(f.path.split('?')[0]).toLowerCase())
+      .filter(Boolean)
+    for (const ext of extensions) {
+      if (Object.keys(acc).includes(ext)) {
+        acc[ext]++
+      } else {
+        acc[ext] = 1
+      }
+    }
+    return acc
+  }, {})
+  designFileExtensions = Object.entries(designFileExtensions)
+    .sort(([_, count1], [__, count2]) => count2 - count1)
+    .map(([ext]) => ext)
+
+  let schematicFileExtensions = projects.reduce((acc, project) => {
+    const schematicFiles = project['schematics'] || []
+    const extensions = schematicFiles
+      .map(f => path.extname(f.path.split('?')[0]).toLowerCase())
+      .filter(Boolean)
+    for (const ext of extensions) {
+      if (Object.keys(acc).includes(ext)) {
+        acc[ext]++
+      } else {
+        acc[ext] = 1
+      }
+    }
+    return acc
+  }, {})
+  schematicFileExtensions = Object.entries(schematicFileExtensions)
+    .sort(([_, count1], [__, count2]) => count2 - count1)
+    .map(([ext]) => ext)
+
+  fs.writeFileSync(
+    'site-data.json',
+    JSON.stringify(
+      {
+        projects,
+        domains,
+        keywords,
+        schematicFileExtensions,
+        designFileExtensions,
+      },
+      null,
+      2,
+    ),
+  )
 })()
 
 async function fetchText(link) {
