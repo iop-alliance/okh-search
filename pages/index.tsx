@@ -85,7 +85,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div style={{ maxWidth: 900 }}>
+              <div style={{ width: 900 }}>
                 <Divider />
                 <Header sub size="large">
                   Keywords
@@ -94,7 +94,7 @@ export default function Home() {
                   <FilterSelect options={keywords} onChange={setSelectedKeywords} />
                 </div>
               </div>
-              <div style={{ maxWidth: 900 }}>
+              <div style={{ width: 900 }}>
                 <Divider />
                 <Header sub size="large">
                   Sources

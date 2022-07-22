@@ -12,42 +12,52 @@ export default function FilterSelect({ onChange, options }) {
     }
   }, [selected.toString()])
 
-  const optionsToShow = isExpanded ? options : options.slice(0, 6)
+  const optionsToShow = isExpanded ? options : options.slice(0, 5)
   return (
-    <div className="flex flex-wrap items-center justify-center space-x-4 space-y-2">
-      <Button basic size="tiny" onClick={() => setSelected([])}>
-        <Icon name="x" />
-        clear
-      </Button>
-      {optionsToShow.map(o => (
-        <SelectInput
-          value={o}
-          isChecked={selected.includes(o)}
-          onChange={isChecked =>
-            setSelected(selected => {
-              if (isChecked && !selected.includes(o)) {
-                return selected.concat([o])
-              } else if (!isChecked) {
-                return selected.filter(x => x !== o)
-              }
-              return selected
-            })
-          }
-        />
-      ))}
-      {optionsToShow.length < options.length && (
-        <Button size="tiny" basic onClick={() => setExpanded(true)}>
-          <Icon name="plus" />
-          {'more ...'}
+    <>
+      <div className="flex justify-end w-full">
+        <Button basic onClick={() => setSelected([])}>
+          clear
         </Button>
-      )}
-      {optionsToShow.length === options.length && (
-        <Button size="tiny" basic onClick={() => setExpanded(false)}>
-          <Icon name="minus" />
-          {'show less'}
-        </Button>
-      )}
-    </div>
+      </div>
+      <div className="flex flex-wrap justify-start align-center space-x-4 space-y-2">
+        <div />
+        {optionsToShow.map(o => (
+          <SelectInput
+            value={o}
+            isChecked={selected.includes(o)}
+            onChange={isChecked =>
+              setSelected(selected => {
+                if (isChecked && !selected.includes(o)) {
+                  return selected.concat([o])
+                } else if (!isChecked) {
+                  return selected.filter(x => x !== o)
+                }
+                return selected
+              })
+            }
+          />
+        ))}
+        {optionsToShow.length < options.length && (
+          <div
+            className="cursor-pointer border-1 pl-2 pr-2 text-xl rounded-full p-2"
+            onClick={() => setExpanded(true)}
+          >
+            <Icon name="plus" />
+            {'more ...'}
+          </div>
+        )}
+        {isExpanded && (
+          <div
+            className="cursor-pointer border-1 pl-2 pr-2 text-xl rounded-full p-2"
+            onClick={() => setExpanded(false)}
+          >
+            <Icon name="minus" />
+            {'hide'}
+          </div>
+        )}
+      </div>
+    </>
   )
 }
 
