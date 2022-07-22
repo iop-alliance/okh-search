@@ -12,6 +12,7 @@ const { projects, keywords } = siteData
 export default function Home() {
   const [searchTerm, setSearchTerm] = React.useState('')
   const [searchResult, setSearchResult] = React.useState(projects)
+  const [selectedKeywords, setSelectedKeywords] = React.useState([])
 
   React.useEffect(() => {
     const handleKeydown = event => {
@@ -36,10 +37,15 @@ export default function Home() {
         'description',
         'licensor.name',
       ])
-      const result = projects.filter(filter)
+      let result = projects.filter(filter)
+      if (selectedKeywords.length > 0) {
+        result = result.filter(p =>
+          selectedKeywords.reduce((acc, k) => acc && p.keywords?.includes(k), true),
+        )
+      }
       setSearchResult(result)
     }, 100)
-  }, [searchTerm])
+  }, [searchTerm, selectedKeywords.toString()])
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -71,12 +77,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <FilterSelect
-                  options={keywords}
-                  onChange={selectedKeywords => {
-                    console.log({ selectedKeywords })
-                  }}
-                />
+                <FilterSelect options={keywords} onChange={setSelectedKeywords} />
               </div>
               <div className="section">
                 <div id="projects">

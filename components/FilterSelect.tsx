@@ -8,7 +8,8 @@ export default function FilterSelect({ onChange, options }) {
     if (onChange != null) {
       onChange(selected)
     }
-  }, [selected.toString(), onChange])
+  }, [selected.toString()])
+
   return (
     <div>
       {options.map(o => (
