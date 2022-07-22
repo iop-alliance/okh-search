@@ -1,18 +1,19 @@
 import React from 'react'
 import Head from 'next/head'
 import { createFilter } from 'react-search-input'
-import { Input, Header } from 'semantic-ui-react'
+import { Input, Header, Divider } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.css'
 import siteData from '../site-data.json'
 import ProjectCard from '../components/ProjectCard'
 import FilterSelect from '../components/FilterSelect'
 
-const { projects, keywords } = siteData
+const { projects, keywords, domains } = siteData
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = React.useState('')
   const [searchResult, setSearchResult] = React.useState(projects)
   const [selectedKeywords, setSelectedKeywords] = React.useState([])
+  const [selectedDomains, setSelectedDomains] = React.useState([])
 
   React.useEffect(() => {
     const handleKeydown = event => {
@@ -43,13 +44,21 @@ export default function Home() {
           selectedKeywords.reduce((acc, k) => acc && p.keywords?.includes(k), true),
         )
       }
+      if (selectedDomains.length > 0) {
+        result = result.filter(p =>
+          selectedDomains.reduce(
+            (acc, d) => acc && selectedDomains.includes(p['source-domain']),
+            true,
+          ),
+        )
+      }
       setSearchResult(result)
     }, 100)
-  }, [searchTerm, selectedKeywords.toString()])
+  }, [searchTerm, selectedKeywords.toString(), selectedDomains.toString()])
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <div style={{ maxWidth: 1200, minWidth: 'min(100%, 1200px)' }}>
+      <div className="main">
         <>
           <Head>
             <title>Open Know-How Search</title>
@@ -76,10 +85,26 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div>
-                <FilterSelect options={keywords} onChange={setSelectedKeywords} />
+              <div style={{ maxWidth: 900 }}>
+                <Divider />
+                <Header sub size="large">
+                  Keywords
+                </Header>
+                <div style={{ marginLeft: 100 }}>
+                  <FilterSelect options={keywords} onChange={setSelectedKeywords} />
+                </div>
               </div>
-              <div className="section">
+              <div style={{ maxWidth: 900 }}>
+                <Divider />
+                <Header sub size="large">
+                  Sources
+                </Header>
+                <div style={{ marginLeft: 100 }}>
+                  <FilterSelect options={domains} onChange={setSelectedDomains} />
+                </div>
+                <Divider />
+              </div>
+              <div>
                 <div id="projects">
                   {searchResult.map(project => (
                     <ProjectCard key={project.id} project={project} />
@@ -91,53 +116,57 @@ export default function Home() {
               </div>
             </>
           }
-
-          <style jsx>{`
-            .main {
-              max-width: 1200px;
-            }
-
-            .top {
-              display: flex;
-              flex-wrap: wrap;
-              width: 100%;
-              justify-content: center;
-              align-items: center;
-            }
-
-            .logo {
-              padding: 20px;
-              display: flex;
-              justify-content: center;
-              flex-direction: column;
-              align-items: center;
-            }
-
-            .logo img {
-              width: 200px;
-            }
-
-            @media (min-width: 550px) {
-              .search {
-                width: 500px;
-              }
-            }
-
-            @media (max-width: 550px) {
-              .search {
-                width: 80vw;
-              }
-            }
-
-            #projects {
-              margin-top: 30px;
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-            }
-          `}</style>
         </>
       </div>
+      <style jsx>{`
+        .main {
+          display: flex;
+          max-width: 1200px;
+          flex-direction: column;
+          min-width: min(100%, 1200px);
+          justify-content: center;
+          align-items: center;
+        }
+
+        .top {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .logo {
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .logo img {
+          width: 200px;
+        }
+
+        @media (min-width: 550px) {
+          .search {
+            width: 500px;
+          }
+        }
+
+        @media (max-width: 550px) {
+          .search {
+            width: 80vw;
+          }
+        }
+
+        #projects {
+          margin-top: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      `}</style>
     </div>
   )
 }
