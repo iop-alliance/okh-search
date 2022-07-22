@@ -49,7 +49,7 @@ export default function Home() {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <div style={{ maxWidth: 1200 }}>
+      <div style={{ maxWidth: 1200, minWidth: 'min(100%, 1200px)' }}>
         <>
           <Head>
             <title>Open Know-How Search</title>
@@ -134,7 +134,6 @@ export default function Home() {
               display: flex;
               flex-wrap: wrap;
               justify-content: center;
-              max-width: 1200px;
             }
           `}</style>
         </>
