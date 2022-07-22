@@ -7,13 +7,22 @@ import siteData from '../site-data.json'
 import ProjectCard from '../components/ProjectCard'
 import FilterSelect from '../components/FilterSelect'
 
-const { projects, keywords, domains } = siteData
+const {
+  projects,
+  keywords,
+  domains,
+  schematicFileExtensions,
+  designFileExtensions,
+} = siteData
+
+const fileExtensions = schematicFileExtensions.concat(designFileExtensions)
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = React.useState('')
   const [searchResult, setSearchResult] = React.useState(projects)
   const [selectedKeywords, setSelectedKeywords] = React.useState([])
   const [selectedDomains, setSelectedDomains] = React.useState([])
+  const [selectedFileExtensions, setSelectedFileExtensions] = React.useState([])
 
   React.useEffect(() => {
     const handleKeydown = event => {
@@ -45,16 +54,25 @@ export default function Home() {
         )
       }
       if (selectedDomains.length > 0) {
-        result = result.filter(p =>
-          selectedDomains.reduce(
-            (acc, d) => acc && selectedDomains.includes(p['source-domain']),
-            true,
-          ),
-        )
+        result = result.filter(p => selectedDomains.includes(p['source-domain']))
+      }
+      if (selectedFileExtensions.length > 0) {
+        result = result.filter(p => {
+          const extensions = p.designFileExtensions.concat(
+            p.schematicFileExtensions,
+          )
+          console.log(extensions)
+          return extensions.some(ext => selectedFileExtensions.includes(ext))
+        })
       }
       setSearchResult(result)
     }, 100)
-  }, [searchTerm, selectedKeywords.toString(), selectedDomains.toString()])
+  }, [
+    searchTerm,
+    selectedKeywords.toString(),
+    selectedDomains.toString(),
+    selectedFileExtensions.toString(),
+  ])
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -101,6 +119,18 @@ export default function Home() {
                 </Header>
                 <div style={{ marginLeft: 100 }}>
                   <FilterSelect options={domains} onChange={setSelectedDomains} />
+                </div>
+              </div>
+              <div style={{ width: 900 }}>
+                <Divider />
+                <Header sub size="large">
+                  Files
+                </Header>
+                <div style={{ marginLeft: 100 }}>
+                  <FilterSelect
+                    options={fileExtensions}
+                    onChange={setSelectedFileExtensions}
+                  />
                 </div>
                 <Divider />
               </div>

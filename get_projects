@@ -125,12 +125,20 @@ const natural = require('natural')
     .sort(([_, count1], [__, count2]) => count2 - count1)
     .map(([domain]) => domain)
 
-  let designFileExtensions = projects.reduce((acc, project) => {
+  projects = projects.map(project => {
     const designFiles = project['design-files'] || []
-    const extensions = designFiles
+    const schematicFiles = project['schematics'] || []
+    const designFileExtensions = designFiles
       .map(f => path.extname(f.path.split('?')[0]).toLowerCase())
       .filter(Boolean)
-    for (const ext of extensions) {
+    const schematicFileExtensions = schematicFiles
+      .map(f => path.extname(f.path.split('?')[0]).toLowerCase())
+      .filter(Boolean)
+    return { ...project, designFileExtensions, schematicFileExtensions }
+  })
+
+  let designFileExtensions = projects.reduce((acc, project) => {
+    for (const ext of project.designFileExtensions) {
       if (Object.keys(acc).includes(ext)) {
         acc[ext]++
       } else {
@@ -144,11 +152,7 @@ const natural = require('natural')
     .map(([ext]) => ext)
 
   let schematicFileExtensions = projects.reduce((acc, project) => {
-    const schematicFiles = project['schematics'] || []
-    const extensions = schematicFiles
-      .map(f => path.extname(f.path.split('?')[0]).toLowerCase())
-      .filter(Boolean)
-    for (const ext of extensions) {
+    for (const ext of project.schematicFileExtensions) {
       if (Object.keys(acc).includes(ext)) {
         acc[ext]++
       } else {
