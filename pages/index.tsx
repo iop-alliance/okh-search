@@ -5,13 +5,13 @@ import { Input, Header } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.css'
 import siteData from '../site-data.json'
 import ProjectCard from '../components/ProjectCard'
+import FilterSelect from '../components/FilterSelect'
 
-const { projects } = siteData
+const { projects, keywords } = siteData
 
 class Home extends React.Component {
   timeout = null
-  state = { result: projects, searching: false }
-  componentDidMoun() {}
+  state = { result: projects, searching: false, selectedKeywords: [] }
   render() {
     return (
       <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -41,6 +41,14 @@ class Home extends React.Component {
                       className="searchInput"
                     />
                   </div>
+                </div>
+                <div>
+                  <FilterSelect
+                    options={keywords}
+                    onChange={selectedKeywords => {
+                      console.log({ selectedKeywords })
+                    }}
+                  />
                 </div>
                 <div className="section">
                   <div id="projects">
