@@ -24,6 +24,7 @@ export default function FilterSelect({ onChange, options }) {
         <div />
         {optionsToShow.map(o => (
           <SelectInput
+            key={o}
             value={o}
             isChecked={selected.includes(o)}
             onChange={isChecked =>
@@ -70,7 +71,6 @@ function SelectInput({ value, isChecked, onChange }) {
     >
       <VisuallyHidden>
         <input
-          key={id}
           checked={isChecked}
           id={id}
           name="goban-size"
@@ -79,7 +79,7 @@ function SelectInput({ value, isChecked, onChange }) {
           onChange={() => onChange(!isChecked)}
         />
       </VisuallyHidden>
-      <label className="cursor-pointer" key={id + '-label'} htmlFor={id}>
+      <label className="cursor-pointer" htmlFor={id}>
         {value}
       </label>
     </div>
