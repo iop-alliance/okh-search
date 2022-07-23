@@ -6,6 +6,7 @@ const yaml = require('yaml')
 const fs = require('fs')
 const util = require('util')
 const accessPromise = util.promisify(fs.access)
+const cadFiles = require('./cad-files.json')
 
 const imageThumbnail = require('image-thumbnail')
 const natural = require('natural')
@@ -131,14 +132,21 @@ const natural = require('natural')
     const designFileExtensions = designFiles
       .map(f => path.extname(f.path.split('?')[0]).toLowerCase())
       .filter(Boolean)
+      .map(ext => cadFiles[ext] || ext.slice(1).toUpperCase(ext))
     const schematicFileExtensions = schematicFiles
       .map(f => path.extname(f.path.split('?')[0]).toLowerCase())
       .filter(Boolean)
-    return { ...project, designFileExtensions, schematicFileExtensions }
+      .map(ext => cadFiles[ext] || ext.slice(1).toUpperCase())
+    let fileExtensions = schematicFileExtensions.concat(designFileExtensions)
+    fileExtensions = Array.from(new Set(fileExtensions))
+    return {
+      ...project,
+      fileExtensions,
+    }
   })
 
-  let designFileExtensions = projects.reduce((acc, project) => {
-    for (const ext of project.designFileExtensions) {
+  let fileExtensions = projects.reduce((acc, project) => {
+    for (const ext of project.fileExtensions) {
       if (Object.keys(acc).includes(ext)) {
         acc[ext]++
       } else {
@@ -147,21 +155,7 @@ const natural = require('natural')
     }
     return acc
   }, {})
-  designFileExtensions = Object.entries(designFileExtensions)
-    .sort(([_, count1], [__, count2]) => count2 - count1)
-    .map(([ext]) => ext)
-
-  let schematicFileExtensions = projects.reduce((acc, project) => {
-    for (const ext of project.schematicFileExtensions) {
-      if (Object.keys(acc).includes(ext)) {
-        acc[ext]++
-      } else {
-        acc[ext] = 1
-      }
-    }
-    return acc
-  }, {})
-  schematicFileExtensions = Object.entries(schematicFileExtensions)
+  fileExtensions = Object.entries(fileExtensions)
     .sort(([_, count1], [__, count2]) => count2 - count1)
     .map(([ext]) => ext)
 
@@ -172,8 +166,7 @@ const natural = require('natural')
         projects,
         domains,
         keywords,
-        schematicFileExtensions,
-        designFileExtensions,
+        fileExtensions,
       },
       null,
       2,

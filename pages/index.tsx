@@ -7,15 +7,7 @@ import siteData from '../site-data.json'
 import ProjectCard from '../components/ProjectCard'
 import FilterSelect from '../components/FilterSelect'
 
-const {
-  projects,
-  keywords,
-  domains,
-  schematicFileExtensions,
-  designFileExtensions,
-} = siteData
-
-const fileExtensions = schematicFileExtensions.concat(designFileExtensions)
+const { projects, keywords, domains, fileExtensions } = siteData
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = React.useState('')
@@ -58,11 +50,7 @@ export default function Home() {
       }
       if (selectedFileExtensions.length > 0) {
         result = result.filter(p => {
-          const extensions = p.designFileExtensions.concat(
-            p.schematicFileExtensions,
-          )
-          console.log(extensions)
-          return extensions.some(ext => selectedFileExtensions.includes(ext))
+          return p.fileExtensions.some(ext => selectedFileExtensions.includes(ext))
         })
       }
       setSearchResult(result)
