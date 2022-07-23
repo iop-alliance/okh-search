@@ -249,7 +249,6 @@ async function processImage(project) {
 
   if (!r.ok || !/^image\//.test(r.headers.get('Content-Type')) || r.body == null) {
     console.warn("Can't read image:", image)
-    console.warn(r)
     return { ...project, image: null }
   }
   const body = await r.buffer()

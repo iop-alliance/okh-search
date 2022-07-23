@@ -17,7 +17,6 @@ jobs:
           submodules: true
       - run: yarn install --frozen-lockfile
       - run: yarn projects
-      - run: cat projects.json
       - run: yarn build
       - run: yarn export
       - env:
