@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const path = require('path')
 const rateLimit = require('promise-rate-limit')
-const fetch = rateLimit(60, 1000, require('undici').fetch)
+const fetch = rateLimit(30, 1000, require('node-fetch'))
 const yaml = require('yaml')
 const fs = require('fs')
 const util = require('util')
