@@ -15,10 +15,12 @@ export default function FilterSelect({ onChange, options }) {
   const optionsToShow = isExpanded ? options : options.slice(0, 5)
   return (
     <>
-      <div className="flex justify-end w-full">
-        <Button basic onClick={() => setSelected([])}>
-          clear
-        </Button>
+      <div className="flex justify-end w-full h-11">
+        {selected.length > 0 && (
+          <Button basic onClick={() => setSelected([])}>
+            clear
+          </Button>
+        )}
       </div>
       <div className="flex flex-wrap justify-start align-center space-x-4 space-y-2">
         <div />
