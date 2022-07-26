@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Button, Icon } from 'semantic-ui-react'
 import VisuallyHidden from '@reach/visually-hidden'
 
-export default function FilterSelect({ onChange, options, className }) {
+export default function FilterSelect({ onChange, options, className = "" }) {
   const [selected, setSelected] = React.useState([])
   const [isExpanded, setExpanded] = React.useState(false)
 
