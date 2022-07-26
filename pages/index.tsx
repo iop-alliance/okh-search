@@ -126,9 +126,18 @@ export default function Home() {
                   {searchResult.map(project => (
                     <ProjectCard key={project.id} project={project} />
                   ))}
-                  {searchResult.length === 0 ? (
-                    <p style={{ marginTop: 80 }}>Sorry, no results</p>
-                  ) : null}
+                  {searchResult.length === 0 && (
+                    <p
+                      style={{
+                        color: '#444444',
+                        marginTop: 60,
+                        marginBottom: 100,
+                        fontSize: '15pt',
+                      }}
+                    >
+                      Sorry, no results.
+                    </p>
+                  )}
                 </div>
               </div>
             </>
@@ -194,7 +203,6 @@ export default function Home() {
             margin-left: 0px;
           }
         }
-
 
         #projects {
           margin-top: 30px;
