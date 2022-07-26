@@ -90,8 +90,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="filter">
-                <Divider />
+              <div style={{marginTop: 50}} className="filter">
                 <Header sub size="large">
                   Keywords
                 </Header>
