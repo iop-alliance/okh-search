@@ -1,10 +1,11 @@
 import React from 'react'
 import Head from 'next/head'
 import { createFilter } from 'react-search-input'
-import { Input, Header, Divider } from 'semantic-ui-react'
+import { Input, Header, Divider, Label, Icon, Button } from 'semantic-ui-react'
 import siteData from '../site-data.json'
 import ProjectCard from '../components/ProjectCard'
 import FilterSelect from '../components/FilterSelect'
+import TagButton from '../components/TagButton'
 
 const { projects, keywords, domains, fileExtensions } = siteData
 
@@ -90,7 +91,32 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div style={{marginTop: 50}} className="filter">
+              <div
+                style={{
+                  width: 'min(920px, 92%)',
+                }}
+              >
+                <Divider />
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'flex-start',
+                    width: 'min(920px, 92%)',
+                  }}
+                >
+                  <Header>Filters: </Header>
+                  <div style={{ marginLeft: 20 }}>
+                    {selectedKeywords
+                      .concat(selectedDomains)
+                      .concat(selectedFileExtensions)
+                      .map(kw => {
+                        return <TagButton icon="x">{kw}</TagButton>
+                      })}
+                  </div>
+                </div>
+                <Divider />
+              </div>
+              <div style={{ marginTop: 50 }} className="filter">
                 <Header sub size="large">
                   Keywords
                 </Header>

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Button, Icon } from 'semantic-ui-react'
 import VisuallyHidden from '@reach/visually-hidden'
+import TagButton from "./TagButton"
 
 export default function FilterSelect({ onChange, options, className = "" }) {
   const [selected, setSelected] = React.useState([])
