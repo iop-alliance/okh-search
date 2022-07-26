@@ -90,7 +90,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div style={{ width: 900 }}>
+              <div style={{ width: 'min(900px, 90%)' }}>
                 <Divider />
                 <Header sub size="large">
                   Keywords
@@ -99,7 +99,7 @@ export default function Home() {
                   <FilterSelect options={keywords} onChange={setSelectedKeywords} />
                 </div>
               </div>
-              <div style={{ width: 900 }}>
+              <div style={{ width: 'min(900px, 90%)' }}>
                 <Divider />
                 <Header sub size="large">
                   Sources
@@ -108,7 +108,7 @@ export default function Home() {
                   <FilterSelect options={domains} onChange={setSelectedDomains} />
                 </div>
               </div>
-              <div style={{ width: 900 }}>
+              <div style={{ width: 'min(900px, 90%)' }}>
                 <Divider />
                 <Header sub size="large">
                   Files
