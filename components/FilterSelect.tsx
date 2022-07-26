@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Button, Icon } from 'semantic-ui-react'
 import VisuallyHidden from '@reach/visually-hidden'
 
-export default function FilterSelect({ onChange, options }) {
+export default function FilterSelect({ onChange, options, className }) {
   const [selected, setSelected] = React.useState([])
   const [isExpanded, setExpanded] = React.useState(false)
 
@@ -14,7 +14,7 @@ export default function FilterSelect({ onChange, options }) {
 
   const optionsToShow = isExpanded ? options : options.slice(0, 5)
   return (
-    <>
+    <div className={className}>
       <div className="flex justify-end w-full h-11">
         {selected.length > 0 && (
           <Button basic onClick={() => setSelected([])}>
@@ -60,7 +60,7 @@ export default function FilterSelect({ onChange, options }) {
           </div>
         )}
       </div>
-    </>
+    </div>
   )
 }
 

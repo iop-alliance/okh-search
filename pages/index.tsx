@@ -90,30 +90,30 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div style={{ width: 'min(900px, 90%)' }}>
+              <div className="filter">
                 <Divider />
                 <Header sub size="large">
                   Keywords
                 </Header>
-                <div style={{ marginLeft: 100 }}>
+                <div className="filter-select">
                   <FilterSelect options={keywords} onChange={setSelectedKeywords} />
                 </div>
               </div>
-              <div style={{ width: 'min(900px, 90%)' }}>
+              <div className="filter">
                 <Divider />
                 <Header sub size="large">
                   Sources
                 </Header>
-                <div style={{ marginLeft: 100 }}>
+                <div className="filter-select">
                   <FilterSelect options={domains} onChange={setSelectedDomains} />
                 </div>
               </div>
-              <div style={{ width: 'min(900px, 90%)' }}>
+              <div className="filter">
                 <Divider />
                 <Header sub size="large">
                   Files
                 </Header>
-                <div style={{ marginLeft: 100 }}>
+                <div className="filter-select">
                   <FilterSelect
                     options={fileExtensions}
                     onChange={setSelectedFileExtensions}
@@ -176,6 +176,25 @@ export default function Home() {
             width: 80vw;
           }
         }
+
+        .filter {
+          width: min(900px, 90%);
+        }
+
+        .filter-select {
+          margin-left: 100px;
+        }
+
+        @media (max-width: 880px) {
+          .filter {
+            display: flex;
+            flex-direction: column;
+          }
+          .filter-select {
+            margin-left: 0px;
+          }
+        }
+
 
         #projects {
           margin-top: 30px;
