@@ -1,13 +1,28 @@
 import React from 'react'
 import Head from 'next/head'
-import { createFilter } from 'react-search-input'
 import { Input, Header, Divider, Label, Icon, Button } from 'semantic-ui-react'
 import siteData from '../site-data.json'
 import ProjectCard from '../components/ProjectCard'
 import FilterSelect from '../components/FilterSelect'
 import TagButton from '../components/TagButton'
+import MiniSearch from 'minisearch'
 
 const { projects, keywords, domains, fileExtensions } = siteData
+
+const miniSearch = new MiniSearch({
+  fields: ['title', 'description', 'licensor.name'],
+  searchOptions: {
+    prefix: true,
+    boost: { title: 2 },
+    fuzzy: 0.2,
+  },
+  extractField: (document, fieldName) => {
+    // Access nested fields
+    return fieldName.split('.').reduce((doc, key) => doc && doc[key], document)
+  },
+})
+
+miniSearch.addAll(projects)
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = React.useState('')
@@ -34,12 +49,11 @@ export default function Home() {
   React.useEffect(() => {
     clearTimeout(timeout)
     timeout = setTimeout(() => {
-      const filter = createFilter(searchTerm, [
-        'title',
-        'description',
-        'licensor.name',
-      ])
-      let result = projects.filter(filter)
+      let result = projects
+      if (searchTerm) {
+        const searchResult = miniSearch.search(searchTerm)
+        result = result.filter(p => searchResult.find(s => s.id === p.id))
+      }
       if (selectedKeywords.length > 0) {
         result = result.filter(p =>
           selectedKeywords.reduce((acc, k) => acc && p.keywords?.includes(k), true),
