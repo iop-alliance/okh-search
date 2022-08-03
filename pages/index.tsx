@@ -7,8 +7,6 @@ import FilterSelect from '../components/FilterSelect'
 import TagButton from '../components/TagButton'
 import MiniSearch from 'minisearch'
 
-const { projects, keywords, domains, fileExtensions } = siteData
-
 const miniSearch = new MiniSearch({
   fields: ['title', 'description', 'licensor.name'],
   searchOptions: {
@@ -22,14 +20,19 @@ const miniSearch = new MiniSearch({
   },
 })
 
-miniSearch.addAll(projects)
+miniSearch.addAll(siteData.projects)
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = React.useState('')
-  const [searchResult, setSearchResult] = React.useState(projects)
+  const [searchResult, setSearchResult] = React.useState(siteData.projects)
   const [selectedKeywords, setSelectedKeywords] = React.useState([])
   const [selectedDomains, setSelectedDomains] = React.useState([])
   const [selectedFileExtensions, setSelectedFileExtensions] = React.useState([])
+  const [keywords, setKeywords] = React.useState(siteData.keywords)
+  const [domains, setDomains] = React.useState(siteData.domains)
+  const [fileExtensions, setFileExtensions] = React.useState(
+    siteData.fileExtensions,
+  )
 
   React.useEffect(() => {
     const handleKeydown = event => {
@@ -49,7 +52,7 @@ export default function Home() {
   React.useEffect(() => {
     clearTimeout(timeout)
     timeout = setTimeout(() => {
-      let result = projects
+      let result = siteData.projects
       if (searchTerm) {
         const searchResult = miniSearch.search(searchTerm)
         result = result.filter(p => searchResult.find(s => s.id === p.id))
@@ -76,11 +79,57 @@ export default function Home() {
     selectedFileExtensions.toString(),
   ])
 
+  React.useEffect(() => {
+    const keywordsInResult = Array.from(
+      searchResult.reduce(
+        (kws, p) => new Set([...kws, ...(p.keywords || [])]),
+        new Set(),
+      ),
+    )
+    const domainsInResult = Array.from(
+      searchResult.reduce(
+        (domains, p) => new Set([...domains, p['source-domain']]),
+        new Set(),
+      ),
+    )
+    const fileExtensionsInResult = Array.from(
+      searchResult.reduce(
+        (extensions, p) => new Set([...extensions, ...p.fileExtensions]),
+        new Set(),
+      ),
+    )
+    setKeywords(
+      siteData.keywords
+        .filter(kw => !selectedKeywords.includes(kw))
+        .filter(kw => keywordsInResult.includes(kw)),
+    )
+    setDomains(
+      siteData.domains
+        .filter(d => !selectedDomains.includes(d))
+        .filter(d => domainsInResult.includes(d)),
+    )
+    setFileExtensions(
+      siteData.fileExtensions
+        .filter(ext => !selectedFileExtensions.includes(ext))
+        .filter(ext => fileExtensionsInResult.includes(ext)),
+    )
+  }, [searchResult.map(p => p.id).toString()])
+
   const removeFilter = name => () => {
     setSelectedKeywords(kws => kws.filter(n => n !== name))
     setSelectedDomains(domains => domains.filter(n => n !== name))
     setSelectedFileExtensions(exts => exts.filter(n => n !== name))
   }
+
+  const clearFilters = () => {
+    setSelectedKeywords([])
+    setSelectedDomains([])
+    setSelectedFileExtensions([])
+  }
+
+  const selectedFilters = selectedKeywords
+    .concat(selectedDomains)
+    .concat(selectedFileExtensions)
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -103,7 +152,7 @@ export default function Home() {
                 </a>
                 <div className="search">
                   <Input
-                    style={{marginTop: 80}}
+                    style={{ marginTop: 80 }}
                     fluid
                     size="huge"
                     placeholder="Search..."
@@ -120,64 +169,89 @@ export default function Home() {
                     <div
                       style={{
                         display: 'flex',
-                        justifyContent: 'flex-start',
-                        width: 'min(920px, 92%)',
+                        justifyContent: 'space-between',
+                        width: '100%',
                       }}
                     >
-                      <div style={{ marginLeft: 20 }}>
-                        {selectedKeywords
-                          .concat(selectedDomains)
-                          .concat(selectedFileExtensions)
-                          .map(kw => {
-                            return (
-                              <TagButton onClick={removeFilter(kw)} icon="x">
-                                {kw}
-                              </TagButton>
-                            )
-                          })}
-                      </div>
+                      {selectedFilters.length > 0 && (
+                        <>
+                          <div>
+                            {selectedFilters.map(kw => {
+                              return (
+                                <TagButton onClick={removeFilter(kw)} icon="x">
+                                  {kw}
+                                </TagButton>
+                              )
+                            })}
+                          </div>
+                          <div
+                            style={{
+                              borderLeft: '1px solid rgba(34, 36, 38, 0.15)',
+                              minWidth: 100,
+                              display: 'flex',
+                              justifyContent: 'center',
+                              alignItems: 'center',
+                            }}
+                          >
+                            <Button
+                              onClick={clearFilters}
+                              style={{ boxShadow: 'none', height: '100%' }}
+                              basic
+                            >
+                              <Icon name="trash" />
+                              Clear
+                            </Button>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
-              <div style={{ marginTop: 50 }} className="filter">
-                <Header sub size="large">
-                  Keywords
-                </Header>
-                <div className="filter-select">
-                  <FilterSelect
-                    options={keywords.filter(o => !selectedKeywords.includes(o))}
-                    onSelect={o => setSelectedKeywords(os => os.concat([o]))}
-                  />
+              {searchResult.length > 3 && keywords.length > 1 && (
+                <div style={{ marginTop: 50 }} className="filter">
+                  <Header sub size="large">
+                    Keywords
+                  </Header>
+                  <div className="filter-select">
+                    <FilterSelect
+                      options={keywords}
+                      onSelect={o => setSelectedKeywords(os => os.concat([o]))}
+                    />
+                  </div>
+                  <Divider />
                 </div>
-              </div>
-              <div className="filter">
-                <Divider />
-                <Header sub size="large">
-                  Sources
-                </Header>
-                <div className="filter-select">
-                  <FilterSelect
-                    options={domains.filter(o => !selectedDomains.includes(o))}
-                    onSelect={o => setSelectedDomains(os => os.concat([o]))}
-                  />
+              )}
+              {searchResult.length > 3 && domains.length > 1 && (
+                <div className="filter">
+                  <Header sub size="large">
+                    Sources
+                  </Header>
+                  <div className="filter-select">
+                    <FilterSelect
+                      options={domains}
+                      onSelect={o => setSelectedDomains(os => os.concat([o]))}
+                    />
+                  </div>
+                  <Divider />
                 </div>
-              </div>
-              <div className="filter">
-                <Divider />
-                <Header sub size="large">
-                  Files
-                </Header>
-                <div className="filter-select">
-                  <FilterSelect
-                    options={fileExtensions.filter(
-                      o => !selectedFileExtensions.includes(o),
-                    )}
-                    onSelect={o => setSelectedFileExtensions(os => os.concat([o]))}
-                  />
+              )}
+              {searchResult.length > 3 && fileExtensions.length > 1 && (
+                <div className="filter">
+                  <Header sub size="large">
+                    Files
+                  </Header>
+                  <div className="filter-select">
+                    <FilterSelect
+                      options={fileExtensions}
+                      onSelect={o =>
+                        setSelectedFileExtensions(os => os.concat([o]))
+                      }
+                    />
+                  </div>
+                  <Divider />
                 </div>
-                <Divider />
-              </div>
+              )}
               <div>
                 <div id="projects">
                   {searchResult.map(project => (

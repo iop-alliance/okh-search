@@ -83,8 +83,7 @@ const natural = require('natural')
   keywords = Object.entries(keywords.stemmed)
     .filter(([_, count]) => count > 1)
     .sort(([_, count1], [__, count2]) => count2 - count1)
-  // make a map of all keywords used to canonical names (the most popular
-  // pre-stemmed keywords)
+  // map keywords to canonical names (the most popular pre-stemmed keywords)
   const keywordMap = keywords.map(([keyword]) => {
     const [canonical] = preStemmed.find(([_, { stemmed }]) => stemmed === keyword)
     const aliases = preStemmed
