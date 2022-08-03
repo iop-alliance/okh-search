@@ -7,7 +7,7 @@ import { access, promises as fs, constants } from 'fs'
 import { promisify } from 'util'
 const accessPromise = promisify(access)
 
-const fetch = rateLimit(10, 1000, nodeFetch)
+const fetch = rateLimit(10, 100, nodeFetch)
 
 import imageThumbnail from 'image-thumbnail'
 import natural from 'natural'
