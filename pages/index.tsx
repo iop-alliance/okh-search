@@ -236,7 +236,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {searchResult.length > 3 && keywords.length > 1 && (
+              {searchResult.length > 3 && keywords.length > 0 && (
                 <div className="filter">
                   <Header sub size="large">
                     Keywords
