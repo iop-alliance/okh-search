@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const path = require('path')
 const rateLimit = require('promise-rate-limit')
-const fetch = rateLimit(10, 1000, require('node-fetch'))
+const fetch = rateLimit(1, 100, require('node-fetch'))
 const yaml = require('yaml')
 const fs = require('fs')
 const util = require('util')
@@ -157,6 +157,8 @@ const natural = require('natural')
   fileExtensions = Object.entries(fileExtensions)
     .sort(([_, count1], [__, count2]) => count2 - count1)
     .map(([ext]) => ext)
+
+  console.info('Writing site-data.json')
 
   fs.writeFileSync(
     'site-data.json',
