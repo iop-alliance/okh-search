@@ -24,14 +24,11 @@ const miniSearch = new MiniSearch({
 miniSearch.addAll(siteData.projects)
 
 export default function Home() {
-  const params = getParams()
-  const [searchTerm, setSearchTerm] = React.useState(params.term)
+  const [searchTerm, setSearchTerm] = React.useState('')
   const [searchResult, setSearchResult] = React.useState(siteData.projects)
-  const [selectedKeywords, setSelectedKeywords] = React.useState(params.keywords)
-  const [selectedDomains, setSelectedDomains] = React.useState(params.domains)
-  const [selectedFileExtensions, setSelectedFileExtensions] = React.useState(
-    params.fileExtensions,
-  )
+  const [selectedKeywords, setSelectedKeywords] = React.useState([])
+  const [selectedDomains, setSelectedDomains] = React.useState([])
+  const [selectedFileExtensions, setSelectedFileExtensions] = React.useState([])
   const [keywords, setKeywords] = React.useState(siteData.keywords)
   const [domains, setDomains] = React.useState(siteData.domains)
   const [fileExtensions, setFileExtensions] = React.useState(
@@ -50,6 +47,12 @@ export default function Home() {
     document
       .getElementsByClassName('searchInput')[0]
       .firstElementChild.addEventListener('keydown', handleKeydown)
+
+    const params = getParams()
+    setSearchTerm(params.term)
+    setSelectedKeywords(params.keywords)
+    setSelectedDomains(params.domains)
+    setSelectedFileExtensions(params.fileExtensions)
   }, [])
 
   let timeout = null
@@ -75,15 +78,14 @@ export default function Home() {
         })
       }
       setSearchResult(result)
+      const params = setParams({
+        searchTerm,
+        selectedKeywords,
+        selectedDomains,
+        selectedFileExtensions,
+      })
+      window.history.replaceState(null, '', '/' + params)
     }, 100)
-
-    const params = toParams(
-      searchTerm,
-      selectedKeywords,
-      selectedDomains,
-      selectedFileExtensions,
-    )
-    window.history.replaceState(null, '', '/' + params)
   }, [
     searchTerm,
     selectedKeywords.toString(),
@@ -168,6 +170,7 @@ export default function Home() {
                     fluid
                     size="huge"
                     placeholder="Search..."
+                    value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                     className="searchInput"
                   />
@@ -358,12 +361,12 @@ export default function Home() {
   )
 }
 
-function toParams(
+function setParams({
   searchTerm,
   selectedKeywords,
   selectedDomains,
   selectedFileExtensions,
-) {
+}) {
   const hasParams =
     searchTerm ||
     selectedKeywords.length > 0 ||
