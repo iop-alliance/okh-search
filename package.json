@@ -7,7 +7,10 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "projects": "./get_projects"
+    "projects": "./getProjects.mjs"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "@reach/visually-hidden": "^0.17.0",
@@ -16,7 +19,7 @@
     "minisearch": "^5.0.0",
     "natural": "^5.2.3",
     "next": "^12.2.2",
-    "node-fetch": "2",
+    "node-fetch": "^3.2.10",
     "promise-rate-limit": "^0.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

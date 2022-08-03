@@ -1,18 +1,19 @@
 #!/usr/bin/env node
-const path = require('path')
-const rateLimit = require('promise-rate-limit')
-const fetch = rateLimit(1, 100, require('node-fetch'))
-const yaml = require('yaml')
-const fs = require('fs')
-const util = require('util')
-const accessPromise = util.promisify(fs.access)
-const cadFiles = require('./cad-files.json')
+import { dirname, extname, join } from 'path'
+import nodeFetch from 'node-fetch'
+import rateLimit from 'promise-rate-limit'
+import yaml from 'yaml'
+import { access, promises as fs, constants } from 'fs'
+import { promisify } from 'util'
+const accessPromise = promisify(access)
 
-const imageThumbnail = require('image-thumbnail')
-const natural = require('natural')
+const fetch = rateLimit(10, 1000, nodeFetch)
 
+import imageThumbnail from 'image-thumbnail'
+import natural from 'natural'
 ;(async () => {
-  const csv = await fs.promises.readFile('projects_okhs.csv', 'utf-8')
+  const csv = await fs.readFile('projects_okhs.csv', 'utf-8')
+  const cadFiles = JSON.parse(await fs.readFile('cad-files.json', 'utf-8'))
   let projects = await Promise.all(
     csv
       .split('\n')
@@ -22,7 +23,7 @@ const natural = require('natural')
         if (link) {
           return fetchText(link)
             .then(text => {
-              const origin = path.dirname(link) + '/'
+              const origin = dirname(link) + '/'
               return { id: index, origin, ...yaml.parse(text) }
             })
             .catch(e => {
@@ -129,11 +130,11 @@ const natural = require('natural')
     const designFiles = project['design-files'] || []
     const schematicFiles = project['schematics'] || []
     const designFileExtensions = designFiles
-      .map(f => path.extname(f.path.split('?')[0]).toLowerCase())
+      .map(f => extname(f.path.split('?')[0]).toLowerCase())
       .filter(Boolean)
       .map(ext => cadFiles[ext] || ext.slice(1).toUpperCase(ext))
     const schematicFileExtensions = schematicFiles
-      .map(f => path.extname(f.path.split('?')[0]).toLowerCase())
+      .map(f => extname(f.path.split('?')[0]).toLowerCase())
       .filter(Boolean)
       .map(ext => cadFiles[ext] || ext.slice(1).toUpperCase())
     let fileExtensions = schematicFileExtensions.concat(designFileExtensions)
@@ -160,7 +161,7 @@ const natural = require('natural')
 
   console.info('Writing site-data.json')
 
-  fs.writeFileSync(
+  await fs.writeFile(
     'site-data.json',
     JSON.stringify(
       {
@@ -173,12 +174,15 @@ const natural = require('natural')
       2,
     ),
   )
-})()
+})().catch(e => {
+  console.error(e)
+  process.exit(1)
+})
 
 async function fetchText(link) {
   link = link.trim()
   if (link.startsWith('local-manifests/')) {
-    return fs.promises.readFile(link, 'utf-8')
+    return fs.readFile(link, 'utf-8')
   }
   // just checking it's a valid url
   new URL(link)
@@ -228,13 +232,13 @@ async function processImage(project) {
     return project
   }
 
-  let ext = path.extname(image).toLowerCase()
+  let ext = extname(image).toLowerCase()
   // remove any query parameters if there are any
   ext = ext.split('?')[0]
 
   const imageUrl = `images/${project.id}${ext}`
   project.image = imageUrl
-  const imagePath = path.join('public', imageUrl)
+  const imagePath = join('public', imageUrl)
 
   const doesExist = await exists(imagePath)
   if (doesExist) {
@@ -259,12 +263,12 @@ async function processImage(project) {
     fit: 'outside',
   })
   console.warn('FETCHED', image)
-  await fs.promises.writeFile(imagePath, thumb)
+  await fs.writeFile(imagePath, thumb)
   return project
 }
 
 function exists(file) {
-  return accessPromise(file, fs.constants.F_OK)
+  return accessPromise(file, constants.F_OK)
     .then(x => x == null)
     .catch(err => {
       if (err.code === 'ENOENT') {

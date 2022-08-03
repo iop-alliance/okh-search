@@ -3,18 +3,21 @@ name: Build and deploy
 on:
   # disabled till it's working reliably
   #schedule:
-    # run every 24 hours on the 23rd minute (github actions sees higher usage on
-    # the 0th minute)
-    #- cron: 23 */24 * * *
+  # run every 24 hours on the 23rd minute (github actions sees higher usage on
+  # the 0th minute)
+  #- cron: 23 */24 * * *
   push:
 
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
       - run: yarn install --frozen-lockfile
       - run: yarn projects
       - run: cat site-data.json
