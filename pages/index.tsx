@@ -233,7 +233,7 @@ export default function Home() {
                 </div>
               </div>
               {searchResult.length > 3 && keywords.length > 1 && (
-                <div style={{ marginTop: 50 }} className="filter">
+                <div className="filter">
                   <Header sub size="large">
                     Keywords
                   </Header>
@@ -339,6 +339,7 @@ export default function Home() {
           width: 100%;
           justify-content: center;
           align-items: flex-start;
+          margin-bottom: 50px;
         }
 
         .logo {
