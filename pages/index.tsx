@@ -49,11 +49,11 @@ export default function Home() {
       .getElementsByClassName('searchInput')[0]
       .firstElementChild.addEventListener('keydown', handleKeydown)
 
-    const params = getParams()
-    setSearchTerm(params.term)
+    const params = getUrlParams()
+    setSearchTerm(params.q)
     setSelectedKeywords(params.keywords)
-    setSelectedDomains(params.domains)
-    setSelectedFileExtensions(params.fileExtensions)
+    setSelectedDomains(params.source)
+    setSelectedFileExtensions(params.files)
   }, [])
 
   let timeout = null
@@ -79,11 +79,11 @@ export default function Home() {
         })
       }
       setSearchResult(result)
-      const params = setParams({
-        searchTerm,
-        selectedKeywords,
-        selectedDomains,
-        selectedFileExtensions,
+      const params = setUrlParams({
+        q: searchTerm,
+        keywords: selectedKeywords,
+        source: selectedDomains,
+        files: selectedFileExtensions,
       })
       window.history.replaceState(null, '', '/' + params)
     }, 100)
@@ -399,21 +399,23 @@ export default function Home() {
   )
 }
 
-function setParams({
-  searchTerm,
-  selectedKeywords,
-  selectedDomains,
-  selectedFileExtensions,
-}) {
-  const keywords = selectedKeywords.toString().replace(/,/g, '|')
-  const source = selectedDomains.toString().replace(/,/g, '|')
-  const files = selectedFileExtensions.toString().replace(/,/g, '|')
+interface UrlParams {
+  q: string
+  keywords: Array<string>
+  source: Array<string>
+  files: Array<string>
+}
+
+function setUrlParams({ q, keywords, source, files }: UrlParams) {
+  keywords = keywords.toString().replace(/,/g, '|')
+  source = source.toString().replace(/,/g, '|')
+  files = files.toString().replace(/,/g, '|')
   // we do this weird dance to create and object or null and spread it so we don't
   // ever have empty params (e.g. `q=&keywords=`) in the URL
-  const qObj = searchTerm ? { q: searchTerm } : null
-  const keywordsObj = selectedKeywords.length > 0 ? { keywords } : null
-  const sourceObj = selectedDomains.length > 0 ? { source } : null
-  const filesObj = selectedFileExtensions.length > 0 ? { files } : null
+  const qObj = q ? { q: q } : null
+  const keywordsObj = keywords.length > 0 ? { keywords } : null
+  const sourceObj = source.length > 0 ? { source } : null
+  const filesObj = files.length > 0 ? { files } : null
   const params = querystring.encode({
     ...qObj,
     ...keywordsObj,
@@ -428,14 +430,7 @@ function setParams({
   return '#' + params
 }
 
-interface Params {
-  term: string
-  keywords: Array<string>
-  domains: Array<string>
-  fileExtensions: Array<string>
-}
-
-function getParams(): Params {
+function getUrlParams(): UrlParams {
   let params = ''
   if (typeof window !== 'undefined') {
     params = window.location.hash.slice(1)
@@ -445,9 +440,9 @@ function getParams(): Params {
     q = ''
   }
   return {
-    term: q,
+    q,
     keywords: keywords && !Array.isArray(keywords) ? keywords.split('|') : [],
-    domains: source && !Array.isArray(source) ? source.split('|') : [],
-    fileExtensions: files && !Array.isArray(files) ? files.split('|') : [],
+    source: source && !Array.isArray(source) ? source.split('|') : [],
+    files: files && !Array.isArray(files) ? files.split('|') : [],
   }
 }
