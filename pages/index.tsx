@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import querystring from 'querystring'
 import { Input, Header, Divider, Label, Icon, Button } from 'semantic-ui-react'
 import siteData from '../site-data.json'
 import ProjectCard from '../components/ProjectCard'
@@ -23,11 +24,14 @@ const miniSearch = new MiniSearch({
 miniSearch.addAll(siteData.projects)
 
 export default function Home() {
-  const [searchTerm, setSearchTerm] = React.useState('')
+  const params = getParams()
+  const [searchTerm, setSearchTerm] = React.useState(params.term)
   const [searchResult, setSearchResult] = React.useState(siteData.projects)
-  const [selectedKeywords, setSelectedKeywords] = React.useState([])
-  const [selectedDomains, setSelectedDomains] = React.useState([])
-  const [selectedFileExtensions, setSelectedFileExtensions] = React.useState([])
+  const [selectedKeywords, setSelectedKeywords] = React.useState(params.keywords)
+  const [selectedDomains, setSelectedDomains] = React.useState(params.domains)
+  const [selectedFileExtensions, setSelectedFileExtensions] = React.useState(
+    params.fileExtensions,
+  )
   const [keywords, setKeywords] = React.useState(siteData.keywords)
   const [domains, setDomains] = React.useState(siteData.domains)
   const [fileExtensions, setFileExtensions] = React.useState(
@@ -72,6 +76,14 @@ export default function Home() {
       }
       setSearchResult(result)
     }, 100)
+
+    const params = toParams(
+      searchTerm,
+      selectedKeywords,
+      selectedDomains,
+      selectedFileExtensions,
+    )
+    window.history.replaceState(null, '', '/' + params)
   }, [
     searchTerm,
     selectedKeywords.toString(),
@@ -344,4 +356,39 @@ export default function Home() {
       `}</style>
     </div>
   )
+}
+
+function toParams(
+  searchTerm,
+  selectedKeywords,
+  selectedDomains,
+  selectedFileExtensions,
+) {
+  const hasParams =
+    searchTerm ||
+    selectedKeywords.length > 0 ||
+    selectedDomains.length > 0 ||
+    selectedFileExtensions.length > 0
+
+  const params = hasParams
+    ? `#q=${searchTerm}` +
+      (selectedKeywords.length > 0 ? `&keywords=${selectedKeywords}` : '') +
+      (selectedDomains.length > 0 ? `&source=${selectedDomains}` : '') +
+      (selectedFileExtensions.length > 0 ? `&files=${selectedFileExtensions}` : '')
+    : ''
+  return params
+}
+
+function getParams() {
+  let params = ''
+  if (typeof window !== 'undefined') {
+    params = window.location.hash.slice(1)
+  }
+  const { q, keywords, source, files } = querystring.decode(params)
+  return {
+    term: q || '',
+    keywords: keywords ? keywords.split(',') : [],
+    domains: source ? source.split(',') : [],
+    fileExtensions: files ? files.split(',') : [],
+  }
 }
