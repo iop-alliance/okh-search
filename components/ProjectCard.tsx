@@ -1,6 +1,5 @@
 import React from 'react'
-import Head from 'next/head'
-import { Card } from 'semantic-ui-react'
+import { Card, Label } from 'semantic-ui-react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const ProjectCard = ({ project }) => {
@@ -13,6 +12,10 @@ const ProjectCard = ({ project }) => {
   if (description.length > 140) {
     description = description.slice(0, 140) + '...'
   }
+
+  const tags = [project['source-domain']]
+    .concat(project.keywords || [])
+    .concat(project.fileExtensions)
 
   return (
     <Card
@@ -52,6 +55,22 @@ const ProjectCard = ({ project }) => {
         >
           {description}
         </Card.Description>
+      </Card.Content>
+      <Card.Content style={{ maxHeight: 55, overflow: 'hidden' }} extra>
+        {tags.map(t => (
+          <Label
+            style={{
+              marginBottom: 12,
+              color: 'rgba(0, 0, 0, 0.6)',
+              padding: '10px !important',
+            }}
+            key={t}
+            basic
+            circular
+          >
+            {t}
+          </Label>
+        ))}
       </Card.Content>
     </Card>
   )
