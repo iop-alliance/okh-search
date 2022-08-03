@@ -236,7 +236,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {searchResult.length > 3 && keywords.length > 1 && (
+              {searchResult.length > 3 && keywords.length > 0 && (
                 <div className="filter">
                   <Header sub size="large">
                     Keywords
@@ -407,15 +407,15 @@ interface UrlParams {
 }
 
 function setUrlParams({ q, keywords, source, files }: UrlParams) {
-  keywords = keywords.toString().replace(/,/g, '|')
-  source = source.toString().replace(/,/g, '|')
-  files = files.toString().replace(/,/g, '|')
+  const keywordsStr = keywords.toString().replace(/,/g, '|')
+  const sourceStr = source.toString().replace(/,/g, '|')
+  const filesStr = files.toString().replace(/,/g, '|')
   // we do this weird dance to create and object or null and spread it so we don't
   // ever have empty params (e.g. `q=&keywords=`) in the URL
   const qObj = q ? { q: q } : null
-  const keywordsObj = keywords.length > 0 ? { keywords } : null
-  const sourceObj = source.length > 0 ? { source } : null
-  const filesObj = files.length > 0 ? { files } : null
+  const keywordsObj = keywordsStr.length > 0 ? { keywords: keywordsStr } : null
+  const sourceObj = sourceStr.length > 0 ? { source: sourceStr } : null
+  const filesObj = filesStr.length > 0 ? { files: filesStr } : null
   const params = querystring.encode({
     ...qObj,
     ...keywordsObj,
