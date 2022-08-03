@@ -97,19 +97,20 @@ export default function Home() {
   React.useEffect(() => {
     const keywordsInResult = Array.from(
       searchResult.reduce(
-        (kws, p) => new Set([...kws, ...(p.keywords || [])]),
+        (kws, p) => new Set([...Array.from(kws), ...(p.keywords || [])]),
         new Set(),
       ),
     )
     const domainsInResult = Array.from(
       searchResult.reduce(
-        (domains, p) => new Set([...domains, p['source-domain']]),
+        (domains, p) => new Set([...Array.from(domains), p['source-domain']]),
         new Set(),
       ),
     )
     const fileExtensionsInResult = Array.from(
       searchResult.reduce(
-        (extensions, p) => new Set([...extensions, ...p.fileExtensions]),
+        (extensions, p) =>
+          new Set([...Array.from(extensions), ...p.fileExtensions]),
         new Set(),
       ),
     )
@@ -326,7 +327,7 @@ export default function Home() {
           font-size: 14pt;
         }
 
-        @media(max-width: 1280px) {
+        @media (max-width: 1280px) {
           .footer {
             width: 100%;
           }
@@ -422,16 +423,26 @@ function setParams({
   return '#' + params
 }
 
-function getParams() {
+interface Params {
+  term: string
+  keywords: Array<string>
+  domains: Array<string>
+  fileExtensions: Array<string>
+}
+
+function getParams(): Params {
   let params = ''
   if (typeof window !== 'undefined') {
     params = window.location.hash.slice(1)
   }
-  const { q, keywords, source, files } = querystring.decode(params)
+  let { q, keywords, source, files } = querystring.decode(params)
+  if (!q || Array.isArray(q)) {
+    q = ''
+  }
   return {
-    term: q || '',
-    keywords: keywords ? keywords.split('|') : [],
-    domains: source ? source.split('|') : [],
-    fileExtensions: files ? files.split('|') : [],
+    term: q,
+    keywords: keywords && !Array.isArray(keywords) ? keywords.split('|') : [],
+    domains: source && !Array.isArray(source) ? source.split('|') : [],
+    fileExtensions: files && !Array.isArray(files) ? files.split('|') : [],
   }
 }
