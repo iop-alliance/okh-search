@@ -109,8 +109,7 @@ export default function Home() {
     )
     const fileExtensionsInResult = Array.from(
       searchResult.reduce(
-        (extensions, p) =>
-          new Set([...Array.from(extensions), ...p.fileExtensions]),
+        (exts, p) => new Set([...Array.from(exts), ...p.fileExtensions]),
         new Set(),
       ),
     )
@@ -129,7 +128,12 @@ export default function Home() {
         .filter(ext => !selectedFileExtensions.includes(ext))
         .filter(ext => fileExtensionsInResult.includes(ext)),
     )
-  }, [searchResult.map(p => p.id).toString()])
+  }, [
+    searchResult.map(p => p.id).toString(),
+    selectedKeywords.toString(),
+    selectedDomains.toString(),
+    selectedFileExtensions.toString(),
+  ])
 
   const removeFilter = name => () => {
     setSelectedKeywords(kws => kws.filter(n => n !== name))
