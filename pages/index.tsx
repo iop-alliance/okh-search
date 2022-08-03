@@ -76,6 +76,12 @@ export default function Home() {
     selectedFileExtensions.toString(),
   ])
 
+  const removeFilter = name => () => {
+    setSelectedKeywords(kws => kws.filter(n => n !== name))
+    setSelectedDomains(domains => domains.filter(n => n !== name))
+    setSelectedFileExtensions(exts => exts.filter(n => n !== name))
+  }
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <div className="main">
@@ -124,7 +130,11 @@ export default function Home() {
                       .concat(selectedDomains)
                       .concat(selectedFileExtensions)
                       .map(kw => {
-                        return <TagButton icon="x">{kw}</TagButton>
+                        return (
+                          <TagButton onClick={removeFilter(kw)} icon="x">
+                            {kw}
+                          </TagButton>
+                        )
                       })}
                   </div>
                 </div>
@@ -135,7 +145,10 @@ export default function Home() {
                   Keywords
                 </Header>
                 <div className="filter-select">
-                  <FilterSelect options={keywords} onChange={setSelectedKeywords} />
+                  <FilterSelect
+                    options={keywords.filter(o => !selectedKeywords.includes(o))}
+                    onSelect={o => setSelectedKeywords(os => os.concat([o]))}
+                  />
                 </div>
               </div>
               <div className="filter">
@@ -144,7 +157,10 @@ export default function Home() {
                   Sources
                 </Header>
                 <div className="filter-select">
-                  <FilterSelect options={domains} onChange={setSelectedDomains} />
+                  <FilterSelect
+                    options={domains.filter(o => !selectedDomains.includes(o))}
+                    onSelect={o => setSelectedDomains(os => os.concat([o]))}
+                  />
                 </div>
               </div>
               <div className="filter">
@@ -154,8 +170,10 @@ export default function Home() {
                 </Header>
                 <div className="filter-select">
                   <FilterSelect
-                    options={fileExtensions}
-                    onChange={setSelectedFileExtensions}
+                    options={fileExtensions.filter(
+                      o => !selectedFileExtensions.includes(o),
+                    )}
+                    onSelect={o => setSelectedFileExtensions(os => os.concat([o]))}
                   />
                 </div>
                 <Divider />
