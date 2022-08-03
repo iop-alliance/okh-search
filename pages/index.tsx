@@ -103,42 +103,42 @@ export default function Home() {
                 </a>
                 <div className="search">
                   <Input
+                    style={{marginTop: 80}}
                     fluid
                     size="huge"
                     placeholder="Search..."
                     onChange={e => setSearchTerm(e.target.value)}
                     className="searchInput"
                   />
-                </div>
-              </div>
-              <div
-                style={{
-                  width: 'min(920px, 92%)',
-                }}
-              >
-                <Divider />
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'flex-start',
-                    width: 'min(920px, 92%)',
-                  }}
-                >
-                  <Header>Filters: </Header>
-                  <div style={{ marginLeft: 20 }}>
-                    {selectedKeywords
-                      .concat(selectedDomains)
-                      .concat(selectedFileExtensions)
-                      .map(kw => {
-                        return (
-                          <TagButton onClick={removeFilter(kw)} icon="x">
-                            {kw}
-                          </TagButton>
-                        )
-                      })}
+                  <div
+                    style={{
+                      marginTop: 10,
+                      minHeight: 42,
+                      width: 'min(920px, 92%)',
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        width: 'min(920px, 92%)',
+                      }}
+                    >
+                      <div style={{ marginLeft: 20 }}>
+                        {selectedKeywords
+                          .concat(selectedDomains)
+                          .concat(selectedFileExtensions)
+                          .map(kw => {
+                            return (
+                              <TagButton onClick={removeFilter(kw)} icon="x">
+                                {kw}
+                              </TagButton>
+                            )
+                          })}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <Divider />
               </div>
               <div style={{ marginTop: 50 }} className="filter">
                 <Header sub size="large">
@@ -216,7 +216,7 @@ export default function Home() {
           flex-wrap: wrap;
           width: 100%;
           justify-content: center;
-          align-items: center;
+          align-items: flex-start;
         }
 
         .logo {

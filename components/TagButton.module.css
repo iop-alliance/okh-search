@@ -1,7 +1,12 @@
+.button {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
 .button i {
-    color: #AAA;
+  color: #aaa;
 }
 
 .button:hover i {
-    color: #777;
+  color: #777;
 }

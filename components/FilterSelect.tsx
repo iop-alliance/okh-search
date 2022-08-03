@@ -11,7 +11,7 @@ export default function FilterSelect({ onSelect, options, className = '' }) {
     <div className={className}>
       <div className="flex flex-wrap justify-start align-center space-x-4 space-y-2">
         {optionsToShow.map(o => (
-          <TagButton key={o} onClick={() => onSelect(o)}>
+          <TagButton size="large" key={o} onClick={() => onSelect(o)}>
             {o}
           </TagButton>
         ))}

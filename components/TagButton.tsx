@@ -3,9 +3,9 @@ import { Button, Icon } from 'semantic-ui-react'
 
 import styles from './TagButton.module.css'
 
-export default function TagButton({ children, icon = false, ...props }) {
+export default function TagButton({ children, size, icon = false, ...props }) {
   return (
-    <Button size="large" className={styles.button} icon circular basic {...props}>
+    <Button size={size} className={styles.button} icon circular basic {...props}>
       <div style={{ display: 'flex' }}>
         {children}
         {icon && (
