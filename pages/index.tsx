@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import querystring from 'querystring'
 import { Input, Header, Divider, Label, Icon, Button } from 'semantic-ui-react'
 import siteData from '../site-data.json'
@@ -156,14 +157,21 @@ export default function Home() {
           {
             <>
               <div className="top">
-                <a href="https://internetofproduction.org/open-know-how">
-                  <div className="logo">
-                    <img src="logo.svg" />
-                    <Header as="h1" style={{ marginTop: 0 }}>
-                      Open Know-How
-                    </Header>
-                  </div>
-                </a>
+                <Link href="/">
+                  <a
+                    onClick={() => {
+                      setSearchTerm('')
+                      clearFilters()
+                    }}
+                  >
+                    <div className="logo">
+                      <img src="logo.svg" />
+                      <Header as="h1" style={{ marginTop: 0 }}>
+                        Open Know-How
+                      </Header>
+                    </div>
+                  </a>
+                </Link>
                 <div className="search">
                   <Input
                     style={{ marginTop: 80 }}
@@ -289,6 +297,13 @@ export default function Home() {
             </>
           }
         </>
+        <div className="footer">
+          <div>
+            <a href="https://internetofproduction.org/open-know-how">about</a>
+            {' | '}
+            <a href="https://github.com/iop-alliance/okh-search">source code</a>
+          </div>
+        </div>
       </div>
       <style jsx>{`
         .main {
@@ -298,6 +313,23 @@ export default function Home() {
           min-width: min(100%, 1200px);
           justify-content: center;
           align-items: center;
+        }
+
+        .footer {
+          position: fixed;
+          background: white;
+          bottom: 0;
+          right: 0;
+          display: flex;
+          justify-content: flex-end;
+          padding: 3px;
+          font-size: 14pt;
+        }
+
+        @media(max-width: 1280px) {
+          .footer {
+            width: 100%;
+          }
         }
 
         .top {
@@ -376,7 +408,12 @@ function setParams({
   const keywordsObj = selectedKeywords.length > 0 ? { keywords } : null
   const sourceObj = selectedDomains.length > 0 ? { source } : null
   const filesObj = selectedFileExtensions.length > 0 ? { files } : null
-  const params = querystring.encode({ ...qObj, ...keywordsObj, ...sourceObj, ...filesObj })
+  const params = querystring.encode({
+    ...qObj,
+    ...keywordsObj,
+    ...sourceObj,
+    ...filesObj,
+  })
 
   if (params === '') {
     return ''
