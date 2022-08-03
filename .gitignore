@@ -26,4 +26,7 @@ yarn-error.log*
 
 .now
 
-projects.json
+site-data.json
+
+public/images
+!public/images/placeholder.png
