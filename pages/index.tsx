@@ -367,19 +367,22 @@ function setParams({
   selectedDomains,
   selectedFileExtensions,
 }) {
-  const hasParams =
-    searchTerm ||
-    selectedKeywords.length > 0 ||
-    selectedDomains.length > 0 ||
-    selectedFileExtensions.length > 0
+  const keywords = selectedKeywords.toString().replace(/,/g, '|')
+  const source = selectedDomains.toString().replace(/,/g, '|')
+  const files = selectedFileExtensions.toString().replace(/,/g, '|')
+  // we do this weird dance to create and object or null and spread it so we don't
+  // ever have empty params (e.g. `q=&keywords=`) in the URL
+  const qObj = searchTerm ? { q: searchTerm } : null
+  const keywordsObj = selectedKeywords.length > 0 ? { keywords } : null
+  const sourceObj = selectedDomains.length > 0 ? { source } : null
+  const filesObj = selectedFileExtensions.length > 0 ? { files } : null
+  const params = querystring.encode({ ...qObj, ...keywordsObj, ...sourceObj, ...filesObj })
 
-  const params = hasParams
-    ? `#q=${searchTerm}` +
-      (selectedKeywords.length > 0 ? `&keywords=${selectedKeywords}` : '') +
-      (selectedDomains.length > 0 ? `&source=${selectedDomains}` : '') +
-      (selectedFileExtensions.length > 0 ? `&files=${selectedFileExtensions}` : '')
-    : ''
-  return params
+  if (params === '') {
+    return ''
+  }
+
+  return '#' + params
 }
 
 function getParams() {
@@ -390,8 +393,8 @@ function getParams() {
   const { q, keywords, source, files } = querystring.decode(params)
   return {
     term: q || '',
-    keywords: keywords ? keywords.split(',') : [],
-    domains: source ? source.split(',') : [],
-    fileExtensions: files ? files.split(',') : [],
+    keywords: keywords ? keywords.split('|') : [],
+    domains: source ? source.split('|') : [],
+    fileExtensions: files ? files.split('|') : [],
   }
 }
