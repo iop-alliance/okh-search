@@ -85,7 +85,6 @@ export default function Home() {
         source: selectedDomains,
         files: selectedFileExtensions,
       })
-      window.history.replaceState(null, '', '/' + params)
     }, 100)
   }, [
     searchTerm,
@@ -283,7 +282,33 @@ export default function Home() {
               <div>
                 <div id="projects">
                   {searchResult.map(project => (
-                    <ProjectCard key={project.id} project={project} />
+                    <ProjectCard
+                      setOnlyFilter={(type, name) => {
+                        setSearchTerm('')
+                        switch (type) {
+                          case 'keywords':
+                            setSelectedKeywords([name])
+                            setSelectedDomains([])
+                            setSelectedFileExtensions([])
+                            break
+                          case 'source':
+                            setSelectedKeywords([])
+                            setSelectedDomains([name])
+                            setSelectedFileExtensions([])
+                            break
+                          case 'files':
+                            setSelectedKeywords([])
+                            setSelectedDomains([])
+                            setSelectedFileExtensions([name])
+                            break
+                        }
+                        // scroll to top
+                        document.body.scrollTop = 0 // for Safari
+                        document.documentElement.scrollTop = 0
+                      }}
+                      key={project.id}
+                      project={project}
+                    />
                   ))}
                   {searchResult.length === 0 && (
                     <p
@@ -416,18 +441,18 @@ function setUrlParams({ q, keywords, source, files }: UrlParams) {
   const keywordsObj = keywordsStr.length > 0 ? { keywords: keywordsStr } : null
   const sourceObj = sourceStr.length > 0 ? { source: sourceStr } : null
   const filesObj = filesStr.length > 0 ? { files: filesStr } : null
-  const params = querystring.encode({
+  let params = querystring.encode({
     ...qObj,
     ...keywordsObj,
     ...sourceObj,
     ...filesObj,
   })
 
-  if (params === '') {
-    return ''
+  if (params !== '') {
+    params = '#' + params
   }
 
-  return '#' + params
+  window.history.replaceState(null, '', '/' + params)
 }
 
 function getUrlParams(): UrlParams {

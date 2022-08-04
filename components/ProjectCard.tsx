@@ -1,8 +1,12 @@
 import React from 'react'
-import { Card, Label } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import querystring from 'querystring'
+import Link from 'next/link'
 
-const ProjectCard = ({ project }) => {
+import TagButton from './TagButton'
+
+const ProjectCard = ({ project, setOnlyFilter }) => {
   const author =
     project.licensor?.name ||
     project.contact?.name ||
@@ -13,22 +17,19 @@ const ProjectCard = ({ project }) => {
     description = description.slice(0, 140) + '...'
   }
 
-  const tags = [project['source-domain']]
-    .concat(project.keywords || [])
-    .concat(project.fileExtensions)
+  const domain = project['source-domain']
+  const keywords = project.keywords || []
+  const files = project.fileExtensions
 
   return (
-    <Card
-      style={{ margin: 20 }}
-      key={project.id}
-      as="a"
-      href={project['documentation-home']}
-    >
-      <LazyLoadImage
-        style={{ width: 290, height: 200, objectFit: 'cover' }}
-        src={project.image || 'images/placeholder.png'}
-      />
-      <Card.Content>
+    <Card style={{ margin: 20 }} key={project.id} link>
+      <a href={project['documentation-home']}>
+        <LazyLoadImage
+          style={{ width: 290, height: 200, objectFit: 'cover' }}
+          src={project.image || 'images/placeholder.png'}
+        />
+      </a>
+      <Card.Content as="a" href={project['documentation-home']}>
         <Card.Header
           style={{
             whiteSpace: 'nowrap',
@@ -56,23 +57,54 @@ const ProjectCard = ({ project }) => {
           {description}
         </Card.Description>
       </Card.Content>
-      <Card.Content style={{ maxHeight: 55, overflow: 'hidden' }} extra>
-        {tags.map(t => (
-          <Label
-            style={{
-              marginBottom: 12,
-              color: 'rgba(0, 0, 0, 0.6)',
-              padding: '10px !important',
-            }}
-            key={t}
-            basic
-            circular
-          >
-            {t}
-          </Label>
+      <Card.Content
+        style={{
+          maxHeight: 63,
+          overflow: 'hidden',
+          cursor: 'default',
+          display: 'flex',
+          flexWrap: 'wrap',
+        }}
+        extra
+      >
+        <Button tagType="source" tagName={domain} setOnlyFilter={setOnlyFilter} />
+        {keywords.map(kw => (
+          <Button
+            key={`kw:${kw}`}
+            tagType="keywords"
+            tagName={kw}
+            setOnlyFilter={setOnlyFilter}
+          />
+        ))}
+        {files.map(ext => (
+          <Button
+            key={`ext:${ext}`}
+            tagType="files"
+            tagName={ext}
+            setOnlyFilter={setOnlyFilter}
+          />
         ))}
       </Card.Content>
     </Card>
+  )
+}
+
+function Button({ tagType, tagName, setOnlyFilter }) {
+  const href = '#' + querystring.encode({ [tagType]: tagName })
+  return (
+    <div style={{ marginBottom: 20 }}>
+      <TagButton
+        as="a"
+        href={href}
+        size="tiny"
+        onClick={e => {
+          e.preventDefault()
+          setOnlyFilter(tagType, tagName)
+        }}
+      >
+        {tagName}
+      </TagButton>
+    </div>
   )
 }
 

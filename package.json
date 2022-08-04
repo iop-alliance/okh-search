@@ -13,7 +13,6 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
-    "@reach/visually-hidden": "^0.17.0",
     "@zeit/next-css": "^1.0.1",
     "image-thumbnail": "https://github.com/OpenKnowHow/image-thumbnail",
     "minisearch": "^5.0.0",
