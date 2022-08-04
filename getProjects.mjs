@@ -14,27 +14,31 @@ import natural from 'natural'
 ;(async () => {
   const csv = await fs.readFile('projects_okhs.csv', 'utf-8')
   const cadFiles = JSON.parse(await fs.readFile('cad-files.json', 'utf-8'))
+  const listOfLists = JSON.parse(await fs.readFile('list_of_lists.json', 'utf-8'))
+
+  let listOfManifests = (
+    await Promise.all(listOfLists.map(url => fetch(url).then(r => r.json())))
+  ).flat()
+
+  listOfManifests = csv.split('\n').concat(listOfManifests)
+
   let projects = await Promise.all(
-    csv
-      .split('\n')
-      .slice(1)
-      .map(async (line, index) => {
-        const [name, date, link] = line.split(',')
-        if (link) {
-          return fetchText(link)
-            .then(text => {
-              const origin = dirname(link) + '/'
-              return { id: index, origin, ...yaml.parse(text) }
-            })
-            .catch(e => {
-              console.warn('--------------------------------------------')
-              console.warn(e)
-              console.warn('............................................')
-              console.warn('Error reading:', link)
-              console.warn('--------------------------------------------')
-            })
-        }
-      }),
+    listOfManifests.map(async (link, index) => {
+      if (link) {
+        return fetchText(link)
+          .then(text => {
+            const origin = dirname(link) + '/'
+            return { id: index, origin, ...yaml.parse(text) }
+          })
+          .catch(e => {
+            console.warn('--------------------------------------------')
+            console.warn(e)
+            console.warn('............................................')
+            console.warn('Error reading:', link)
+            console.warn('--------------------------------------------')
+          })
+      }
+    }),
   )
   // remove null/undefined
   projects = projects.filter(Boolean)
