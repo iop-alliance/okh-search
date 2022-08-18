@@ -12,18 +12,19 @@ const fetch = rateLimit(10, 100, nodeFetch)
 import imageThumbnail from 'image-thumbnail'
 import natural from 'natural'
 ;(async () => {
-  const csv = await fs.readFile('projects_okhs.csv', 'utf-8')
+  const config = JSON.parse(await fs.readFile('okh-config.json', 'utf-8'))
   const cadFiles = JSON.parse(await fs.readFile('cad-files.json', 'utf-8'))
-  const listOfLists = JSON.parse(await fs.readFile('list_of_lists.json', 'utf-8'))
+  const listOfLists = config.remoteLists
+  let list = config.remoteManifests
 
-  let listOfManifests = (
-    await Promise.all(listOfLists.map(url => fetch(url).then(r => r.json())))
-  ).flat()
-
-  listOfManifests = csv.split('\n').concat(listOfManifests)
+  list = list.concat(
+    (
+      await Promise.all(listOfLists.map(url => fetch(url).then(r => r.json())))
+    ).flat(),
+  )
 
   let projects = await Promise.all(
-    listOfManifests.map(async (link, index) => {
+    list.map(async (link, index) => {
       if (link) {
         return fetchText(link)
           .then(text => {
@@ -42,7 +43,7 @@ import natural from 'natural'
   )
   // remove null/undefined
   projects = projects.filter(Boolean)
-  projects = projects.map(processUrls)
+  projects = projects.map(p => processUrls(config.url, p))
   // remove null/undefined
   projects = projects.filter(Boolean)
   shuffleArray(projects)
@@ -55,7 +56,7 @@ import natural from 'natural'
     ),
   )
   // aggregate keywords and count the number of times they are used. stem the
-  // keywords but keep trak of the original pre-stemmed keywords too.
+  // keywords but keep track of the original pre-stemmed keywords too.
   let keywords = projects.reduce(
     ({ stemmed, original }, p) => {
       if (p.keywords) {
@@ -200,10 +201,10 @@ async function fetchText(link) {
   })
 }
 
-function processUrls(project) {
+function processUrls(siteUrl, project) {
   let origin = project.origin.trim()
   if (origin === 'local-manifests/') {
-    origin = 'https://search.openknowhow.org'
+    origin = siteUrl
   }
   let sourceDomain = new URL(origin).host.split('.')
   sourceDomain =
