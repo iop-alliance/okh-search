@@ -9,11 +9,18 @@ import { promisify } from 'util'
 import imageThumbnail from 'image-thumbnail'
 import natural from 'natural'
 import globule from 'globule'
+import path from 'path'
+import { fileURLToPath } from 'url'
 const accessPromise = promisify(access)
 const fetch = rateLimit(10, 100, nodeFetch)
 
-const config = JSON.parse(await fs.readFile('okh-config.json', 'utf-8'))
-const cadFiles = JSON.parse(await fs.readFile('data/cad-files.json', 'utf-8'))
+const scriptDir = path.dirname(fileURLToPath(import.meta.url))
+
+const configPath = path.join(scriptDir, '../okh-config.json')
+const cadFilesPath = path.join(scriptDir, '../data/cad-files.json')
+
+const config = JSON.parse(await fs.readFile(configPath, 'utf-8'))
+const cadFiles = JSON.parse(await fs.readFile(cadFilesPath, 'utf-8'))
 const remoteLists = config.remoteLists
 
 let manifestUrls = config.remoteManifests
@@ -59,7 +66,7 @@ await fs.writeFile(
 )
 
 function readLocalManifests() {
-  const paths = globule.find('local-manifests/*.yml')
+  const paths = globule.find(path.join(scriptDir, '../local-manifests/*.yml'))
   return Promise.all(paths.map(p => fs.readFile(p, 'utf-8'))).then(texts =>
     texts.map(yaml.parse).map(p => ({ ...p, origin: config.url })),
   )

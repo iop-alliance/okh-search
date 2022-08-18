@@ -7,7 +7,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "get-data": "./get-data.mjs"
+    "get-data": "scripts/get-data.mjs"
   },
   "engines": {
     "node": ">=16.0.0"
