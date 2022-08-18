@@ -13,7 +13,7 @@ import imageThumbnail from 'image-thumbnail'
 import natural from 'natural'
 ;(async () => {
   const config = JSON.parse(await fs.readFile('okh-config.json', 'utf-8'))
-  const cadFiles = JSON.parse(await fs.readFile('cad-files.json', 'utf-8'))
+  const cadFiles = JSON.parse(await fs.readFile('data/cad-files.json', 'utf-8'))
   const listOfLists = config.remoteLists
   let list = config.remoteManifests
 
@@ -164,10 +164,10 @@ import natural from 'natural'
     .sort(([_, count1], [__, count2]) => count2 - count1)
     .map(([ext]) => ext)
 
-  console.info('Writing site-data.json')
+  console.info('Writing data/site-data.json')
 
   await fs.writeFile(
-    'site-data.json',
+    'data/site-data.json',
     JSON.stringify(
       {
         projects,
