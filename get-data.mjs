@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import crypto from 'crypto'
 import { dirname, extname, join } from 'path'
 import nodeFetch from 'node-fetch'
 import rateLimit from 'promise-rate-limit'
@@ -31,7 +32,6 @@ projects = await Promise.all(
   ),
 )
 
-
 const keywordsResult = processKeywords(projects)
 projects = keywordsResult.projects
 
@@ -60,8 +60,9 @@ await fs.writeFile(
 
 function readLocalManifests() {
   const paths = globule.find('local-manifests/*.yml')
-  return Promise.all(paths.map(p => fs.readFile(p, 'utf-8')))
-    .then(texts => texts.map(yaml.parse).map(p => ({ ...p, origin: config.url })))
+  return Promise.all(paths.map(p => fs.readFile(p, 'utf-8'))).then(texts =>
+    texts.map(yaml.parse).map(p => ({ ...p, origin: config.url })),
+  )
 }
 
 function processKeywords(projects) {
@@ -185,21 +186,19 @@ function processFileExtensions(projects) {
 
 function fetchManifests(manifestUrls) {
   return Promise.all(
-    manifestUrls.map(async link => {
-      if (link) {
-        return fetchText(link)
-          .then(text => {
-            const origin = dirname(link) + '/'
-            return { origin, ...yaml.parse(text) }
-          })
-          .catch(e => {
-            console.warn('--------------------------------------------')
-            console.warn(e)
-            console.warn('............................................')
-            console.warn('Error reading:', link)
-            console.warn('--------------------------------------------')
-          })
-      }
+    manifestUrls.map(async url => {
+      return fetchText(url)
+        .then(text => {
+          const origin = dirname(url) + '/'
+          return { id: createHash(url), origin, ...yaml.parse(text) }
+        })
+        .catch(e => {
+          console.warn('--------------------------------------------')
+          console.warn(e)
+          console.warn('............................................')
+          console.warn('Error reading:', url)
+          console.warn('--------------------------------------------')
+        })
     }),
     // remove null/undefined
   ).then(manifests => manifests.filter(Boolean))
@@ -310,4 +309,8 @@ function shuffleArray(array) {
     // eslint-disable-next-line no-param-reassign
     ;[array[i], array[j]] = [array[j], array[i]]
   }
+}
+
+function createHash(str) {
+  return crypto.createHash('sha256').update(str).digest('hex')
 }
