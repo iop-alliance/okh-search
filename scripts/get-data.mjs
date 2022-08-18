@@ -28,7 +28,6 @@ manifestUrls = manifestUrls.concat(await getManifestUrls(remoteLists))
 
 let projects = await fetchManifests(manifestUrls)
 projects = projects.concat(await readLocalManifests())
-projects = projects.map((project, index) => ({ id: index, ...project }))
 projects = projects.map(processUrls).filter(Boolean)
 projects = await Promise.all(
   projects.map(p =>
