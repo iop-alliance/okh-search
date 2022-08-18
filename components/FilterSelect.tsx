@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Button, Icon } from 'semantic-ui-react'
 import TagButton from './TagButton'
+import styles from './FilterSelect.module.css'
 
 export default function FilterSelect({ onSelect, options, className = '' }) {
   const [isExpanded, setExpanded] = React.useState(false)
@@ -8,26 +9,20 @@ export default function FilterSelect({ onSelect, options, className = '' }) {
   const optionsToShow = isExpanded ? options : options.slice(0, 5)
   return (
     <div className={className}>
-      <div className="flex flex-wrap justify-start align-center space-x-4 space-y-2">
+      <div className={styles.filterSelect}>
         {optionsToShow.map(o => (
           <TagButton size="large" key={o} onClick={() => onSelect(o)}>
             {o}
           </TagButton>
         ))}
         {optionsToShow.length < options.length && (
-          <div
-            className="cursor-pointer border-1 pl-2 pr-2 text-xl rounded-full p-2"
-            onClick={() => setExpanded(true)}
-          >
+          <div className={styles.showOrHide} onClick={() => setExpanded(true)}>
             <Icon name="plus" />
             {'more ...'}
           </div>
         )}
         {isExpanded && (
-          <div
-            className="cursor-pointer border-1 pl-2 pr-2 text-xl rounded-full p-2"
-            onClick={() => setExpanded(false)}
-          >
+          <div className={styles.showOrHide} onClick={() => setExpanded(false)}>
             <Icon name="minus" />
             {'hide'}
           </div>

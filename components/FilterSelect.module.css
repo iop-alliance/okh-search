@@ -1,0 +1,17 @@
+.filterSelect {
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.showOrHide {
+  padding: 0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+}
