@@ -7,6 +7,7 @@ import { access, promises as fs, constants } from 'fs'
 import { promisify } from 'util'
 import imageThumbnail from 'image-thumbnail'
 import natural from 'natural'
+import globule from 'globule'
 const accessPromise = promisify(access)
 const fetch = rateLimit(10, 100, nodeFetch)
 
@@ -18,8 +19,9 @@ let manifestUrls = config.remoteManifests
 manifestUrls = manifestUrls.concat(await getManifestUrls(remoteLists))
 
 let projects = await fetchManifests(manifestUrls)
-projects = projects.map(p => processUrls(config.url, p)).filter(Boolean)
-
+projects = projects.concat(await readLocalManifests())
+projects = projects.map((project, index) => ({ id: index, ...project }))
+projects = projects.map(processUrls).filter(Boolean)
 projects = await Promise.all(
   projects.map(p =>
     processImage(p).catch(e => {
@@ -28,6 +30,7 @@ projects = await Promise.all(
     }),
   ),
 )
+
 
 const keywordsResult = processKeywords(projects)
 projects = keywordsResult.projects
@@ -54,6 +57,12 @@ await fs.writeFile(
     2,
   ),
 )
+
+function readLocalManifests() {
+  const paths = globule.find('local-manifests/*.yml')
+  return Promise.all(paths.map(p => fs.readFile(p, 'utf-8')))
+    .then(texts => texts.map(yaml.parse).map(p => ({ ...p, origin: config.url })))
+}
 
 function processKeywords(projects) {
   // aggregate keywords and count the number of times they are used. stem the
@@ -176,12 +185,12 @@ function processFileExtensions(projects) {
 
 function fetchManifests(manifestUrls) {
   return Promise.all(
-    manifestUrls.map(async (link, index) => {
+    manifestUrls.map(async link => {
       if (link) {
         return fetchText(link)
           .then(text => {
             const origin = dirname(link) + '/'
-            return { id: index, origin, ...yaml.parse(text) }
+            return { origin, ...yaml.parse(text) }
           })
           .catch(e => {
             console.warn('--------------------------------------------')
@@ -203,9 +212,6 @@ function getManifestUrls(remoteLists) {
 }
 
 async function fetchText(link) {
-  if (link.startsWith('local-manifests/')) {
-    return fs.readFile(link, 'utf-8')
-  }
   // just checking it's a valid url
   new URL(link)
   // actually fetch it
@@ -218,11 +224,8 @@ async function fetchText(link) {
   })
 }
 
-function processUrls(siteUrl, project) {
+function processUrls(project) {
   let origin = project.origin.trim()
-  if (origin === 'local-manifests/') {
-    origin = siteUrl
-  }
   let sourceDomain = new URL(origin).host.split('.')
   sourceDomain =
     sourceDomain[sourceDomain.length - 2] +
