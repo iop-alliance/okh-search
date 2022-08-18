@@ -10,42 +10,16 @@ import natural from 'natural'
 const accessPromise = promisify(access)
 const fetch = rateLimit(10, 100, nodeFetch)
 
-
 const config = JSON.parse(await fs.readFile('okh-config.json', 'utf-8'))
 const cadFiles = JSON.parse(await fs.readFile('data/cad-files.json', 'utf-8'))
-const listOfLists = config.remoteLists
-let list = config.remoteManifests
+const remoteLists = config.remoteLists
 
-list = list.concat(
-  (
-    await Promise.all(listOfLists.map(url => fetch(url).then(r => r.json())))
-  ).flat(),
-)
+let manifestUrls = config.remoteManifests
+manifestUrls = manifestUrls.concat(await getManifestUrls(remoteLists))
 
-let projects = await Promise.all(
-  list.map(async (link, index) => {
-    if (link) {
-      return fetchText(link)
-        .then(text => {
-          const origin = dirname(link) + '/'
-          return { id: index, origin, ...yaml.parse(text) }
-        })
-        .catch(e => {
-          console.warn('--------------------------------------------')
-          console.warn(e)
-          console.warn('............................................')
-          console.warn('Error reading:', link)
-          console.warn('--------------------------------------------')
-        })
-    }
-  }),
-)
-// remove null/undefined
-projects = projects.filter(Boolean)
-projects = projects.map(p => processUrls(config.url, p))
-// remove null/undefined
-projects = projects.filter(Boolean)
-shuffleArray(projects)
+let projects = await fetchManifests(manifestUrls)
+projects = projects.map(p => processUrls(config.url, p)).filter(Boolean)
+
 projects = await Promise.all(
   projects.map(p =>
     processImage(p).catch(e => {
@@ -54,112 +28,16 @@ projects = await Promise.all(
     }),
   ),
 )
-// aggregate keywords and count the number of times they are used. stem the
-// keywords but keep track of the original pre-stemmed keywords too.
-let keywords = projects.reduce(
-  ({ stemmed, original }, p) => {
-    if (p.keywords) {
-      const stemmedKeywords = p.keywords
-        .filter(Boolean)
-        .map(k => k.toLowerCase())
-        .map(k => [k, natural.PorterStemmer.stem(k)])
-      for (const [originalKey, stemmedKey] of stemmedKeywords) {
-        if (Object.keys(stemmed).includes(stemmedKey)) {
-          stemmed[stemmedKey]++
-        } else {
-          stemmed[stemmedKey] = 1
-        }
-        if (Object.keys(original).includes(originalKey)) {
-          original[originalKey].count++
-        } else {
-          original[originalKey] = { stemmed: stemmedKey, count: 1 }
-        }
-      }
-    }
-    return { stemmed, original }
-  },
-  { stemmed: {}, original: {} },
-)
-// get the pre-stemmed original keywords sorted according to popularity
-const preStemmed = Object.entries(keywords.original).sort(
-  ([_, { count }], [__, { count: count2 }]) => count2 - count,
-)
-// get the stemmed keywords according to popularity
-keywords = Object.entries(keywords.stemmed)
-  .filter(([_, count]) => count > 1)
-  .sort(([_, count1], [__, count2]) => count2 - count1)
-// map keywords to canonical names (the most popular pre-stemmed keywords)
-const keywordMap = keywords.map(([keyword]) => {
-  const [canonical] = preStemmed.find(([_, { stemmed }]) => stemmed === keyword)
-  const aliases = preStemmed
-    .filter(([_, { stemmed }]) => stemmed === keyword)
-    .map(([k]) => k)
-    .filter(k => k !== canonical)
-  return [canonical, aliases]
-})
-// normalize keywords in projects by mapping them to canonical names
-projects = projects.map(project => {
-  if (project.keywords) {
-    const keywords = project.keywords.filter(Boolean).map(keyword => {
-      keyword = keyword.toLowerCase()
-      const canonical = keywordMap.find(([_, aliases]) => aliases.includes(keyword))
-      if (canonical) {
-        return canonical[0]
-      }
-      return keyword
-    })
-    return { ...project, keywords }
-  }
-  return project
-})
-keywords = keywordMap.map(([canonical]) => canonical)
 
-let domains = projects.reduce((acc, project) => {
-  const name = project['source-domain']
-  if (Object.keys(acc).includes(name)) {
-    acc[name]++
-  } else {
-    acc[name] = 1
-  }
-  return acc
-}, {})
-// sort the domains according to popularity
-domains = Object.entries(domains)
-  .sort(([_, count1], [__, count2]) => count2 - count1)
-  .map(([domain]) => domain)
+const keywordsResult = processKeywords(projects)
+projects = keywordsResult.projects
 
-projects = projects.map(project => {
-  const designFiles = project['design-files'] || []
-  const schematicFiles = project['schematics'] || []
-  const designFileExtensions = designFiles
-    .map(f => extname(f.path.split('?')[0]).toLowerCase())
-    .filter(Boolean)
-    .map(ext => cadFiles[ext] || ext.slice(1).toUpperCase(ext))
-  const schematicFileExtensions = schematicFiles
-    .map(f => extname(f.path.split('?')[0]).toLowerCase())
-    .filter(Boolean)
-    .map(ext => cadFiles[ext] || ext.slice(1).toUpperCase())
-  let fileExtensions = schematicFileExtensions.concat(designFileExtensions)
-  fileExtensions = Array.from(new Set(fileExtensions))
-  return {
-    ...project,
-    fileExtensions,
-  }
-})
+const domainsResult = processDomains(projects)
+projects = domainsResult.projects
 
-let fileExtensions = projects.reduce((acc, project) => {
-  for (const ext of project.fileExtensions) {
-    if (Object.keys(acc).includes(ext)) {
-      acc[ext]++
-    } else {
-      acc[ext] = 1
-    }
-  }
-  return acc
-}, {})
-fileExtensions = Object.entries(fileExtensions)
-  .sort(([_, count1], [__, count2]) => count2 - count1)
-  .map(([ext]) => ext)
+const fileExtensions = processFileExtensions(projects)
+
+shuffleArray(projects)
 
 console.info('Writing data/site-data.json')
 
@@ -168,16 +46,163 @@ await fs.writeFile(
   JSON.stringify(
     {
       projects,
-      domains,
-      keywords,
+      domains: domainsResult.domains,
+      keywords: keywordsResult.keywords,
       fileExtensions,
     },
     null,
     2,
   ),
 )
+
+function processKeywords(projects) {
+  // aggregate keywords and count the number of times they are used. stem the
+  // keywords but keep track of the original pre-stemmed keywords too.
+  let keywords = projects.reduce(
+    ({ stemmed, original }, p) => {
+      if (p.keywords) {
+        const stemmedKeywords = p.keywords
+          .filter(Boolean)
+          .map(k => k.toLowerCase())
+          .map(k => [k, natural.PorterStemmer.stem(k)])
+        for (const [originalKey, stemmedKey] of stemmedKeywords) {
+          if (Object.keys(stemmed).includes(stemmedKey)) {
+            stemmed[stemmedKey]++
+          } else {
+            stemmed[stemmedKey] = 1
+          }
+          if (Object.keys(original).includes(originalKey)) {
+            original[originalKey].count++
+          } else {
+            original[originalKey] = { stemmed: stemmedKey, count: 1 }
+          }
+        }
+      }
+      return { stemmed, original }
+    },
+    { stemmed: {}, original: {} },
+  )
+  // get the pre-stemmed original keywords sorted according to popularity
+  const preStemmed = Object.entries(keywords.original).sort(
+    ([_, { count }], [__, { count: count2 }]) => count2 - count,
+  )
+  // get the stemmed keywords according to popularity
+  keywords = Object.entries(keywords.stemmed)
+    .filter(([_, count]) => count > 1)
+    .sort(([_, count1], [__, count2]) => count2 - count1)
+  // map keywords to canonical names (the most popular pre-stemmed keywords)
+  const keywordMap = keywords.map(([keyword]) => {
+    const [canonical] = preStemmed.find(([_, { stemmed }]) => stemmed === keyword)
+    const aliases = preStemmed
+      .filter(([_, { stemmed }]) => stemmed === keyword)
+      .map(([k]) => k)
+      .filter(k => k !== canonical)
+    return [canonical, aliases]
+  })
+  // normalize keywords in projects by mapping them to canonical names
+  projects = projects.map(project => {
+    if (project.keywords) {
+      const keywords = project.keywords.filter(Boolean).map(keyword => {
+        keyword = keyword.toLowerCase()
+        const canonical = keywordMap.find(([_, aliases]) =>
+          aliases.includes(keyword),
+        )
+        if (canonical) {
+          return canonical[0]
+        }
+        return keyword
+      })
+      return { ...project, keywords }
+    }
+    return project
+  })
+  keywords = keywordMap.map(([canonical]) => canonical)
+
+  return { projects, keywords }
+}
+
+function processDomains(projects) {
+  let domains = projects.reduce((acc, project) => {
+    const name = project['source-domain']
+    if (Object.keys(acc).includes(name)) {
+      acc[name]++
+    } else {
+      acc[name] = 1
+    }
+    return acc
+  }, {})
+  // sort the domains according to popularity
+  domains = Object.entries(domains)
+    .sort(([_, count1], [__, count2]) => count2 - count1)
+    .map(([domain]) => domain)
+
+  projects = projects.map(project => {
+    const designFiles = project['design-files'] || []
+    const schematicFiles = project['schematics'] || []
+    const designFileExtensions = designFiles
+      .map(f => extname(f.path.split('?')[0]).toLowerCase())
+      .filter(Boolean)
+      .map(ext => cadFiles[ext] || ext.slice(1).toUpperCase(ext))
+    const schematicFileExtensions = schematicFiles
+      .map(f => extname(f.path.split('?')[0]).toLowerCase())
+      .filter(Boolean)
+      .map(ext => cadFiles[ext] || ext.slice(1).toUpperCase())
+    let fileExtensions = schematicFileExtensions.concat(designFileExtensions)
+    fileExtensions = Array.from(new Set(fileExtensions))
+    return {
+      ...project,
+      fileExtensions,
+    }
+  })
+  return { domains, projects }
+}
+
+function processFileExtensions(projects) {
+  let fileExtensions = projects.reduce((acc, project) => {
+    for (const ext of project.fileExtensions) {
+      if (Object.keys(acc).includes(ext)) {
+        acc[ext]++
+      } else {
+        acc[ext] = 1
+      }
+    }
+    return acc
+  }, {})
+  fileExtensions = Object.entries(fileExtensions)
+    .sort(([_, count1], [__, count2]) => count2 - count1)
+    .map(([ext]) => ext)
+  return fileExtensions
+}
+
+function fetchManifests(manifestUrls) {
+  return Promise.all(
+    manifestUrls.map(async (link, index) => {
+      if (link) {
+        return fetchText(link)
+          .then(text => {
+            const origin = dirname(link) + '/'
+            return { id: index, origin, ...yaml.parse(text) }
+          })
+          .catch(e => {
+            console.warn('--------------------------------------------')
+            console.warn(e)
+            console.warn('............................................')
+            console.warn('Error reading:', link)
+            console.warn('--------------------------------------------')
+          })
+      }
+    }),
+    // remove null/undefined
+  ).then(manifests => manifests.filter(Boolean))
+}
+
+function getManifestUrls(remoteLists) {
+  return Promise.all(remoteLists.map(url => fetch(url).then(r => r.json()))).then(
+    lists => lists.flat(),
+  )
+}
+
 async function fetchText(link) {
-  link = link.trim()
   if (link.startsWith('local-manifests/')) {
     return fs.readFile(link, 'utf-8')
   }
