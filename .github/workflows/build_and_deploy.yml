@@ -19,8 +19,7 @@ jobs:
         with:
           node-version: 18
       - run: yarn install --frozen-lockfile
-      - run: yarn projects
-      - run: cat site-data.json
+      - run: yarn get-data
       - run: yarn build
       - run: yarn export
       - env:
