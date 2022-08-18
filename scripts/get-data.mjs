@@ -64,11 +64,23 @@ await fs.writeFile(
   ),
 )
 
-function readLocalManifests() {
-  const paths = globule.find(path.join(scriptDir, '../local-manifests/*.yml'))
-  return Promise.all(paths.map(p => fs.readFile(p, 'utf-8'))).then(texts =>
-    texts.map(yaml.parse).map(p => ({ ...p, origin: config.url })),
+async function readLocalManifests() {
+  const manifestDir = path.join(scriptDir, '../local-manifests')
+  const paths = globule.find(path.join(manifestDir, '*.yml'))
+  const texts = await Promise.all(
+    paths.map(p => fs.readFile(p, 'utf-8').then(text => [p, text])),
   )
+  return texts.map(([p, text]) => {
+    const project = yaml.parse(text)
+    project.origin = config.url
+    const manifestUrl = path.join(
+      config.url,
+      'manifests',
+      path.relative(manifestDir, p),
+    )
+    project.id = createHash(manifestUrl)
+    return project
+  })
 }
 
 function processKeywords(projects) {
