@@ -27,7 +27,8 @@ let manifestUrls = config.remoteManifests
 manifestUrls = manifestUrls.concat(await getManifestUrls(remoteLists))
 
 let projects = await fetchManifests(manifestUrls)
-projects = projects.concat(await readLocalManifests())
+const localManifests = await readLocalManifests()
+projects = projects.concat(localManifests)
 projects = projects.map(processUrls).filter(Boolean)
 projects = await Promise.all(
   projects.map(p =>
@@ -204,8 +205,8 @@ function processFileExtensions(projects) {
 
 function fetchManifests(manifestUrls) {
   return Promise.all(
-    manifestUrls.map(async url => {
-      return fetchText(url)
+    manifestUrls.map(url =>
+      fetchText(url)
         .then(text => {
           const origin = dirname(url) + '/'
           return { id: createHash(url), origin, ...yaml.parse(text) }
@@ -216,8 +217,8 @@ function fetchManifests(manifestUrls) {
           console.warn('............................................')
           console.warn('Error reading:', url)
           console.warn('--------------------------------------------')
-        })
-    }),
+        }),
+    ),
     // remove null/undefined
   ).then(manifests => manifests.filter(Boolean))
 }
