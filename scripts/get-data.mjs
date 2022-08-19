@@ -14,13 +14,8 @@ import { fileURLToPath } from 'url'
 const accessPromise = promisify(access)
 const fetch = rateLimit(10, 100, nodeFetch)
 
-const scriptDir = path.dirname(fileURLToPath(import.meta.url))
-
-const configPath = path.join(scriptDir, '../okh-config.json')
-const cadFilesPath = path.join(scriptDir, '../data/cad-files.json')
-
-const config = JSON.parse(await fs.readFile(configPath, 'utf-8'))
-const cadFiles = JSON.parse(await fs.readFile(cadFilesPath, 'utf-8'))
+const config = JSON.parse(await fs.readFile('okh-config.json', 'utf-8'))
+const cadFiles = JSON.parse(await fs.readFile('data/cad-files.json', 'utf-8'))
 const remoteLists = config.remoteLists
 
 let manifestUrls = config.remoteManifests
@@ -88,7 +83,7 @@ await fs.writeFile(
 )
 
 async function readLocalManifests() {
-  const manifestDir = path.join(scriptDir, '../local-manifests')
+  const manifestDir = 'local-manifests'
   const paths = globule.find(path.join(manifestDir, '*.yml'))
   const texts = await Promise.all(
     paths.map(p => fs.readFile(p, 'utf-8').then(text => [p, text])),
