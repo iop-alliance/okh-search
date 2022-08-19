@@ -30,7 +30,7 @@ projects = projects.map(processUrls).filter(Boolean)
 projects = await Promise.all(
   projects.map(p =>
     processImage(p).catch(e => {
-      console.warn('FAILED', p.image)
+      console.info('FAILED', p.image)
       return { ...p, image: null }
     }),
   ),
@@ -257,7 +257,7 @@ async function fetchText(link) {
     if (r.status !== 200) {
       throw Error(r.status)
     }
-    console.warn('FETCHED', link)
+    console.info('Fetched', link)
     return r.text()
   })
 }
@@ -325,7 +325,7 @@ async function processImage(project) {
     width: 290,
     fit: 'outside',
   })
-  console.warn('FETCHED', image)
+  console.info('Fetched', image)
   await fs.writeFile(imagePath, thumb)
   return project
 }
