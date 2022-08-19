@@ -25,10 +25,12 @@ const remoteLists = config.remoteLists
 
 let manifestUrls = config.remoteManifests
 manifestUrls = manifestUrls.concat(await getManifestUrls(remoteLists))
+// de-dupe
+manifestUrls = Array.from(new Set(manifestUrls))
 
 let projects = await fetchManifests(manifestUrls)
-const localManifests = await readLocalManifests()
-projects = projects.concat(localManifests)
+const [localManifestList, localProjects] = await readLocalManifests()
+projects = projects.concat(localProjects)
 projects = projects.map(processUrls).filter(Boolean)
 projects = await Promise.all(
   projects.map(p =>
@@ -65,23 +67,46 @@ await fs.writeFile(
   ),
 )
 
+await fs.mkdir('public/manifests', { recursive: true })
+
+const localManifestUrls = localManifestList.map(p =>
+  path.join(config.url, 'manifests', path.basename(p)),
+)
+
+await Promise.all(
+  localManifestList.map(p => {
+    const filename = path.basename(p)
+    return fs.copyFile(p, path.join('public/manifests/', filename))
+  }),
+)
+
+console.info('Writing public/manifests/list.json')
+
+await fs.writeFile(
+  'public/manifests/list.json',
+  JSON.stringify(localManifestUrls.concat(manifestUrls), null, 2),
+)
+
 async function readLocalManifests() {
   const manifestDir = path.join(scriptDir, '../local-manifests')
   const paths = globule.find(path.join(manifestDir, '*.yml'))
   const texts = await Promise.all(
     paths.map(p => fs.readFile(p, 'utf-8').then(text => [p, text])),
   )
-  return texts.map(([p, text]) => {
-    const project = yaml.parse(text)
-    project.origin = config.url
-    const manifestUrl = path.join(
-      config.url,
-      'manifests',
-      path.relative(manifestDir, p),
-    )
-    project.id = createHash(manifestUrl)
-    return project
-  })
+  return [
+    paths,
+    texts.map(([p, text]) => {
+      const project = yaml.parse(text)
+      project.origin = config.url
+      const manifestUrl = path.join(
+        config.url,
+        'manifests',
+        path.relative(manifestDir, p),
+      )
+      project.id = createHash(manifestUrl)
+      return project
+    }),
+  ]
 }
 
 function processKeywords(projects) {
