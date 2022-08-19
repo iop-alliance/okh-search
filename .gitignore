@@ -28,5 +28,6 @@ yarn-error.log*
 
 data/site-data.json
 
+public/manifests
 public/images
 !public/images/placeholder.png
