@@ -1,5 +1,8 @@
 {
+  "title": "Open Know-How",
   "url": "https://search.openknowhow.org/",
+  "aboutUrl": "https://internetofproduction.org/open-know-how",
+  "sourceCodeUrl": "https://github.com/iop-alliance/okh-search",
   "remoteLists": [
     "https://field-ready-projects.openknowhow.org/manifests/list.json"
   ],

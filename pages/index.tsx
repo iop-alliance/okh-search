@@ -9,6 +9,22 @@ import FilterSelect from '../components/FilterSelect'
 import TagButton from '../components/TagButton'
 import MiniSearch from 'minisearch'
 
+import config from '../okh-config.json'
+
+if (!config.title) {
+  throw Error('title missing in okh-config.json')
+}
+if (!config.url) {
+  throw Error('url missing in okh-config.json')
+}
+if (!config.aboutUrl) {
+  throw Error('aboutUrl missing in okh-config.json')
+}
+if (!config.sourceCodeUrl) {
+  throw Error('sourceCodeUrl missing in okh-config.json')
+}
+
+
 const miniSearch = new MiniSearch({
   fields: ['title', 'description', 'licensor.name'],
   searchOptions: {
@@ -155,7 +171,7 @@ export default function Home() {
       <div className="main">
         <>
           <Head>
-            <title>Open Know-How Search</title>
+            <title>{config.title}</title>
             <link rel="icon" type="image/png" href="favicon.png" />
           </Head>
           {
@@ -171,7 +187,7 @@ export default function Home() {
                     <div className="logo">
                       <img src="logo.svg" />
                       <Header as="h1" style={{ marginTop: 0 }}>
-                        Open Know-How
+                        {config.title}
                       </Header>
                     </div>
                   </a>
@@ -329,9 +345,9 @@ export default function Home() {
         </>
         <div className="footer">
           <div>
-            <a href="https://internetofproduction.org/open-know-how">about</a>
+            <a href={config.aboutUrl}>about</a>
             {' | '}
-            <a href="https://github.com/iop-alliance/okh-search">source code</a>
+            <a href={config.sourceCodeUrl}>source code</a>
           </div>
         </div>
       </div>
