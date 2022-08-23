@@ -4,6 +4,8 @@
 # Open Know-How Search
 Open Know-How (OKH) wants to make hardware projects easier to find through a standardised data interchange format. Read more about it [here](https://www.internetofproduction.org/open-know-how).
 
+This site is a prototype for a federated search using the OKH format. Have a look at the [design docs](design-docs/README.md) for more details on the thinking behind it.
+
 ## Sites using OKH
 
 - [search.openknowhow.org](https://search.openknowhow.org) - This site that tries to collate all sources of OKH compliant data.
@@ -57,15 +59,26 @@ npm run dev
 npm run build && npm run export
 ```
 
-7. Please [edit the `okh-config.json` on iop-alliance/okh-search](https://github.com/iop-alliance/okh-search/edit/master/okh-config.json) and add your `${your-site}/manifests/list.json` to the `remoteLists` field. This will add the projects from your site to https://search.openknowhow.org. 
+7. Please [edit the `okh-config.json` on iop-alliance/okh-search](https://github.com/iop-alliance/okh-search/edit/master/okh-config.json) and add your `${your-site}/manifests/list.json` to the `remoteLists` field. This will add the projects from your site to https://search.openknowhow.org.
 
 
 ### Making a custom site with an OKH compliant API
 
 1. Manually make or generate [OKH compliant manifests][standard] for each project you want to list.
 2. Create a [JSON list endpoint of these manifests][json-list-forum-post].
-3. Please [edit the `okh-config.json` on iop-alliance/okh-search](https://github.com/iop-alliance/okh-search/edit/master/okh-config.json) and add your `${your-site}/manifests/list.json` to the `remoteLists` field. This will add the projects from your site to https://search.openknowhow.org. 
+3. Please [edit the `okh-config.json` on iop-alliance/okh-search](https://github.com/iop-alliance/okh-search/edit/master/okh-config.json) and add your `${your-site}/manifests/list.json` to the `remoteLists` field. This will add the projects from your site to https://search.openknowhow.org.
 
 
 [json-list-forum-post]: https://community.internetofproduction.org/t/use-simple-json-list-instead-of-json-feed/81
 [standard]: https://standards.internetofproduction.org/pub/okh
+
+
+## Thanks
+
+This project is funded through the NGI0 Discovery Fund, a fund established by NLnet with financial support from the European Commission's Next Generation Internet programme, under the aegis of DG Communications Networks, Content and Technology under grant agreement No 825322.
+
+[![nlnet banner](design-docs/readme-images/nlnet.png)](https://nlnet.nl/)
+[![ngi0 banner](design-docs/readme-images/ngi0.png)](https://nlnet.nl/NGI0)
+
+
+[iop-okh]: https://www.internetofproduction.org/open-know-how

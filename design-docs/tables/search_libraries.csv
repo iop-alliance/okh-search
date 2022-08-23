@@ -1,0 +1,33 @@
+﻿Name,Link,Tags,Features,Pros,Cons,Pros - Cons
+"MeiliSearch
+",https://www.meilisearch.com/,server-side,"faceting, ranking, stemming, stop-words, synonyms","Responsive on issues, Written in Rust",Not mature,1
+Postgres + RUM,https://github.com/postgrespro/rum,server-side,,,,0
+Vespa,https://vespa.ai/,server-side,,,,0
+" Solr",https://solr.apache.org/,server-side,"faceting, ranking, stemming, stop-words, synonyms",Mature,Written in Java,0
+ElasticSearch / OpenSearch,,server-side,,Mature,"Split between FOSS and not FOSS, Written in Java",-1
+"Typesense
+",https://typesense.org/,server-side,,Responsive on issues,"Not mature, Written in C++",-1
+Sersia,http://searsia.org/,"client-side, server-side",,"Client side and server side, Responsive on issues",Written in Java,1
+"JS Search
+",,client-side,,Improved on lunr.js,,1
+"https://www.npmjs.com/package/flexsearch
+",https://www.npmjs.com/package/flexsearch,client-side,,"High Performance, Used to be used by MDN",Not responsive on issues,1
+https://stork-search.net/,https://stork-search.net/,client-side,,Written in Rust,No fuzzy search,0
+"FuzzySearch
+",,client-side,,,,0
+"Fuse.js
+",https://fusejs.io/,client-side,,,,0
+"Lunr.js
+",,client-side,,High number of features,Not responsive on issues,0
+"BulkSearch
+",,client-side,,,,0
+"MiniSearch
+",https://lucaong.github.io/minisearch/,client-side,,,,0
+"Elasticlunr.js
+",,client-side,,Improved on lunr.js,Not responsive on issues,0
+"bm25.js
+",,client-side,,,,0
+fzf Javascript,https://fzf.netlify.app/docs/latest,client-side,,Used by MDN,"Not mature, Only fuzzy search",-1
+"Wade
+",https://github.com/kbrsh/wade,client-side,,,Not mature,-1
+,,,,,,0

@@ -1,0 +1,21 @@
+﻿User Story,User Type,Issue/Feature Type,Potential Design Solution
+"Open hardware creators might not have a community ",,Usability Issue,
+Users might not want an extra piece of software or plugin just for a listing of their projects. They already have a way of doing things,Community Member,Usability Issue,
+Users on mobile want to be able to see as many project as possible before vertically scrolling,,Usability Issue,Optimise list/table view for smaller screens
+Users want to be able to access the search from any project page,,Usability Issue,Keep search chrome on project page - (how is this possible without an iframe?)
+Users want to be able to easily find and access the tool from my search engine of choice,,Usability Issue,"Review and restructure url schema and page organisation, improve SEO on landing page"
+We want to  voluntary feedback from live users of the search so that we can improve it in the future,,Feature Enhancement,"Add feedback mechanism to the site - this could be as simple as an email link to send feedback to, or better would be a simple text field"
+Moderation want to make sure that projects are not offensive,,Feature Enhancement,"Do we need moderation? Probably, if we allow others to add projects."
+New communities and makers want to add their projects to the search,Community Member,Feature Enhancement,Instructions for new communities / makers to add their project pages
+Communities want a means of managing their own page and projects,Community Member,Feature Enhancement,"All them to update logo, projects listed and the url of the project pages. Assume that this will be done by a non-developer. Can we use airtable for example?"
+Users want to see some key info about each project without having to click through to the project page,,Feature Enhancement,"Completeness of documentation, is parametric? , Linked to other versions?, Number of times it has been viewed etc"
+Users want to sort order information in a way that matches their priority,,Feature Enhancement,"Newest added, Difficulty to source in my country, Difficulty to assemble, theme, "
+Users want to be able to browse by different criteria useful to them,,Feature Enhancement,"Categories, Usage, Community, By equipment name,
+Use case, field/ context, estimated BOM cost, rate the repairability, customisation tool, documentation rating, subtype, features, functionality, quality if instruction, instruction type, english"
+I want to access the search from the hardware itself (e.g via QR code),,Speculative Idea (beyond scope),
+I want to access design data even if it goes offline on the original site,,Speculative Idea (beyond scope),Have a link to archive.org
+Users may like to feel part of a community by sharing usage stories for context,,Speculative Idea (beyond scope),simple moderated comment system
+Users and makers would appreciate virtual ‘Kudos’ (or even financial support to projects,,Speculative Idea (beyond scope),
+Makers want to gather feedback on the designs themselves to inform the makers/ communities,,Speculative Idea (beyond scope),
+Uses would like alternative ways to explore the data,Researcher,Speculative Idea (beyond scope),"Visual graphs for: compatibility, desendence, communities (could use something like a D3.js force graph)"
+,,,
