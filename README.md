@@ -41,25 +41,31 @@ npx create-next-app -e https://github.com/iop-alliance/okh-search my-okh-site
   - `remoteLists` - URLs of any [list of manifest JSON endpoints][json-list-forum-post] that you would like to include in your page.
   - `remoteManifests` - [OKH manifests][standard] of projects you want to include.
 
-4. Retrieve the manifest data
+4. Install dependencies
+
+```
+npm install
+```
+
+5. Retrieve the manifest data
 
 ```
 npm run get-data
 ```
 
-5. Take a look at the local development site.
+6. Take a look at the local development site.
 
 ```
 npm run dev
 ```
 
-6. Export a static site (this can be deployed on e.g. Github or Gitlab pages or somewhere like Vercel or Netlify)
+7. Export a static site (this can be deployed on e.g. Github or Gitlab pages or somewhere like Vercel or Netlify)
 
 ```
 npm run build && npm run export
 ```
 
-7. Please [edit the `okh-config.json` on iop-alliance/okh-search](https://github.com/iop-alliance/okh-search/edit/master/okh-config.json) and add your `${your-site}/manifests/list.json` to the `remoteLists` field. This will add the projects from your site to https://search.openknowhow.org.
+8. Please [edit the `okh-config.json` on iop-alliance/okh-search](https://github.com/iop-alliance/okh-search/edit/master/okh-config.json) and add your `${your-site}/manifests/list.json` to the `remoteLists` field. This will add the projects from your site to https://search.openknowhow.org.
 
 
 ### Making a custom site with an OKH compliant API
