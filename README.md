@@ -1,12 +1,71 @@
 [![Open Know-How logo](public/logo.svg)](https://search.openknowhow.org)
 
 
-
 # Open Know-How Search
+Open Know-How (OKH) wants to make hardware projects easier to find through a standardised data interchange format. Read more about it [here](https://www.internetofproduction.org/open-know-how).
 
-Open Know-How wants to make hardware projects easy to find (there are more than 80 different platforms/repositories for hardware available out there!). To do that, a group of people has come up with a manifest, a little file that goes into each project documentation, and that can be found by webcrawlers.
+## Sites using OKH
+
+- [search.openknowhow.org](https://search.openknowhow.org) - This site that tries to collate all sources of OKH compliant data.
+
+### Community Sites
+
+- [Appropedia.org](https://appropedia.org) - Appropedia is the site to develop and share collaborative solutions in sustainability, poverty reduction and international development through the use of sound principles and appropriate technology.
+- [GOSH Community](https://projects.openhardware.science) - A community that wants to make open science hardware ubiquitous by 2025.
+- [Field Ready](https://field-ready-projects.openknowhow.org) - A group of organizations with efforts to prevent, respond to and address the causes and consequences of disasters.
+
+## Listing Your Project
+
+You can directly edit the [okh-config.json](okh-config.json) on this site and add a URL of your [OKH compliant][standard] manifest under the `remoteManifests` field. Alternatively you can add your project to one of the community sites listed above (or make your own community site!).
+
+## Making Your Own OKH Site
+
+You can either use this template for a static [Next.js](https://nextjs.org) site or add an OKH compliant API to any site.
+
+### Using this template
+
+1. Create a site based on this template
+
+```
+npx create-next-app -e https://github.com/iop-alliance/okh-search my-okh-site
+```
+
+2. Replace `public/logo.svg` and `public/favicon.png` with your own images.
+
+3. Edit `okh-config.json`, including:
+  - `title` - The page title.
+  - `description` - A description of what the page is for.
+  - `url` - The URL of the site when it will be deployed.
+  - `remoteLists` - URLs of any [list of manifest JSON endpoints][json-list-forum-post] that you would like to include in your page.
+  - `remoteManifests` - [OKH manifests][standard] of projects you want to include.
+
+4. Retrieve the manifest data
+
+```
+npm run get-data
+```
+
+5. Take a look at the local development site.
+
+```
+npm run dev
+```
+
+6. Export a static site (this can be deployed on e.g. Github or Gitlab pages or somewhere like Vercel or Netlify)
+
+```
+npm run build && npm run export
+```
+
+7. Please [edit the `okh-config.json` on iop-alliance/okh-search](https://github.com/iop-alliance/okh-search/edit/master/okh-config.json) and add your `${your-site}/manifests/list.json` to the `remoteLists` field. This will add the projects from your site to https://search.openknowhow.org. 
 
 
-## Problem?
+### Making a custom site with an OKH compliant API
 
-If you have any questions, [create an issue](https://github.com/OpenKnowHow/okh-log/issues/new), or drop a message to andremaia.chagas[at]gmail.com
+1. Manually make or generate [OKH compliant manifests][standard] for each project you want to list.
+2. Create a [JSON list endpoint of these manifests][json-list-forum-post].
+3. Please [edit the `okh-config.json` on iop-alliance/okh-search](https://github.com/iop-alliance/okh-search/edit/master/okh-config.json) and add your `${your-site}/manifests/list.json` to the `remoteLists` field. This will add the projects from your site to https://search.openknowhow.org. 
+
+
+[json-list-forum-post]: https://community.internetofproduction.org/t/use-simple-json-list-instead-of-json-feed/81
+[standard]: https://standards.internetofproduction.org/pub/okh
