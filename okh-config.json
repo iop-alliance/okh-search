@@ -1,5 +1,6 @@
 {
   "title": "Open Know-How",
+  "description": "Discover Open Source Hardware",
   "url": "https://search.openknowhow.org/",
   "aboutUrl": "https://internetofproduction.org/open-know-how",
   "sourceCodeUrl": "https://github.com/iop-alliance/okh-search",

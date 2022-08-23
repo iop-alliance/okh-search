@@ -14,6 +14,9 @@ import config from '../okh-config.json'
 if (!config.title) {
   throw Error('title missing in okh-config.json')
 }
+if (!config.description) {
+  throw Error('description missing in okh-config.json')
+}
 if (!config.url) {
   throw Error('url missing in okh-config.json')
 }
@@ -23,7 +26,6 @@ if (!config.aboutUrl) {
 if (!config.sourceCodeUrl) {
   throw Error('sourceCodeUrl missing in okh-config.json')
 }
-
 
 const miniSearch = new MiniSearch({
   fields: ['title', 'description', 'licensor.name'],
@@ -173,6 +175,7 @@ export default function Home() {
           <Head>
             <title>{config.title}</title>
             <link rel="icon" type="image/png" href="favicon.png" />
+            <MetaTags />
           </Head>
           {
             <>
@@ -486,4 +489,27 @@ function getUrlParams(): UrlParams {
     source: source && !Array.isArray(source) ? source.split('|') : [],
     files: files && !Array.isArray(files) ? files.split('|') : [],
   }
+}
+
+function MetaTags() {
+  return (
+    <>
+      <meta name="description" content={config.description} />
+
+      <meta itemProp="name" content={config.title} />
+      <meta itemProp="description" content={config.description} />
+      <meta itemProp="image" content={`${config.url}/logo.svg`} />
+
+      <meta property="og:url" content={config.url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={config.title} />
+      <meta property="og:description" content={config.description} />
+      <meta property="og:image" content={`${config.url}/logo.svg`} />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={config.title} />
+      <meta name="twitter:description" content={config.description} />
+      <meta name="twitter:image" content={`${config.url}/logo.svg`} />
+    </>
+  )
 }
