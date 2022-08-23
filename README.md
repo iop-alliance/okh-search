@@ -20,6 +20,8 @@ This site is a prototype for a federated search using the OKH format. Have a loo
 
 You can directly edit the [okh-config.json](okh-config.json) on this site and add a URL of your [OKH compliant][standard] manifest under the `remoteManifests` field. Alternatively you can add your project to one of the community sites listed above (or make your own community site!).
 
+If you don't want to host the .yml manifest yourself you can add a `local-manifests/` folder in this repo and put the .yml file in there.
+
 ## Making Your Own OKH Site
 
 You can either use this template for a static [Next.js](https://nextjs.org) site or add an OKH compliant API to any site.
@@ -40,6 +42,8 @@ npx create-next-app -e https://github.com/iop-alliance/okh-search my-okh-site
   - `url` - The URL of the site when it will be deployed.
   - `remoteLists` - URLs of any [list of manifest JSON endpoints][json-list-forum-post] that you would like to include in your page.
   - `remoteManifests` - [OKH manifests][standard] of projects you want to include.
+
+  If you want to add manifests locally add a folder called `local-manifests/` and put .yml files in there.
 
 4. Install dependencies
 
