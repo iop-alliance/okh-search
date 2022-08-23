@@ -23,7 +23,7 @@ const ProjectCard = ({ project, setOnlyFilter }) => {
 
   return (
     <Card style={{ margin: 20 }} key={project.id} link>
-      <a href={project['documentation-home']}>
+      <a style={{height: 200}} href={project['documentation-home']}>
         <LazyLoadImage
           style={{ width: 290, height: 200, objectFit: 'cover' }}
           src={project.image || 'images/placeholder.png'}
@@ -92,7 +92,7 @@ const ProjectCard = ({ project, setOnlyFilter }) => {
 function Button({ tagType, tagName, setOnlyFilter }) {
   const href = '#' + querystring.encode({ [tagType]: tagName })
   return (
-    <div style={{ marginBottom: 20 }}>
+    <div style={{marginBottom: 20}}>
       <TagButton
         as="a"
         href={href}
