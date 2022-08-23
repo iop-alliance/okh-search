@@ -1,4 +1,6 @@
-[![Open Know-How logo](public/logo.svg)][standard]
+[![Open Know-How logo](public/logo.svg)](https://search.openknowhow.org)
+
+
 
 # Open Know-How Search
 
@@ -8,6 +10,3 @@ Open Know-How wants to make hardware projects easy to find (there are more than 
 ## Problem?
 
 If you have any questions, [create an issue](https://github.com/OpenKnowHow/okh-log/issues/new), or drop a message to andremaia.chagas[at]gmail.com
-
-
-[search page]: https://search.openknowhow.org
