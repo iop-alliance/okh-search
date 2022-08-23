@@ -63,6 +63,8 @@ npm run get-data
 npm run dev
 ```
 
+Visit http://localhost:3000 to see it. 
+
 7. Export a static site (this can be deployed on e.g. Github or Gitlab pages or somewhere like Vercel or Netlify)
 
 ```
