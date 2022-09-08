@@ -12,7 +12,7 @@ import globule from 'globule'
 import path from 'path'
 import { fileURLToPath } from 'url'
 const accessPromise = promisify(access)
-const fetch = rateLimit(10, 100, nodeFetch)
+const fetch = rateLimit(10, 1000, nodeFetch)
 
 const config = JSON.parse(await fs.readFile('okh-config.json', 'utf-8'))
 const cadFiles = JSON.parse(await fs.readFile('data/cad-files.json', 'utf-8'))
