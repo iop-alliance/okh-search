@@ -402,6 +402,7 @@
     "https://openknowhow.appropedia.org/manifests/okh-Yamaha%20Quick%20Fastener.yml",
     "https://openknowhow.appropedia.org/manifests/okh-Zero-electricity%20refrigerator.yml",
     "https://gitlab.com/openflexure/openflexure-simple-illumination/-/raw/master/okh.yml",
-    "https://raw.githubusercontent.com/7B-Things/braille-signage-generator/main/okh.yml"
+    "https://codeberg.org/7BIndustries/braille-label-generator/raw/branch/main/okh.yml",
+    "https://codeberg.org/7BIndustries/push-button-switch/raw/branch/main/okh.yml"
   ]
 }
