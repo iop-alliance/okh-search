@@ -5,7 +5,7 @@
   "aboutUrl": "https://internetofproduction.org/open-know-how",
   "sourceCodeUrl": "https://github.com/iop-alliance/okh-search",
   "remoteLists": [
-    "https://www.appropedia.org/scripts/generateOpenKnowHowManifests.php",
+    "https://www.appropedia.org/manifests/list.json",
     "https://field-ready-projects.openknowhow.org/manifests/list.json",
     "https://projects.openhardware.science/manifests/list.json"
   ],
